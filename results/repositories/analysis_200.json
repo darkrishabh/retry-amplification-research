@@ -1,0 +1,3092 @@
+{
+  "analysis_date": "1769804456.9763052",
+  "total_repositories": 200,
+  "repositories_with_retry": 23,
+  "total_retry_configs": 162,
+  "statistics": {
+    "prevalence_with_retry": 0.115,
+    "retry_count_1_3": 0.45098039215686275,
+    "retry_count_4_5": 0.20588235294117646,
+    "retry_count_over_5": 0.3431372549019608,
+    "exponential_backoff": 0.17901234567901234,
+    "linear_backoff": 0.47530864197530864,
+    "no_backoff": 0.345679012345679,
+    "has_jitter": 0.04938271604938271
+  },
+  "findings": [
+    {
+      "repo": "NVIDIA/nv-ingest",
+      "file": "docker/scripts/post_build_triggers.py",
+      "line": 7,
+      "pattern": "generic_max_retries",
+      "max_retries": 5,
+      "backoff_type": "none",
+      "has_jitter": true,
+      "evidence": "MAX_RETRIES = 5"
+    },
+    {
+      "repo": "NVIDIA/nv-ingest",
+      "file": "api/src/nv_ingest_api/internal/primitives/nim/model_interface/helpers.py",
+      "line": 267,
+      "pattern": "python_backoff",
+      "max_retries": null,
+      "backoff_type": "linear",
+      "has_jitter": false,
+      "evidence": "@backoff.on_predicate"
+    },
+    {
+      "repo": "NVIDIA/nv-ingest",
+      "file": "api/src/nv_ingest_api/internal/primitives/nim/model_interface/helpers.py",
+      "line": 300,
+      "pattern": "python_backoff",
+      "max_retries": null,
+      "backoff_type": "linear",
+      "has_jitter": false,
+      "evidence": "@backoff.on_predicate"
+    },
+    {
+      "repo": "NVIDIA/nv-ingest",
+      "file": "client/src/nv_ingest_client/util/vdb/milvus.py",
+      "line": 1549,
+      "pattern": "generic_max_retries",
+      "max_retries": 3,
+      "backoff_type": "none",
+      "has_jitter": false,
+      "evidence": "max_retries = 3"
+    },
+    {
+      "repo": "AgnetLabs/Laddr",
+      "file": "lib/laddr/src/laddr/core/runtime_entry.py",
+      "line": 733,
+      "pattern": "generic_max_retries",
+      "max_retries": 10,
+      "backoff_type": "linear",
+      "has_jitter": false,
+      "evidence": "max_retries = 10"
+    },
+    {
+      "repo": "AgnetLabs/Laddr",
+      "file": "lib/laddr/src/laddr/core/agent_runtime.py",
+      "line": 288,
+      "pattern": "generic_max_retries",
+      "max_retries": 5,
+      "backoff_type": "exponential",
+      "has_jitter": false,
+      "evidence": "max_retries = 5"
+    },
+    {
+      "repo": "apidoorman/doorman",
+      "file": "backend-services/doorman.py",
+      "line": 189,
+      "pattern": "generic_max_retries",
+      "max_retries": 3,
+      "backoff_type": "linear",
+      "has_jitter": false,
+      "evidence": "max_retries = 3"
+    },
+    {
+      "repo": "apidoorman/doorman",
+      "file": "backend-services/services/gateway_service.py",
+      "line": 2277,
+      "pattern": "generic_max_retries",
+      "max_retries": 0,
+      "backoff_type": "none",
+      "has_jitter": false,
+      "evidence": "max_retries = 0"
+    },
+    {
+      "repo": "apidoorman/doorman",
+      "file": "backend-services/services/gateway_service.py",
+      "line": 2281,
+      "pattern": "generic_max_retries",
+      "max_retries": 0,
+      "backoff_type": "none",
+      "has_jitter": true,
+      "evidence": "max_retries = 0"
+    },
+    {
+      "repo": "tangpan360/MicroRCA-Agent",
+      "file": "src/main_multiprocessing.py",
+      "line": 127,
+      "pattern": "generic_max_retries",
+      "max_retries": 3,
+      "backoff_type": "none",
+      "has_jitter": false,
+      "evidence": "max_retries = 3"
+    },
+    {
+      "repo": "open-edge-platform/edge-ai-libraries",
+      "file": "microservices/time-series-analytics/src/opcua_alerts.py",
+      "line": 65,
+      "pattern": "generic_max_retries",
+      "max_retries": 10,
+      "backoff_type": "none",
+      "has_jitter": false,
+      "evidence": "max_retries=10"
+    },
+    {
+      "repo": "open-edge-platform/edge-ai-libraries",
+      "file": "microservices/dlstreamer-pipeline-server/user_scripts/gvapython/timestamp/ntp.py",
+      "line": 20,
+      "pattern": "generic_max_retries",
+      "max_retries": 10,
+      "backoff_type": "none",
+      "has_jitter": false,
+      "evidence": "max_retries=10"
+    },
+    {
+      "repo": "open-edge-platform/edge-ai-libraries",
+      "file": "microservices/dlstreamer-pipeline-server/user_scripts/gvapython/timestamp/ntp.py",
+      "line": 22,
+      "pattern": "generic_max_retries",
+      "max_retries": 10,
+      "backoff_type": "none",
+      "has_jitter": false,
+      "evidence": "max_retries=10"
+    },
+    {
+      "repo": "open-edge-platform/edge-ai-libraries",
+      "file": "microservices/dlstreamer-pipeline-server/src/server/gstreamer_pipeline.py",
+      "line": 865,
+      "pattern": "generic_max_retries",
+      "max_retries": 5,
+      "backoff_type": "none",
+      "has_jitter": false,
+      "evidence": "max_retries = 5"
+    },
+    {
+      "repo": "open-edge-platform/edge-ai-libraries",
+      "file": "microservices/visual-data-preparation-for-retrieval/vdms/src/core/object_detection/detector.py",
+      "line": 141,
+      "pattern": "generic_max_retries",
+      "max_retries": 5,
+      "backoff_type": "none",
+      "has_jitter": false,
+      "evidence": "max_retries = 5"
+    },
+    {
+      "repo": "open-edge-platform/edge-ai-libraries",
+      "file": "sample-applications/video-search-and-summarization/search-ms/src/utils/utils.py",
+      "line": 36,
+      "pattern": "generic_max_retries",
+      "max_retries": 3,
+      "backoff_type": "none",
+      "has_jitter": false,
+      "evidence": "max_retries=3"
+    },
+    {
+      "repo": "open-edge-platform/edge-ai-libraries",
+      "file": "sample-applications/document-summarization/app/server.py",
+      "line": 84,
+      "pattern": "generic_max_retries",
+      "max_retries": 2,
+      "backoff_type": "none",
+      "has_jitter": false,
+      "evidence": "max_retries=2"
+    },
+    {
+      "repo": "roma-glushko/hyx",
+      "file": "hyx/retry/api.py",
+      "line": 23,
+      "pattern": "python_decorator",
+      "max_retries": null,
+      "backoff_type": "linear",
+      "has_jitter": false,
+      "evidence": "@retry("
+    },
+    {
+      "repo": "roma-glushko/hyx",
+      "file": "docs/snippets/retry/retry_infinite_attempts.py",
+      "line": 11,
+      "pattern": "python_decorator",
+      "max_retries": null,
+      "backoff_type": "linear",
+      "has_jitter": false,
+      "evidence": "@retry("
+    },
+    {
+      "repo": "roma-glushko/hyx",
+      "file": "docs/snippets/retry/retry_backoff_fibo.py",
+      "line": 9,
+      "pattern": "python_decorator",
+      "max_retries": null,
+      "backoff_type": "linear",
+      "has_jitter": false,
+      "evidence": "@retry("
+    },
+    {
+      "repo": "roma-glushko/hyx",
+      "file": "docs/snippets/retry/retry_backoff_custom.py",
+      "line": 37,
+      "pattern": "python_decorator",
+      "max_retries": null,
+      "backoff_type": "linear",
+      "has_jitter": false,
+      "evidence": "@retry("
+    },
+    {
+      "repo": "roma-glushko/hyx",
+      "file": "docs/snippets/retry/retry_backoff_decorrexp.py",
+      "line": 9,
+      "pattern": "python_decorator",
+      "max_retries": null,
+      "backoff_type": "linear",
+      "has_jitter": false,
+      "evidence": "@retry("
+    },
+    {
+      "repo": "roma-glushko/hyx",
+      "file": "docs/snippets/retry/retry_backoff_softexp.py",
+      "line": 9,
+      "pattern": "python_decorator",
+      "max_retries": null,
+      "backoff_type": "linear",
+      "has_jitter": false,
+      "evidence": "@retry("
+    },
+    {
+      "repo": "roma-glushko/hyx",
+      "file": "docs/snippets/retry/retry_backoff_expo_jitter.py",
+      "line": 9,
+      "pattern": "python_decorator",
+      "max_retries": null,
+      "backoff_type": "linear",
+      "has_jitter": true,
+      "evidence": "@retry("
+    },
+    {
+      "repo": "roma-glushko/hyx",
+      "file": "docs/snippets/retry/retry_backoff_linear.py",
+      "line": 9,
+      "pattern": "python_decorator",
+      "max_retries": null,
+      "backoff_type": "linear",
+      "has_jitter": false,
+      "evidence": "@retry("
+    },
+    {
+      "repo": "roma-glushko/hyx",
+      "file": "docs/snippets/retry/retry_basic_usage.py",
+      "line": 8,
+      "pattern": "python_decorator",
+      "max_retries": null,
+      "backoff_type": "linear",
+      "has_jitter": false,
+      "evidence": "@retry("
+    },
+    {
+      "repo": "roma-glushko/hyx",
+      "file": "docs/snippets/retry/retry_backoff_const.py",
+      "line": 8,
+      "pattern": "python_decorator",
+      "max_retries": null,
+      "backoff_type": "linear",
+      "has_jitter": false,
+      "evidence": "@retry("
+    },
+    {
+      "repo": "roma-glushko/hyx",
+      "file": "docs/snippets/retry/retry_backoff_custom_jitter.py",
+      "line": 19,
+      "pattern": "python_decorator",
+      "max_retries": null,
+      "backoff_type": "linear",
+      "has_jitter": true,
+      "evidence": "@retry("
+    },
+    {
+      "repo": "roma-glushko/hyx",
+      "file": "docs/snippets/retry/retry_backoff_const_intervals.py",
+      "line": 8,
+      "pattern": "python_decorator",
+      "max_retries": null,
+      "backoff_type": "linear",
+      "has_jitter": false,
+      "evidence": "@retry("
+    },
+    {
+      "repo": "roma-glushko/hyx",
+      "file": "docs/snippets/retry/retry_no_delays.py",
+      "line": 10,
+      "pattern": "python_decorator",
+      "max_retries": null,
+      "backoff_type": "linear",
+      "has_jitter": false,
+      "evidence": "@retry("
+    },
+    {
+      "repo": "roma-glushko/hyx",
+      "file": "docs/snippets/retry/retry_backoff_expo.py",
+      "line": 9,
+      "pattern": "python_decorator",
+      "max_retries": null,
+      "backoff_type": "linear",
+      "has_jitter": false,
+      "evidence": "@retry("
+    },
+    {
+      "repo": "aws-samples/observability-with-amazon-opensearch",
+      "file": "sample-apps/08-paymentService/paymentService.py",
+      "line": 60,
+      "pattern": "python_urllib3",
+      "max_retries": 2,
+      "backoff_type": "none",
+      "has_jitter": false,
+      "evidence": "Retry(\n    total=2"
+    },
+    {
+      "repo": "aws-samples/observability-with-amazon-opensearch",
+      "file": "sample-apps/10-authenticationService/authenticationService.py",
+      "line": 60,
+      "pattern": "python_urllib3",
+      "max_retries": 2,
+      "backoff_type": "none",
+      "has_jitter": false,
+      "evidence": "Retry(\n    total=2"
+    },
+    {
+      "repo": "aws-samples/observability-with-amazon-opensearch",
+      "file": "sample-apps/09-recommendationService/recommendationService.py",
+      "line": 60,
+      "pattern": "python_urllib3",
+      "max_retries": 2,
+      "backoff_type": "none",
+      "has_jitter": false,
+      "evidence": "Retry(\n    total=2"
+    },
+    {
+      "repo": "aws-samples/observability-with-amazon-opensearch",
+      "file": "sample-apps/11-client/api/api.py",
+      "line": 159,
+      "pattern": "python_urllib3",
+      "max_retries": 2,
+      "backoff_type": "none",
+      "has_jitter": false,
+      "evidence": "Retry(\n    total=2"
+    },
+    {
+      "repo": "zd87pl/ai-crypto-trader",
+      "file": "services/portfolio_risk_service.py",
+      "line": 107,
+      "pattern": "generic_max_retries",
+      "max_retries": 5,
+      "backoff_type": "linear",
+      "has_jitter": false,
+      "evidence": "max_retries=5"
+    },
+    {
+      "repo": "zd87pl/ai-crypto-trader",
+      "file": "services/ai_analyzer_service.py",
+      "line": 72,
+      "pattern": "generic_max_retries",
+      "max_retries": 10,
+      "backoff_type": "linear",
+      "has_jitter": false,
+      "evidence": "max_retries=10"
+    },
+    {
+      "repo": "zd87pl/ai-crypto-trader",
+      "file": "services/ai_analyzer_service.py",
+      "line": 761,
+      "pattern": "generic_max_retries",
+      "max_retries": 15,
+      "backoff_type": "linear",
+      "has_jitter": false,
+      "evidence": "max_retries=15"
+    },
+    {
+      "repo": "zd87pl/ai-crypto-trader",
+      "file": "services/neural_network_service.py",
+      "line": 92,
+      "pattern": "generic_max_retries",
+      "max_retries": 10,
+      "backoff_type": "linear",
+      "has_jitter": false,
+      "evidence": "max_retries=10"
+    },
+    {
+      "repo": "zd87pl/ai-crypto-trader",
+      "file": "services/neural_network_service.py",
+      "line": 1570,
+      "pattern": "generic_max_retries",
+      "max_retries": 15,
+      "backoff_type": "linear",
+      "has_jitter": false,
+      "evidence": "max_retries=15"
+    },
+    {
+      "repo": "zd87pl/ai-crypto-trader",
+      "file": "services/feature_importance_service.py",
+      "line": 96,
+      "pattern": "generic_max_retries",
+      "max_retries": 10,
+      "backoff_type": "linear",
+      "has_jitter": false,
+      "evidence": "max_retries=10"
+    },
+    {
+      "repo": "zd87pl/ai-crypto-trader",
+      "file": "services/feature_importance_service.py",
+      "line": 529,
+      "pattern": "generic_max_retries",
+      "max_retries": 15,
+      "backoff_type": "linear",
+      "has_jitter": false,
+      "evidence": "max_retries=15"
+    },
+    {
+      "repo": "zd87pl/ai-crypto-trader",
+      "file": "services/monte_carlo_service.py",
+      "line": 110,
+      "pattern": "generic_max_retries",
+      "max_retries": 5,
+      "backoff_type": "linear",
+      "has_jitter": false,
+      "evidence": "max_retries=5"
+    },
+    {
+      "repo": "zd87pl/ai-crypto-trader",
+      "file": "services/market_monitor_service.py",
+      "line": 117,
+      "pattern": "generic_max_retries",
+      "max_retries": 5,
+      "backoff_type": "linear",
+      "has_jitter": false,
+      "evidence": "max_retries=5"
+    },
+    {
+      "repo": "zd87pl/ai-crypto-trader",
+      "file": "services/enhanced_social_monitor_service.py",
+      "line": 109,
+      "pattern": "generic_max_retries",
+      "max_retries": 5,
+      "backoff_type": "linear",
+      "has_jitter": false,
+      "evidence": "max_retries=5"
+    },
+    {
+      "repo": "zd87pl/ai-crypto-trader",
+      "file": "services/social_risk_adjuster.py",
+      "line": 127,
+      "pattern": "generic_max_retries",
+      "max_retries": 5,
+      "backoff_type": "linear",
+      "has_jitter": false,
+      "evidence": "max_retries=5"
+    },
+    {
+      "repo": "zd87pl/ai-crypto-trader",
+      "file": "services/pattern_recognition_service.py",
+      "line": 69,
+      "pattern": "generic_max_retries",
+      "max_retries": 10,
+      "backoff_type": "linear",
+      "has_jitter": false,
+      "evidence": "max_retries=10"
+    },
+    {
+      "repo": "zd87pl/ai-crypto-trader",
+      "file": "services/pattern_recognition_service.py",
+      "line": 393,
+      "pattern": "generic_max_retries",
+      "max_retries": 15,
+      "backoff_type": "linear",
+      "has_jitter": false,
+      "evidence": "max_retries=15"
+    },
+    {
+      "repo": "zd87pl/ai-crypto-trader",
+      "file": "services/news_analysis_service.py",
+      "line": 69,
+      "pattern": "generic_max_retries",
+      "max_retries": 5,
+      "backoff_type": "linear",
+      "has_jitter": false,
+      "evidence": "max_retries=5"
+    },
+    {
+      "repo": "zd87pl/ai-crypto-trader",
+      "file": "services/market_regime_service.py",
+      "line": 165,
+      "pattern": "generic_max_retries",
+      "max_retries": 10,
+      "backoff_type": "linear",
+      "has_jitter": false,
+      "evidence": "max_retries=10"
+    },
+    {
+      "repo": "zd87pl/ai-crypto-trader",
+      "file": "services/market_regime_service.py",
+      "line": 1164,
+      "pattern": "generic_max_retries",
+      "max_retries": 15,
+      "backoff_type": "linear",
+      "has_jitter": false,
+      "evidence": "max_retries=15"
+    },
+    {
+      "repo": "zd87pl/ai-crypto-trader",
+      "file": "services/ai_explainability_service.py",
+      "line": 62,
+      "pattern": "generic_max_retries",
+      "max_retries": 10,
+      "backoff_type": "linear",
+      "has_jitter": false,
+      "evidence": "max_retries=10"
+    },
+    {
+      "repo": "zd87pl/ai-crypto-trader",
+      "file": "services/ai_explainability_service.py",
+      "line": 411,
+      "pattern": "generic_max_retries",
+      "max_retries": 15,
+      "backoff_type": "linear",
+      "has_jitter": false,
+      "evidence": "max_retries=15"
+    },
+    {
+      "repo": "zd87pl/ai-crypto-trader",
+      "file": "services/social_monitor_service.py",
+      "line": 72,
+      "pattern": "generic_max_retries",
+      "max_retries": 5,
+      "backoff_type": "linear",
+      "has_jitter": false,
+      "evidence": "max_retries=5"
+    },
+    {
+      "repo": "zd87pl/ai-crypto-trader",
+      "file": "services/trade_executor_service.py",
+      "line": 549,
+      "pattern": "generic_max_retries",
+      "max_retries": 10,
+      "backoff_type": "linear",
+      "has_jitter": false,
+      "evidence": "max_retries=10"
+    },
+    {
+      "repo": "zd87pl/ai-crypto-trader",
+      "file": "services/trade_executor_service.py",
+      "line": 1387,
+      "pattern": "generic_max_retries",
+      "max_retries": 15,
+      "backoff_type": "linear",
+      "has_jitter": false,
+      "evidence": "max_retries=15"
+    },
+    {
+      "repo": "zd87pl/ai-crypto-trader",
+      "file": "services/model_registry_service.py",
+      "line": 87,
+      "pattern": "generic_max_retries",
+      "max_retries": 10,
+      "backoff_type": "linear",
+      "has_jitter": false,
+      "evidence": "max_retries=10"
+    },
+    {
+      "repo": "zd87pl/ai-crypto-trader",
+      "file": "services/model_registry_service.py",
+      "line": 467,
+      "pattern": "generic_max_retries",
+      "max_retries": 15,
+      "backoff_type": "linear",
+      "has_jitter": false,
+      "evidence": "max_retries=15"
+    },
+    {
+      "repo": "celery/celery",
+      "file": "t/integration/tasks.py",
+      "line": 237,
+      "pattern": "generic_max_retries",
+      "max_retries": 1,
+      "backoff_type": "none",
+      "has_jitter": false,
+      "evidence": "max_retries=1"
+    },
+    {
+      "repo": "celery/celery",
+      "file": "t/integration/tasks.py",
+      "line": 238,
+      "pattern": "generic_max_retries",
+      "max_retries": 1,
+      "backoff_type": "none",
+      "has_jitter": false,
+      "evidence": "max_retries=1"
+    },
+    {
+      "repo": "celery/celery",
+      "file": "t/integration/tasks.py",
+      "line": 247,
+      "pattern": "generic_max_retries",
+      "max_retries": 1,
+      "backoff_type": "none",
+      "has_jitter": false,
+      "evidence": "max_retries=1"
+    },
+    {
+      "repo": "celery/celery",
+      "file": "t/integration/tasks.py",
+      "line": 248,
+      "pattern": "generic_max_retries",
+      "max_retries": 1,
+      "backoff_type": "none",
+      "has_jitter": false,
+      "evidence": "max_retries=1"
+    },
+    {
+      "repo": "celery/celery",
+      "file": "t/integration/tasks.py",
+      "line": 257,
+      "pattern": "generic_max_retries",
+      "max_retries": 1,
+      "backoff_type": "none",
+      "has_jitter": false,
+      "evidence": "max_retries=1"
+    },
+    {
+      "repo": "celery/celery",
+      "file": "t/integration/tasks.py",
+      "line": 258,
+      "pattern": "generic_max_retries",
+      "max_retries": 1,
+      "backoff_type": "none",
+      "has_jitter": false,
+      "evidence": "max_retries=1"
+    },
+    {
+      "repo": "celery/celery",
+      "file": "celery/app/task.py",
+      "line": 199,
+      "pattern": "generic_max_retries",
+      "max_retries": 3,
+      "backoff_type": "linear",
+      "has_jitter": false,
+      "evidence": "max_retries = 3"
+    },
+    {
+      "repo": "celery/celery",
+      "file": "celery/backends/elasticsearch.py",
+      "line": 47,
+      "pattern": "generic_max_retries",
+      "max_retries": 3,
+      "backoff_type": "none",
+      "has_jitter": false,
+      "evidence": "max_retries = 3"
+    },
+    {
+      "repo": "celery/celery",
+      "file": "celery/backends/gcs.py",
+      "line": 127,
+      "pattern": "generic_max_retries",
+      "max_retries": 3,
+      "backoff_type": "none",
+      "has_jitter": false,
+      "evidence": "max_retries=3"
+    },
+    {
+      "repo": "celery/celery",
+      "file": "celery/worker/consumer/delayed_delivery.py",
+      "line": 31,
+      "pattern": "generic_max_retries",
+      "max_retries": 3,
+      "backoff_type": "linear",
+      "has_jitter": false,
+      "evidence": "MAX_RETRIES = 3"
+    },
+    {
+      "repo": "hatchet-dev/hatchet",
+      "file": "sdks/python/hatchet_sdk/clients/rest/tenacity_utils.py",
+      "line": 19,
+      "pattern": "python_tenacity",
+      "max_retries": null,
+      "backoff_type": "exponential",
+      "has_jitter": true,
+      "evidence": "tenacity.retry"
+    },
+    {
+      "repo": "hatchet-dev/hatchet",
+      "file": "sdks/python/hatchet_sdk/clients/rest/tenacity_utils.py",
+      "line": 24,
+      "pattern": "python_tenacity",
+      "max_retries": null,
+      "backoff_type": "exponential",
+      "has_jitter": true,
+      "evidence": "tenacity.retry"
+    },
+    {
+      "repo": "hatchet-dev/hatchet",
+      "file": "sdks/python/hatchet_sdk/clients/rest/tenacity_utils.py",
+      "line": 28,
+      "pattern": "python_tenacity",
+      "max_retries": null,
+      "backoff_type": "none",
+      "has_jitter": false,
+      "evidence": "tenacity.Retry"
+    },
+    {
+      "repo": "hatchet-dev/hatchet",
+      "file": "sdks/typescript/src/v1/examples/non_retryable/workflow.ts",
+      "line": 14,
+      "pattern": "js_retries",
+      "max_retries": 1,
+      "backoff_type": "none",
+      "has_jitter": false,
+      "evidence": "retries: 1"
+    },
+    {
+      "repo": "hatchet-dev/hatchet",
+      "file": "sdks/typescript/src/v1/examples/non_retryable/workflow.ts",
+      "line": 24,
+      "pattern": "js_retries",
+      "max_retries": 1,
+      "backoff_type": "none",
+      "has_jitter": false,
+      "evidence": "retries: 1"
+    },
+    {
+      "repo": "hatchet-dev/hatchet",
+      "file": "sdks/typescript/src/v1/examples/retries/workflow.ts",
+      "line": 7,
+      "pattern": "js_retries",
+      "max_retries": 3,
+      "backoff_type": "none",
+      "has_jitter": false,
+      "evidence": "retries: 3"
+    },
+    {
+      "repo": "hatchet-dev/hatchet",
+      "file": "sdks/typescript/src/v1/examples/retries/workflow.ts",
+      "line": 17,
+      "pattern": "js_retries",
+      "max_retries": 3,
+      "backoff_type": "none",
+      "has_jitter": false,
+      "evidence": "retries: 3"
+    },
+    {
+      "repo": "hatchet-dev/hatchet",
+      "file": "sdks/typescript/src/v1/examples/retries/workflow.ts",
+      "line": 38,
+      "pattern": "js_retries",
+      "max_retries": 10,
+      "backoff_type": "linear",
+      "has_jitter": false,
+      "evidence": "retries: 10"
+    },
+    {
+      "repo": "hatchet-dev/hatchet",
+      "file": "sdks/typescript/src/v1/client/worker/worker-internal.ts",
+      "line": 283,
+      "pattern": "js_retries",
+      "max_retries": 0,
+      "backoff_type": "none",
+      "has_jitter": false,
+      "evidence": "retries: 0"
+    },
+    {
+      "repo": "hatchet-dev/hatchet",
+      "file": "sdks/typescript/src/v1/client/worker/worker-internal.ts",
+      "line": 322,
+      "pattern": "js_retries",
+      "max_retries": 0,
+      "backoff_type": "none",
+      "has_jitter": false,
+      "evidence": "retries: 0"
+    },
+    {
+      "repo": "hatchet-dev/hatchet",
+      "file": "sdks/typescript/src/protoc/v1/workflows.ts",
+      "line": 1710,
+      "pattern": "js_retries",
+      "max_retries": 0,
+      "backoff_type": "linear",
+      "has_jitter": false,
+      "evidence": "retries: 0"
+    },
+    {
+      "repo": "hatchet-dev/hatchet",
+      "file": "sdks/typescript/src/protoc/workflows/workflows.ts",
+      "line": 1214,
+      "pattern": "js_retries",
+      "max_retries": 0,
+      "backoff_type": "linear",
+      "has_jitter": false,
+      "evidence": "retries: 0"
+    },
+    {
+      "repo": "hatchet-dev/hatchet",
+      "file": "internal/queueutils/backoff.go",
+      "line": 9,
+      "pattern": "go_exponential",
+      "max_retries": null,
+      "backoff_type": "exponential",
+      "has_jitter": true,
+      "evidence": "ExponentialBackoff"
+    },
+    {
+      "repo": "hatchet-dev/hatchet",
+      "file": "internal/queueutils/backoff.go",
+      "line": 12,
+      "pattern": "go_exponential",
+      "max_retries": null,
+      "backoff_type": "exponential",
+      "has_jitter": true,
+      "evidence": "ExponentialBackoff"
+    },
+    {
+      "repo": "hatchet-dev/hatchet",
+      "file": "internal/services/dispatcher/dispatcher_v1.go",
+      "line": 289,
+      "pattern": "go_exponential",
+      "max_retries": null,
+      "backoff_type": "exponential",
+      "has_jitter": false,
+      "evidence": "ExponentialBackoff"
+    },
+    {
+      "repo": "hatchet-dev/hatchet",
+      "file": "internal/msgqueue/rabbitmq/rabbitmq.go",
+      "line": 895,
+      "pattern": "go_exponential",
+      "max_retries": null,
+      "backoff_type": "exponential",
+      "has_jitter": false,
+      "evidence": "ExponentialBackoff"
+    },
+    {
+      "repo": "hatchet-dev/hatchet",
+      "file": "examples/typescript/non_retryable/workflow.ts",
+      "line": 14,
+      "pattern": "js_retries",
+      "max_retries": 1,
+      "backoff_type": "none",
+      "has_jitter": false,
+      "evidence": "retries: 1"
+    },
+    {
+      "repo": "hatchet-dev/hatchet",
+      "file": "examples/typescript/non_retryable/workflow.ts",
+      "line": 23,
+      "pattern": "js_retries",
+      "max_retries": 1,
+      "backoff_type": "none",
+      "has_jitter": false,
+      "evidence": "retries: 1"
+    },
+    {
+      "repo": "hatchet-dev/hatchet",
+      "file": "examples/typescript/retries/workflow.ts",
+      "line": 6,
+      "pattern": "js_retries",
+      "max_retries": 3,
+      "backoff_type": "none",
+      "has_jitter": false,
+      "evidence": "retries: 3"
+    },
+    {
+      "repo": "hatchet-dev/hatchet",
+      "file": "examples/typescript/retries/workflow.ts",
+      "line": 15,
+      "pattern": "js_retries",
+      "max_retries": 3,
+      "backoff_type": "none",
+      "has_jitter": false,
+      "evidence": "retries: 3"
+    },
+    {
+      "repo": "hatchet-dev/hatchet",
+      "file": "examples/typescript/retries/workflow.ts",
+      "line": 35,
+      "pattern": "js_retries",
+      "max_retries": 10,
+      "backoff_type": "linear",
+      "has_jitter": false,
+      "evidence": "retries: 10"
+    },
+    {
+      "repo": "run-house/kubetorch",
+      "file": "python_client/kubetorch/serving/remote_worker_pool.py",
+      "line": 238,
+      "pattern": "generic_max_retries",
+      "max_retries": 3,
+      "backoff_type": "linear",
+      "has_jitter": false,
+      "evidence": "max_retries = 3"
+    },
+    {
+      "repo": "run-house/kubetorch",
+      "file": "python_client/kubetorch/data_store/rsync_client.py",
+      "line": 37,
+      "pattern": "generic_max_retries",
+      "max_retries": 3,
+      "backoff_type": "linear",
+      "has_jitter": false,
+      "evidence": "MAX_RETRIES = 3"
+    },
+    {
+      "repo": "modal-labs/modal-examples",
+      "file": "06_gpu_and_ml/unsloth_finetune.py",
+      "line": 105,
+      "pattern": "generic_max_retries",
+      "max_retries": 3,
+      "backoff_type": "none",
+      "has_jitter": false,
+      "evidence": "MAX_RETRIES = 3"
+    },
+    {
+      "repo": "modal-labs/modal-examples",
+      "file": "06_gpu_and_ml/langchains/potus_speech_qanda.py",
+      "line": 66,
+      "pattern": "generic_max_retries",
+      "max_retries": 3,
+      "backoff_type": "exponential",
+      "has_jitter": false,
+      "evidence": "max_retries=3"
+    },
+    {
+      "repo": "OpenBMB/IoA",
+      "file": "im_client/server_helper.py",
+      "line": 27,
+      "pattern": "python_decorator",
+      "max_retries": null,
+      "backoff_type": "exponential",
+      "has_jitter": false,
+      "evidence": "@retry("
+    },
+    {
+      "repo": "OpenBMB/IoA",
+      "file": "im_client/server_helper.py",
+      "line": 56,
+      "pattern": "python_decorator",
+      "max_retries": null,
+      "backoff_type": "exponential",
+      "has_jitter": false,
+      "evidence": "@retry("
+    },
+    {
+      "repo": "OpenBMB/IoA",
+      "file": "im_client/server_helper.py",
+      "line": 81,
+      "pattern": "python_decorator",
+      "max_retries": null,
+      "backoff_type": "exponential",
+      "has_jitter": false,
+      "evidence": "@retry("
+    },
+    {
+      "repo": "OpenBMB/IoA",
+      "file": "im_client/server_helper.py",
+      "line": 108,
+      "pattern": "python_decorator",
+      "max_retries": null,
+      "backoff_type": "exponential",
+      "has_jitter": false,
+      "evidence": "@retry("
+    },
+    {
+      "repo": "OpenBMB/IoA",
+      "file": "im_client/agents/open_interpreter/open_interpreter_agent.py",
+      "line": 36,
+      "pattern": "generic_max_retries",
+      "max_retries": 20,
+      "backoff_type": "none",
+      "has_jitter": false,
+      "evidence": "max_retries = 20"
+    },
+    {
+      "repo": "OpenBMB/IoA",
+      "file": "im_client/agents/open_interpreter/open_interpreter_agent.py",
+      "line": 39,
+      "pattern": "generic_max_retries",
+      "max_retries": 5,
+      "backoff_type": "none",
+      "has_jitter": false,
+      "evidence": "max_retries=5"
+    },
+    {
+      "repo": "OpenBMB/IoA",
+      "file": "im_client/agents/open_interpreter/open_interpreter_agent.py",
+      "line": 110,
+      "pattern": "generic_max_retries",
+      "max_retries": 3,
+      "backoff_type": "linear",
+      "has_jitter": false,
+      "evidence": "max_retries = 3"
+    },
+    {
+      "repo": "OpenBMB/IoA",
+      "file": "im_client/agents/autogpt/autogpt_adapter.py",
+      "line": 226,
+      "pattern": "generic_max_retries",
+      "max_retries": 5,
+      "backoff_type": "none",
+      "has_jitter": false,
+      "evidence": "max_retries = 5"
+    },
+    {
+      "repo": "OpenBMB/IoA",
+      "file": "im_client/llms/openai.py",
+      "line": 105,
+      "pattern": "python_decorator",
+      "max_retries": null,
+      "backoff_type": "exponential",
+      "has_jitter": false,
+      "evidence": "@retry("
+    },
+    {
+      "repo": "OpenBMB/IoA",
+      "file": "im_client/llms/openai.py",
+      "line": 219,
+      "pattern": "python_decorator",
+      "max_retries": null,
+      "backoff_type": "exponential",
+      "has_jitter": false,
+      "evidence": "@retry("
+    },
+    {
+      "repo": "OpenBMB/IoA",
+      "file": "im_client/llms/openai.py",
+      "line": 384,
+      "pattern": "python_decorator",
+      "max_retries": null,
+      "backoff_type": "exponential",
+      "has_jitter": false,
+      "evidence": "@retry("
+    },
+    {
+      "repo": "OpenBMB/IoA",
+      "file": "common/utils/milvus_utils.py",
+      "line": 123,
+      "pattern": "python_decorator",
+      "max_retries": null,
+      "backoff_type": "exponential",
+      "has_jitter": false,
+      "evidence": "@retry("
+    },
+    {
+      "repo": "OpenBMB/IoA",
+      "file": "im_server/frontend/src/App.js",
+      "line": 47,
+      "pattern": "generic_max_retries",
+      "max_retries": 3,
+      "backoff_type": "none",
+      "has_jitter": false,
+      "evidence": "MAX_RETRIES = 3"
+    },
+    {
+      "repo": "robertvoy/ComfyUI-Distributed",
+      "file": "web/constants.js",
+      "line": 155,
+      "pattern": "js_retries",
+      "max_retries": 3,
+      "backoff_type": "exponential",
+      "has_jitter": false,
+      "evidence": "RETRIES: 3"
+    },
+    {
+      "repo": "VOLTTRON/volttron",
+      "file": "volttron/utils/rmq_setup.py",
+      "line": 720,
+      "pattern": "generic_max_retries",
+      "max_retries": 12,
+      "backoff_type": "none",
+      "has_jitter": false,
+      "evidence": "max_retries=12"
+    },
+    {
+      "repo": "VOLTTRON/volttron",
+      "file": "volttron/utils/rmq_setup.py",
+      "line": 866,
+      "pattern": "generic_max_retries",
+      "max_retries": 12,
+      "backoff_type": "none",
+      "has_jitter": false,
+      "evidence": "max_retries=12"
+    },
+    {
+      "repo": "VOLTTRON/volttron",
+      "file": "volttron/utils/rmq_setup.py",
+      "line": 1047,
+      "pattern": "generic_max_retries",
+      "max_retries": 12,
+      "backoff_type": "none",
+      "has_jitter": false,
+      "evidence": "max_retries=12"
+    },
+    {
+      "repo": "VOLTTRON/volttron",
+      "file": "volttron/utils/rmq_setup.py",
+      "line": 1113,
+      "pattern": "generic_max_retries",
+      "max_retries": 12,
+      "backoff_type": "none",
+      "has_jitter": false,
+      "evidence": "max_retries=12"
+    },
+    {
+      "repo": "VOLTTRON/volttron",
+      "file": "volttron/utils/rmq_setup.py",
+      "line": 1208,
+      "pattern": "generic_max_retries",
+      "max_retries": 12,
+      "backoff_type": "none",
+      "has_jitter": false,
+      "evidence": "max_retries=12"
+    },
+    {
+      "repo": "VOLTTRON/volttron",
+      "file": "volttron/utils/rmq_setup.py",
+      "line": 1263,
+      "pattern": "generic_max_retries",
+      "max_retries": 12,
+      "backoff_type": "none",
+      "has_jitter": false,
+      "evidence": "max_retries=12"
+    },
+    {
+      "repo": "modal-labs/modal-client",
+      "file": "modal/retries.py",
+      "line": 32,
+      "pattern": "generic_max_retries",
+      "max_retries": 2,
+      "backoff_type": "exponential",
+      "has_jitter": false,
+      "evidence": "max_retries=2"
+    },
+    {
+      "repo": "modal-labs/modal-client",
+      "file": "modal/retries.py",
+      "line": 44,
+      "pattern": "generic_max_retries",
+      "max_retries": 4,
+      "backoff_type": "exponential",
+      "has_jitter": false,
+      "evidence": "max_retries=4"
+    },
+    {
+      "repo": "modal-labs/modal-client",
+      "file": "modal/volume.py",
+      "line": 673,
+      "pattern": "python_decorator",
+      "max_retries": null,
+      "backoff_type": "linear",
+      "has_jitter": false,
+      "evidence": "@retry("
+    },
+    {
+      "repo": "modal-labs/modal-client",
+      "file": "modal/volume.py",
+      "line": 732,
+      "pattern": "python_decorator",
+      "max_retries": null,
+      "backoff_type": "linear",
+      "has_jitter": false,
+      "evidence": "@retry("
+    },
+    {
+      "repo": "modal-labs/modal-client",
+      "file": "modal/volume.py",
+      "line": 1295,
+      "pattern": "python_decorator",
+      "max_retries": null,
+      "backoff_type": "linear",
+      "has_jitter": false,
+      "evidence": "@retry("
+    },
+    {
+      "repo": "modal-labs/modal-client",
+      "file": "modal/volume.py",
+      "line": 573,
+      "pattern": "generic_max_retries",
+      "max_retries": 90,
+      "backoff_type": "linear",
+      "has_jitter": false,
+      "evidence": "max_retries=90"
+    },
+    {
+      "repo": "modal-labs/modal-client",
+      "file": "modal/parallel_map.py",
+      "line": 49,
+      "pattern": "generic_max_retries",
+      "max_retries": 8,
+      "backoff_type": "linear",
+      "has_jitter": false,
+      "evidence": "MAX_RETRIES = 8"
+    },
+    {
+      "repo": "modal-labs/modal-client",
+      "file": "modal/parallel_map.py",
+      "line": 479,
+      "pattern": "generic_max_retries",
+      "max_retries": 20,
+      "backoff_type": "none",
+      "has_jitter": false,
+      "evidence": "max_retries=20"
+    },
+    {
+      "repo": "modal-labs/modal-client",
+      "file": "modal/parallel_map.py",
+      "line": 862,
+      "pattern": "generic_max_retries",
+      "max_retries": 20,
+      "backoff_type": "linear",
+      "has_jitter": false,
+      "evidence": "max_retries=20"
+    },
+    {
+      "repo": "modal-labs/modal-client",
+      "file": "modal/_utils/async_utils.py",
+      "line": 358,
+      "pattern": "python_decorator",
+      "max_retries": null,
+      "backoff_type": "exponential",
+      "has_jitter": false,
+      "evidence": "@retry("
+    },
+    {
+      "repo": "modal-labs/modal-client",
+      "file": "modal/_utils/async_utils.py",
+      "line": 398,
+      "pattern": "python_decorator",
+      "max_retries": null,
+      "backoff_type": "linear",
+      "has_jitter": false,
+      "evidence": "@retry("
+    },
+    {
+      "repo": "modal-labs/modal-client",
+      "file": "modal/_utils/blob_utils.py",
+      "line": 61,
+      "pattern": "python_decorator",
+      "max_retries": null,
+      "backoff_type": "linear",
+      "has_jitter": false,
+      "evidence": "@retry("
+    },
+    {
+      "repo": "modal-labs/modal-client",
+      "file": "modal/_utils/blob_utils.py",
+      "line": 313,
+      "pattern": "python_decorator",
+      "max_retries": null,
+      "backoff_type": "linear",
+      "has_jitter": false,
+      "evidence": "@retry("
+    },
+    {
+      "repo": "modal-labs/modal-client",
+      "file": "modal/_utils/grpc_utils.py",
+      "line": 208,
+      "pattern": "python_decorator",
+      "max_retries": null,
+      "backoff_type": "linear",
+      "has_jitter": false,
+      "evidence": "@retry("
+    },
+    {
+      "repo": "modal-labs/modal-client",
+      "file": "modal/_runtime/container_io_manager.py",
+      "line": 1085,
+      "pattern": "generic_max_retries",
+      "max_retries": 9,
+      "backoff_type": "linear",
+      "has_jitter": false,
+      "evidence": "max_retries=9"
+    },
+    {
+      "repo": "hashview/hashview",
+      "file": "install/hashview-agent/agent/http/http.py",
+      "line": 14,
+      "pattern": "python_urllib3",
+      "max_retries": 100,
+      "backoff_type": "linear",
+      "has_jitter": false,
+      "evidence": "Retry(total=100"
+    },
+    {
+      "repo": "AnubisLMS/Anubis",
+      "file": "theia/autograde/anubis_autograde/exercise/pipeline.py",
+      "line": 15,
+      "pattern": "python_decorator",
+      "max_retries": null,
+      "backoff_type": "none",
+      "has_jitter": false,
+      "evidence": "@retry("
+    },
+    {
+      "repo": "adidas/lakehouse-engine",
+      "file": "lakehouse_engine/utils/sharepoint_utils.py",
+      "line": 108,
+      "pattern": "python_decorator",
+      "max_retries": null,
+      "backoff_type": "exponential",
+      "has_jitter": false,
+      "evidence": "@retry("
+    },
+    {
+      "repo": "allenai/genesys",
+      "file": "model_discovery/agents/search_utils.py",
+      "line": 718,
+      "pattern": "generic_max_retries",
+      "max_retries": 3,
+      "backoff_type": "linear",
+      "has_jitter": false,
+      "evidence": "max_retries=3"
+    },
+    {
+      "repo": "lzjever/routilux",
+      "file": "playground/retry_serialization_demo/retry_demo.py",
+      "line": 73,
+      "pattern": "generic_max_retries",
+      "max_retries": 4,
+      "backoff_type": "linear",
+      "has_jitter": false,
+      "evidence": "max_retries=4"
+    },
+    {
+      "repo": "lzjever/routilux",
+      "file": "playground/retry_serialization_demo/showcase_scenarios.py",
+      "line": 228,
+      "pattern": "generic_max_retries",
+      "max_retries": 4,
+      "backoff_type": "linear",
+      "has_jitter": false,
+      "evidence": "max_retries=4"
+    },
+    {
+      "repo": "lzjever/routilux",
+      "file": "playground/retry_serialization_demo/showcase_scenarios.py",
+      "line": 244,
+      "pattern": "generic_max_retries",
+      "max_retries": 3,
+      "backoff_type": "linear",
+      "has_jitter": false,
+      "evidence": "max_retries=3"
+    },
+    {
+      "repo": "lzjever/routilux",
+      "file": "playground/retry_serialization_demo/enhanced_retry_demo.py",
+      "line": 165,
+      "pattern": "generic_max_retries",
+      "max_retries": 4,
+      "backoff_type": "linear",
+      "has_jitter": false,
+      "evidence": "max_retries=4"
+    },
+    {
+      "repo": "lzjever/routilux",
+      "file": "routilux/routine.py",
+      "line": 600,
+      "pattern": "generic_max_retries",
+      "max_retries": 3,
+      "backoff_type": "none",
+      "has_jitter": false,
+      "evidence": "max_retries=3"
+    },
+    {
+      "repo": "lzjever/routilux",
+      "file": "routilux/routine.py",
+      "line": 649,
+      "pattern": "generic_max_retries",
+      "max_retries": 5,
+      "backoff_type": "linear",
+      "has_jitter": false,
+      "evidence": "max_retries=5"
+    },
+    {
+      "repo": "lzjever/routilux",
+      "file": "routilux/error_handler.py",
+      "line": 100,
+      "pattern": "generic_max_retries",
+      "max_retries": 5,
+      "backoff_type": "linear",
+      "has_jitter": false,
+      "evidence": "max_retries=5"
+    },
+    {
+      "repo": "lzjever/routilux",
+      "file": "routilux/error_handler.py",
+      "line": 110,
+      "pattern": "generic_max_retries",
+      "max_retries": 3,
+      "backoff_type": "none",
+      "has_jitter": false,
+      "evidence": "max_retries=3"
+    },
+    {
+      "repo": "lzjever/routilux",
+      "file": "routilux/error_handler.py",
+      "line": 160,
+      "pattern": "generic_max_retries",
+      "max_retries": 5,
+      "backoff_type": "exponential",
+      "has_jitter": false,
+      "evidence": "max_retries=5"
+    },
+    {
+      "repo": "lzjever/routilux",
+      "file": "routilux/flow/flow.py",
+      "line": 80,
+      "pattern": "generic_max_retries",
+      "max_retries": 3,
+      "backoff_type": "none",
+      "has_jitter": false,
+      "evidence": "max_retries=3"
+    },
+    {
+      "repo": "lzjever/routilux",
+      "file": "routilux/flow/state_management.py",
+      "line": 253,
+      "pattern": "generic_max_retries",
+      "max_retries": 0,
+      "backoff_type": "none",
+      "has_jitter": false,
+      "evidence": "max_retries = 0"
+    },
+    {
+      "repo": "lzjever/routilux",
+      "file": "examples/llm_agent_complex_demo.py",
+      "line": 537,
+      "pattern": "generic_max_retries",
+      "max_retries": 2,
+      "backoff_type": "linear",
+      "has_jitter": false,
+      "evidence": "max_retries=2"
+    },
+    {
+      "repo": "lzjever/routilux",
+      "file": "examples/builtin_routines_demo.py",
+      "line": 114,
+      "pattern": "generic_max_retries",
+      "max_retries": 3,
+      "backoff_type": "linear",
+      "has_jitter": false,
+      "evidence": "max_retries=3"
+    },
+    {
+      "repo": "lzjever/routilux",
+      "file": "examples/complex_routine_demo.py",
+      "line": 83,
+      "pattern": "generic_max_retries",
+      "max_retries": 3,
+      "backoff_type": "exponential",
+      "has_jitter": false,
+      "evidence": "max_retries=3"
+    },
+    {
+      "repo": "lzjever/routilux",
+      "file": "examples/retry_with_router_demo.py",
+      "line": 148,
+      "pattern": "generic_max_retries",
+      "max_retries": 3,
+      "backoff_type": "none",
+      "has_jitter": false,
+      "evidence": "max_retries=3"
+    },
+    {
+      "repo": "lzjever/routilux",
+      "file": "examples/retry_with_router_demo.py",
+      "line": 228,
+      "pattern": "generic_max_retries",
+      "max_retries": 2,
+      "backoff_type": "none",
+      "has_jitter": false,
+      "evidence": "max_retries=2"
+    },
+    {
+      "repo": "lzjever/routilux",
+      "file": "examples/error_handling_example.py",
+      "line": 63,
+      "pattern": "generic_max_retries",
+      "max_retries": 5,
+      "backoff_type": "linear",
+      "has_jitter": false,
+      "evidence": "max_retries=5"
+    },
+    {
+      "repo": "PrimeIntellect-ai/prime",
+      "file": "packages/prime-evals/src/prime_evals/evals.py",
+      "line": 254,
+      "pattern": "python_decorator",
+      "max_retries": null,
+      "backoff_type": "exponential",
+      "has_jitter": false,
+      "evidence": "@retry("
+    },
+    {
+      "repo": "PrimeIntellect-ai/prime",
+      "file": "packages/prime-evals/src/prime_evals/evals.py",
+      "line": 585,
+      "pattern": "python_decorator",
+      "max_retries": null,
+      "backoff_type": "exponential",
+      "has_jitter": false,
+      "evidence": "@retry("
+    },
+    {
+      "repo": "PrimeIntellect-ai/prime",
+      "file": "packages/prime-sandboxes/src/prime_sandboxes/core/client.py",
+      "line": 88,
+      "pattern": "python_decorator",
+      "max_retries": null,
+      "backoff_type": "exponential",
+      "has_jitter": false,
+      "evidence": "@retry("
+    },
+    {
+      "repo": "PrimeIntellect-ai/prime",
+      "file": "packages/prime-sandboxes/src/prime_sandboxes/core/client.py",
+      "line": 199,
+      "pattern": "python_decorator",
+      "max_retries": null,
+      "backoff_type": "exponential",
+      "has_jitter": false,
+      "evidence": "@retry("
+    },
+    {
+      "repo": "nvidia-cosmos/cosmos-curate",
+      "file": "benchmarks/cloudevent.py",
+      "line": 27,
+      "pattern": "python_tenacity",
+      "max_retries": null,
+      "backoff_type": "exponential",
+      "has_jitter": false,
+      "evidence": "tenacity.retry"
+    },
+    {
+      "repo": "nvidia-cosmos/cosmos-curate",
+      "file": "benchmarks/secrets.py",
+      "line": 35,
+      "pattern": "python_tenacity",
+      "max_retries": null,
+      "backoff_type": "exponential",
+      "has_jitter": false,
+      "evidence": "tenacity.retry"
+    },
+    {
+      "repo": "nvidia-cosmos/cosmos-curate",
+      "file": "cosmos_curate/core/utils/storage/presigned_s3_zip.py",
+      "line": 298,
+      "pattern": "generic_max_retries",
+      "max_retries": 3,
+      "backoff_type": "none",
+      "has_jitter": false,
+      "evidence": "max_retries = 3"
+    },
+    {
+      "repo": "nvidia-cosmos/cosmos-curate",
+      "file": "cosmos_curate/core/utils/db/database_types.py",
+      "line": 185,
+      "pattern": "python_tenacity",
+      "max_retries": null,
+      "backoff_type": "linear",
+      "has_jitter": false,
+      "evidence": "tenacity.retry"
+    },
+    {
+      "repo": "nvidia-cosmos/cosmos-curate",
+      "file": "cosmos_curate/pipelines/video/captioning/api_caption_stage.py",
+      "line": 262,
+      "pattern": "python_tenacity",
+      "max_retries": null,
+      "backoff_type": "linear",
+      "has_jitter": false,
+      "evidence": "tenacity.retry"
+    },
+    {
+      "repo": "nvidia-cosmos/cosmos-curate",
+      "file": "cosmos_curate/pipelines/video/captioning/api_caption_stage.py",
+      "line": 265,
+      "pattern": "python_tenacity",
+      "max_retries": null,
+      "backoff_type": "linear",
+      "has_jitter": false,
+      "evidence": "tenacity.retry"
+    },
+    {
+      "repo": "nvidia-cosmos/cosmos-curate",
+      "file": "cosmos_curate/pipelines/video/captioning/vllm_caption_stage.py",
+      "line": 514,
+      "pattern": "python_tenacity",
+      "max_retries": null,
+      "backoff_type": "none",
+      "has_jitter": false,
+      "evidence": "tenacity.retry"
+    },
+    {
+      "repo": "nvidia-cosmos/cosmos-curate",
+      "file": "cosmos_curate/scripts/onto_slurm.py",
+      "line": 332,
+      "pattern": "python_tenacity",
+      "max_retries": null,
+      "backoff_type": "linear",
+      "has_jitter": false,
+      "evidence": "tenacity.retry"
+    },
+    {
+      "repo": "nvidia-cosmos/cosmos-curate",
+      "file": "cosmos_curate/scripts/onto_slurm.py",
+      "line": 395,
+      "pattern": "python_tenacity",
+      "max_retries": null,
+      "backoff_type": "linear",
+      "has_jitter": false,
+      "evidence": "tenacity.retry"
+    }
+  ],
+  "repositories": [
+    {
+      "name": "jina-ai/serve",
+      "language": "Python",
+      "has_retry": false,
+      "retry_count": 0,
+      "anti_patterns": []
+    },
+    {
+      "name": "falconry/falcon",
+      "language": "Python",
+      "has_retry": false,
+      "retry_count": 0,
+      "anti_patterns": []
+    },
+    {
+      "name": "emissary-ingress/emissary",
+      "language": "Python",
+      "has_retry": false,
+      "retry_count": 0,
+      "anti_patterns": []
+    },
+    {
+      "name": "ml-tooling/opyrator",
+      "language": "Python",
+      "has_retry": false,
+      "retry_count": 0,
+      "anti_patterns": []
+    },
+    {
+      "name": "cheshire-cat-ai/core",
+      "language": "Python",
+      "has_retry": false,
+      "retry_count": 0,
+      "anti_patterns": []
+    },
+    {
+      "name": "NVIDIA/nv-ingest",
+      "language": "Python",
+      "has_retry": true,
+      "retry_count": 4,
+      "anti_patterns": [
+        "no_backoff"
+      ]
+    },
+    {
+      "name": "umermansoor/microservices",
+      "language": "Python",
+      "has_retry": false,
+      "retry_count": 0,
+      "anti_patterns": []
+    },
+    {
+      "name": "yashab-cyber/HackGpt",
+      "language": "Python",
+      "has_retry": false,
+      "retry_count": 0,
+      "anti_patterns": []
+    },
+    {
+      "name": "minos-framework/minos-python",
+      "language": "Python",
+      "has_retry": false,
+      "retry_count": 0,
+      "anti_patterns": []
+    },
+    {
+      "name": "GetBindu/Bindu",
+      "language": "Python",
+      "has_retry": false,
+      "retry_count": 0,
+      "anti_patterns": []
+    },
+    {
+      "name": "kimtth/software-architect-mindmap",
+      "language": "Python",
+      "has_retry": false,
+      "retry_count": 0,
+      "anti_patterns": []
+    },
+    {
+      "name": "dymmond/ravyn",
+      "language": "Python",
+      "has_retry": false,
+      "retry_count": 0,
+      "anti_patterns": []
+    },
+    {
+      "name": "Agentfy-io/Agentfy",
+      "language": "Python",
+      "has_retry": false,
+      "retry_count": 0,
+      "anti_patterns": []
+    },
+    {
+      "name": "AgnetLabs/Laddr",
+      "language": "Python",
+      "has_retry": true,
+      "retry_count": 2,
+      "anti_patterns": [
+        "aggressive_retry",
+        "missing_jitter"
+      ]
+    },
+    {
+      "name": "fizzbee-io/fizzbee",
+      "language": "Python",
+      "has_retry": false,
+      "retry_count": 0,
+      "anti_patterns": []
+    },
+    {
+      "name": "alechilczenko/kimi",
+      "language": "Python",
+      "has_retry": false,
+      "retry_count": 0,
+      "anti_patterns": []
+    },
+    {
+      "name": "armadaplatform/armada",
+      "language": "Python",
+      "has_retry": false,
+      "retry_count": 0,
+      "anti_patterns": []
+    },
+    {
+      "name": "kalaspuff/tomodachi",
+      "language": "Python",
+      "has_retry": false,
+      "retry_count": 0,
+      "anti_patterns": []
+    },
+    {
+      "name": "DaoCloud/DaoCloud-docs",
+      "language": "Python",
+      "has_retry": false,
+      "retry_count": 0,
+      "anti_patterns": []
+    },
+    {
+      "name": "keijack/python-eureka-client",
+      "language": "Python",
+      "has_retry": false,
+      "retry_count": 0,
+      "anti_patterns": []
+    },
+    {
+      "name": "Hecate2/Ignareo-ISML-auto-voter",
+      "language": "Python",
+      "has_retry": false,
+      "retry_count": 0,
+      "anti_patterns": []
+    },
+    {
+      "name": "apidoorman/doorman",
+      "language": "Python",
+      "has_retry": true,
+      "retry_count": 3,
+      "anti_patterns": [
+        "no_backoff"
+      ]
+    },
+    {
+      "name": "yandex/yandex-taxi-testsuite",
+      "language": "Python",
+      "has_retry": false,
+      "retry_count": 0,
+      "anti_patterns": []
+    },
+    {
+      "name": "shanbay/sea",
+      "language": "Python",
+      "has_retry": false,
+      "retry_count": 0,
+      "anti_patterns": []
+    },
+    {
+      "name": "rclement/mailer",
+      "language": "Python",
+      "has_retry": false,
+      "retry_count": 0,
+      "anti_patterns": []
+    },
+    {
+      "name": "tangpan360/MicroRCA-Agent",
+      "language": "Python",
+      "has_retry": true,
+      "retry_count": 1,
+      "anti_patterns": [
+        "no_backoff"
+      ]
+    },
+    {
+      "name": "open-edge-platform/edge-ai-libraries",
+      "language": "Python",
+      "has_retry": true,
+      "retry_count": 7,
+      "anti_patterns": [
+        "no_backoff",
+        "aggressive_retry"
+      ]
+    },
+    {
+      "name": "GoogleCloudPlatform/cloud-run-microservice-template-python",
+      "language": "Python",
+      "has_retry": false,
+      "retry_count": 0,
+      "anti_patterns": []
+    },
+    {
+      "name": "Pathwit/file2md",
+      "language": "Python",
+      "has_retry": false,
+      "retry_count": 0,
+      "anti_patterns": []
+    },
+    {
+      "name": "freelawproject/doctor",
+      "language": "Python",
+      "has_retry": false,
+      "retry_count": 0,
+      "anti_patterns": []
+    },
+    {
+      "name": "roma-glushko/hyx",
+      "language": "Python",
+      "has_retry": true,
+      "retry_count": 14,
+      "anti_patterns": []
+    },
+    {
+      "name": "aws-samples/observability-with-amazon-opensearch",
+      "language": "Python",
+      "has_retry": true,
+      "retry_count": 4,
+      "anti_patterns": [
+        "no_backoff"
+      ]
+    },
+    {
+      "name": "steemit/hivemind",
+      "language": "Python",
+      "has_retry": false,
+      "retry_count": 0,
+      "anti_patterns": []
+    },
+    {
+      "name": "aws-containers/eks-app-mesh-polyglot-demo",
+      "language": "Python",
+      "has_retry": false,
+      "retry_count": 0,
+      "anti_patterns": []
+    },
+    {
+      "name": "mSvcBench/muBench",
+      "language": "Python",
+      "has_retry": false,
+      "retry_count": 0,
+      "anti_patterns": []
+    },
+    {
+      "name": "ultra1971/algotrading_stack",
+      "language": "Python",
+      "has_retry": false,
+      "retry_count": 0,
+      "anti_patterns": []
+    },
+    {
+      "name": "community-of-python/microbootstrap",
+      "language": "Python",
+      "has_retry": false,
+      "retry_count": 0,
+      "anti_patterns": []
+    },
+    {
+      "name": "zd87pl/ai-crypto-trader",
+      "language": "Python",
+      "has_retry": true,
+      "retry_count": 23,
+      "anti_patterns": [
+        "aggressive_retry"
+      ]
+    },
+    {
+      "name": "daquintero/piel",
+      "language": "Python",
+      "has_retry": false,
+      "retry_count": 0,
+      "anti_patterns": []
+    },
+    {
+      "name": "mcgoon/MetaAurora",
+      "language": "Python",
+      "has_retry": false,
+      "retry_count": 0,
+      "anti_patterns": []
+    },
+    {
+      "name": "IBM/ada",
+      "language": "Python",
+      "has_retry": false,
+      "retry_count": 0,
+      "anti_patterns": []
+    },
+    {
+      "name": "xfenix/spellcheck-microservice",
+      "language": "Python",
+      "has_retry": false,
+      "retry_count": 0,
+      "anti_patterns": []
+    },
+    {
+      "name": "taogeYT/fast-grpc",
+      "language": "Python",
+      "has_retry": false,
+      "retry_count": 0,
+      "anti_patterns": []
+    },
+    {
+      "name": "monoscuits/OptiTruck_ML",
+      "language": "Python",
+      "has_retry": false,
+      "retry_count": 0,
+      "anti_patterns": []
+    },
+    {
+      "name": "needful-apps/Gunter",
+      "language": "Python",
+      "has_retry": false,
+      "retry_count": 0,
+      "anti_patterns": []
+    },
+    {
+      "name": "permitio/opal",
+      "language": "Python",
+      "has_retry": false,
+      "retry_count": 0,
+      "anti_patterns": []
+    },
+    {
+      "name": "spec-first/connexion",
+      "language": "Python",
+      "has_retry": false,
+      "retry_count": 0,
+      "anti_patterns": []
+    },
+    {
+      "name": "kennethreitz/responder",
+      "language": "Python",
+      "has_retry": false,
+      "retry_count": 0,
+      "anti_patterns": []
+    },
+    {
+      "name": "vmagamedov/grpclib",
+      "language": "Python",
+      "has_retry": false,
+      "retry_count": 0,
+      "anti_patterns": []
+    },
+    {
+      "name": "cloudblue/django-cqrs",
+      "language": "Python",
+      "has_retry": false,
+      "retry_count": 0,
+      "anti_patterns": []
+    },
+    {
+      "name": "ithaka/apiron",
+      "language": "Python",
+      "has_retry": false,
+      "retry_count": 0,
+      "anti_patterns": []
+    },
+    {
+      "name": "linto-ai/linto-stt",
+      "language": "Python",
+      "has_retry": false,
+      "retry_count": 0,
+      "anti_patterns": []
+    },
+    {
+      "name": "dymmond/asyncmq",
+      "language": "Python",
+      "has_retry": false,
+      "retry_count": 0,
+      "anti_patterns": []
+    },
+    {
+      "name": "Sharan-Kumar-R/Custom-MCP-Server",
+      "language": "Python",
+      "has_retry": false,
+      "retry_count": 0,
+      "anti_patterns": []
+    },
+    {
+      "name": "juntossomosmais/django-outbox-pattern",
+      "language": "Python",
+      "has_retry": false,
+      "retry_count": 0,
+      "anti_patterns": []
+    },
+    {
+      "name": "deepspeedai/DeepSpeed",
+      "language": "Python",
+      "has_retry": false,
+      "retry_count": 0,
+      "anti_patterns": []
+    },
+    {
+      "name": "ray-project/ray",
+      "language": "Python",
+      "has_retry": false,
+      "retry_count": 0,
+      "anti_patterns": []
+    },
+    {
+      "name": "celery/celery",
+      "language": "Python",
+      "has_retry": true,
+      "retry_count": 10,
+      "anti_patterns": [
+        "no_backoff"
+      ]
+    },
+    {
+      "name": "horovod/horovod",
+      "language": "Python",
+      "has_retry": false,
+      "retry_count": 0,
+      "anti_patterns": []
+    },
+    {
+      "name": "optuna/optuna",
+      "language": "Python",
+      "has_retry": false,
+      "retry_count": 0,
+      "anti_patterns": []
+    },
+    {
+      "name": "modin-project/modin",
+      "language": "Python",
+      "has_retry": false,
+      "retry_count": 0,
+      "anti_patterns": []
+    },
+    {
+      "name": "huggingface/accelerate",
+      "language": "Python",
+      "has_retry": false,
+      "retry_count": 0,
+      "anti_patterns": []
+    },
+    {
+      "name": "NVIDIA/apex",
+      "language": "Python",
+      "has_retry": false,
+      "retry_count": 0,
+      "anti_patterns": []
+    },
+    {
+      "name": "hyperopt/hyperopt",
+      "language": "Python",
+      "has_retry": false,
+      "retry_count": 0,
+      "anti_patterns": []
+    },
+    {
+      "name": "mher/flower",
+      "language": "Python",
+      "has_retry": false,
+      "retry_count": 0,
+      "anti_patterns": []
+    },
+    {
+      "name": "hatchet-dev/hatchet",
+      "language": "Python",
+      "has_retry": true,
+      "retry_count": 21,
+      "anti_patterns": [
+        "no_backoff",
+        "aggressive_retry",
+        "missing_jitter"
+      ]
+    },
+    {
+      "name": "DEAP/deap",
+      "language": "Python",
+      "has_retry": false,
+      "retry_count": 0,
+      "anti_patterns": []
+    },
+    {
+      "name": "netalertx/NetAlertX",
+      "language": "Python",
+      "has_retry": false,
+      "retry_count": 0,
+      "anti_patterns": []
+    },
+    {
+      "name": "FedML-AI/FedML",
+      "language": "Python",
+      "has_retry": false,
+      "retry_count": 0,
+      "anti_patterns": []
+    },
+    {
+      "name": "huggingface/safetensors",
+      "language": "Python",
+      "has_retry": false,
+      "retry_count": 0,
+      "anti_patterns": []
+    },
+    {
+      "name": "PaddlePaddle/PARL",
+      "language": "Python",
+      "has_retry": false,
+      "retry_count": 0,
+      "anti_patterns": []
+    },
+    {
+      "name": "tensorflow/lingvo",
+      "language": "Python",
+      "has_retry": false,
+      "retry_count": 0,
+      "anti_patterns": []
+    },
+    {
+      "name": "python-arq/arq",
+      "language": "Python",
+      "has_retry": false,
+      "retry_count": 0,
+      "anti_patterns": []
+    },
+    {
+      "name": "quay/quay",
+      "language": "Python",
+      "has_retry": false,
+      "retry_count": 0,
+      "anti_patterns": []
+    },
+    {
+      "name": "palahsu/DDoS-Ripper",
+      "language": "Python",
+      "has_retry": false,
+      "retry_count": 0,
+      "anti_patterns": []
+    },
+    {
+      "name": "mitogen-hq/mitogen",
+      "language": "Python",
+      "has_retry": false,
+      "retry_count": 0,
+      "anti_patterns": []
+    },
+    {
+      "name": "Lightning-AI/torchmetrics",
+      "language": "Python",
+      "has_retry": false,
+      "retry_count": 0,
+      "anti_patterns": []
+    },
+    {
+      "name": "fugue-project/fugue",
+      "language": "Python",
+      "has_retry": false,
+      "retry_count": 0,
+      "anti_patterns": []
+    },
+    {
+      "name": "deedy5/ddgs",
+      "language": "Python",
+      "has_retry": false,
+      "retry_count": 0,
+      "anti_patterns": []
+    },
+    {
+      "name": "huggingface/picotron",
+      "language": "Python",
+      "has_retry": false,
+      "retry_count": 0,
+      "anti_patterns": []
+    },
+    {
+      "name": "taskiq-python/taskiq",
+      "language": "Python",
+      "has_retry": false,
+      "retry_count": 0,
+      "anti_patterns": []
+    },
+    {
+      "name": "uber/petastorm",
+      "language": "Python",
+      "has_retry": false,
+      "retry_count": 0,
+      "anti_patterns": []
+    },
+    {
+      "name": "EMI-Group/evox",
+      "language": "Python",
+      "has_retry": false,
+      "retry_count": 0,
+      "anti_patterns": []
+    },
+    {
+      "name": "pytest-dev/pytest-xdist",
+      "language": "Python",
+      "has_retry": false,
+      "retry_count": 0,
+      "anti_patterns": []
+    },
+    {
+      "name": "ceph/ceph-ansible",
+      "language": "Python",
+      "has_retry": false,
+      "retry_count": 0,
+      "anti_patterns": []
+    },
+    {
+      "name": "Yelp/paasta",
+      "language": "Python",
+      "has_retry": false,
+      "retry_count": 0,
+      "anti_patterns": []
+    },
+    {
+      "name": "dask/distributed",
+      "language": "Python",
+      "has_retry": false,
+      "retry_count": 0,
+      "anti_patterns": []
+    },
+    {
+      "name": "intelligent-machine-learning/dlrover",
+      "language": "Python",
+      "has_retry": false,
+      "retry_count": 0,
+      "anti_patterns": []
+    },
+    {
+      "name": "ByteDance-Seed/VeOmni",
+      "language": "Python",
+      "has_retry": false,
+      "retry_count": 0,
+      "anti_patterns": []
+    },
+    {
+      "name": "opendilab/DI-star",
+      "language": "Python",
+      "has_retry": false,
+      "retry_count": 0,
+      "anti_patterns": []
+    },
+    {
+      "name": "ByteDance-Seed/Triton-distributed",
+      "language": "Python",
+      "has_retry": false,
+      "retry_count": 0,
+      "anti_patterns": []
+    },
+    {
+      "name": "Haidra-Org/AI-Horde",
+      "language": "Python",
+      "has_retry": false,
+      "retry_count": 0,
+      "anti_patterns": []
+    },
+    {
+      "name": "canonical/snapcraft",
+      "language": "Python",
+      "has_retry": false,
+      "retry_count": 0,
+      "anti_patterns": []
+    },
+    {
+      "name": "brainix/pottery",
+      "language": "Python",
+      "has_retry": false,
+      "retry_count": 0,
+      "anti_patterns": []
+    },
+    {
+      "name": "Netflix/repokid",
+      "language": "Python",
+      "has_retry": false,
+      "retry_count": 0,
+      "anti_patterns": []
+    },
+    {
+      "name": "tiangolo/dockerswarm.rocks",
+      "language": "Python",
+      "has_retry": false,
+      "retry_count": 0,
+      "anti_patterns": []
+    },
+    {
+      "name": "run-house/kubetorch",
+      "language": "Python",
+      "has_retry": true,
+      "retry_count": 2,
+      "anti_patterns": []
+    },
+    {
+      "name": "nnaisense/evotorch",
+      "language": "Python",
+      "has_retry": false,
+      "retry_count": 0,
+      "anti_patterns": []
+    },
+    {
+      "name": "GradientHQ/parallax",
+      "language": "Python",
+      "has_retry": false,
+      "retry_count": 0,
+      "anti_patterns": []
+    },
+    {
+      "name": "modal-labs/modal-examples",
+      "language": "Python",
+      "has_retry": true,
+      "retry_count": 2,
+      "anti_patterns": [
+        "no_backoff",
+        "missing_jitter"
+      ]
+    },
+    {
+      "name": "inference-labs-inc/dsperse",
+      "language": "Python",
+      "has_retry": false,
+      "retry_count": 0,
+      "anti_patterns": []
+    },
+    {
+      "name": "volcengine/veScale",
+      "language": "Python",
+      "has_retry": false,
+      "retry_count": 0,
+      "anti_patterns": []
+    },
+    {
+      "name": "ydf0509/funboost",
+      "language": "Python",
+      "has_retry": false,
+      "retry_count": 0,
+      "anti_patterns": []
+    },
+    {
+      "name": "AgileRL/AgileRL",
+      "language": "Python",
+      "has_retry": false,
+      "retry_count": 0,
+      "anti_patterns": []
+    },
+    {
+      "name": "PrimeIntellect-ai/prime-diloco",
+      "language": "Python",
+      "has_retry": false,
+      "retry_count": 0,
+      "anti_patterns": []
+    },
+    {
+      "name": "optuna/optuna-examples",
+      "language": "Python",
+      "has_retry": false,
+      "retry_count": 0,
+      "anti_patterns": []
+    },
+    {
+      "name": "citusdata/django-multitenant",
+      "language": "Python",
+      "has_retry": false,
+      "retry_count": 0,
+      "anti_patterns": []
+    },
+    {
+      "name": "OpenBMB/IoA",
+      "language": "Python",
+      "has_retry": true,
+      "retry_count": 13,
+      "anti_patterns": [
+        "no_backoff",
+        "aggressive_retry",
+        "missing_jitter"
+      ]
+    },
+    {
+      "name": "internetarchive/brozzler",
+      "language": "Python",
+      "has_retry": false,
+      "retry_count": 0,
+      "anti_patterns": []
+    },
+    {
+      "name": "hyperledger-indy/indy-node",
+      "language": "Python",
+      "has_retry": false,
+      "retry_count": 0,
+      "anti_patterns": []
+    },
+    {
+      "name": "census-instrumentation/opencensus-python",
+      "language": "Python",
+      "has_retry": false,
+      "retry_count": 0,
+      "anti_patterns": []
+    },
+    {
+      "name": "jupyter-server/enterprise_gateway",
+      "language": "Python",
+      "has_retry": false,
+      "retry_count": 0,
+      "anti_patterns": []
+    },
+    {
+      "name": "koordinates/kart",
+      "language": "Python",
+      "has_retry": false,
+      "retry_count": 0,
+      "anti_patterns": []
+    },
+    {
+      "name": "oduwsdl/ipwb",
+      "language": "Python",
+      "has_retry": false,
+      "retry_count": 0,
+      "anti_patterns": []
+    },
+    {
+      "name": "Pyrlang/Pyrlang",
+      "language": "Python",
+      "has_retry": false,
+      "retry_count": 0,
+      "anti_patterns": []
+    },
+    {
+      "name": "SandAI-org/MagiAttention",
+      "language": "Python",
+      "has_retry": false,
+      "retry_count": 0,
+      "anti_patterns": []
+    },
+    {
+      "name": "pingcap/docs",
+      "language": "Python",
+      "has_retry": false,
+      "retry_count": 0,
+      "anti_patterns": []
+    },
+    {
+      "name": "wakatime/wakaq",
+      "language": "Python",
+      "has_retry": false,
+      "retry_count": 0,
+      "anti_patterns": []
+    },
+    {
+      "name": "LambdaLabsML/distributed-training-guide",
+      "language": "Python",
+      "has_retry": false,
+      "retry_count": 0,
+      "anti_patterns": []
+    },
+    {
+      "name": "IBM/federated-learning-lib",
+      "language": "Python",
+      "has_retry": false,
+      "retry_count": 0,
+      "anti_patterns": []
+    },
+    {
+      "name": "markqvist/LXMF",
+      "language": "Python",
+      "has_retry": false,
+      "retry_count": 0,
+      "anti_patterns": []
+    },
+    {
+      "name": "floooh/fips",
+      "language": "Python",
+      "has_retry": false,
+      "retry_count": 0,
+      "anti_patterns": []
+    },
+    {
+      "name": "terrytangyuan/distributed-ml-patterns",
+      "language": "Python",
+      "has_retry": false,
+      "retry_count": 0,
+      "anti_patterns": []
+    },
+    {
+      "name": "robertvoy/ComfyUI-Distributed",
+      "language": "Python",
+      "has_retry": true,
+      "retry_count": 1,
+      "anti_patterns": [
+        "missing_jitter"
+      ]
+    },
+    {
+      "name": "VOLTTRON/volttron",
+      "language": "Python",
+      "has_retry": true,
+      "retry_count": 6,
+      "anti_patterns": [
+        "no_backoff",
+        "aggressive_retry"
+      ]
+    },
+    {
+      "name": "jr-robotics/robo-gym",
+      "language": "Python",
+      "has_retry": false,
+      "retry_count": 0,
+      "anti_patterns": []
+    },
+    {
+      "name": "CERT-Polska/karton",
+      "language": "Python",
+      "has_retry": false,
+      "retry_count": 0,
+      "anti_patterns": []
+    },
+    {
+      "name": "maze-agent/Maze",
+      "language": "Python",
+      "has_retry": false,
+      "retry_count": 0,
+      "anti_patterns": []
+    },
+    {
+      "name": "cr0hn/aiotasks",
+      "language": "Python",
+      "has_retry": false,
+      "retry_count": 0,
+      "anti_patterns": []
+    },
+    {
+      "name": "modal-labs/modal-client",
+      "language": "Python",
+      "has_retry": true,
+      "retry_count": 15,
+      "anti_patterns": [
+        "no_backoff",
+        "aggressive_retry",
+        "missing_jitter"
+      ]
+    },
+    {
+      "name": "labgrid-project/labgrid",
+      "language": "Python",
+      "has_retry": false,
+      "retry_count": 0,
+      "anti_patterns": []
+    },
+    {
+      "name": "Eclectic-Sheep/sheeprl",
+      "language": "Python",
+      "has_retry": false,
+      "retry_count": 0,
+      "anti_patterns": []
+    },
+    {
+      "name": "Oneflow-Inc/libai",
+      "language": "Python",
+      "has_retry": false,
+      "retry_count": 0,
+      "anti_patterns": []
+    },
+    {
+      "name": "RTimothyEdwards/open_pdks",
+      "language": "Python",
+      "has_retry": false,
+      "retry_count": 0,
+      "anti_patterns": []
+    },
+    {
+      "name": "hashview/hashview",
+      "language": "Python",
+      "has_retry": true,
+      "retry_count": 1,
+      "anti_patterns": [
+        "aggressive_retry"
+      ]
+    },
+    {
+      "name": "tensorflow/cloud",
+      "language": "Python",
+      "has_retry": false,
+      "retry_count": 0,
+      "anti_patterns": []
+    },
+    {
+      "name": "team-ocean/veros",
+      "language": "Python",
+      "has_retry": false,
+      "retry_count": 0,
+      "anti_patterns": []
+    },
+    {
+      "name": "AnubisLMS/Anubis",
+      "language": "Python",
+      "has_retry": true,
+      "retry_count": 1,
+      "anti_patterns": [
+        "no_backoff"
+      ]
+    },
+    {
+      "name": "py-sherlock/sherlock",
+      "language": "Python",
+      "has_retry": false,
+      "retry_count": 0,
+      "anti_patterns": []
+    },
+    {
+      "name": "brainiak/brainiak",
+      "language": "Python",
+      "has_retry": false,
+      "retry_count": 0,
+      "anti_patterns": []
+    },
+    {
+      "name": "JiuZero/z0scan",
+      "language": "Python",
+      "has_retry": false,
+      "retry_count": 0,
+      "anti_patterns": []
+    },
+    {
+      "name": "lithops-cloud/lithops",
+      "language": "Python",
+      "has_retry": false,
+      "retry_count": 0,
+      "anti_patterns": []
+    },
+    {
+      "name": "bodo-ai/Bodo",
+      "language": "Python",
+      "has_retry": false,
+      "retry_count": 0,
+      "anti_patterns": []
+    },
+    {
+      "name": "wolph/portalocker",
+      "language": "Python",
+      "has_retry": false,
+      "retry_count": 0,
+      "anti_patterns": []
+    },
+    {
+      "name": "nabla-ml/nabla",
+      "language": "Python",
+      "has_retry": false,
+      "retry_count": 0,
+      "anti_patterns": []
+    },
+    {
+      "name": "selinon/selinon",
+      "language": "Python",
+      "has_retry": false,
+      "retry_count": 0,
+      "anti_patterns": []
+    },
+    {
+      "name": "bobbui/json-logging-python",
+      "language": "Python",
+      "has_retry": false,
+      "retry_count": 0,
+      "anti_patterns": []
+    },
+    {
+      "name": "kubernetes-sigs/jobset",
+      "language": "Python",
+      "has_retry": false,
+      "retry_count": 0,
+      "anti_patterns": []
+    },
+    {
+      "name": "DeNA/HandyRL",
+      "language": "Python",
+      "has_retry": false,
+      "retry_count": 0,
+      "anti_patterns": []
+    },
+    {
+      "name": "goodboy/tractor",
+      "language": "Python",
+      "has_retry": false,
+      "retry_count": 0,
+      "anti_patterns": []
+    },
+    {
+      "name": "Epistimio/orion",
+      "language": "Python",
+      "has_retry": false,
+      "retry_count": 0,
+      "anti_patterns": []
+    },
+    {
+      "name": "Ibotta/sk-dist",
+      "language": "Python",
+      "has_retry": false,
+      "retry_count": 0,
+      "anti_patterns": []
+    },
+    {
+      "name": "enlite-ai/maze",
+      "language": "Python",
+      "has_retry": false,
+      "retry_count": 0,
+      "anti_patterns": []
+    },
+    {
+      "name": "hanruihua/rl_rvo_nav",
+      "language": "Python",
+      "has_retry": false,
+      "retry_count": 0,
+      "anti_patterns": []
+    },
+    {
+      "name": "adidas/lakehouse-engine",
+      "language": "Python",
+      "has_retry": true,
+      "retry_count": 1,
+      "anti_patterns": [
+        "missing_jitter"
+      ]
+    },
+    {
+      "name": "NVIDIA-NeMo/Automodel",
+      "language": "Python",
+      "has_retry": false,
+      "retry_count": 0,
+      "anti_patterns": []
+    },
+    {
+      "name": "dask/dask-jobqueue",
+      "language": "Python",
+      "has_retry": false,
+      "retry_count": 0,
+      "anti_patterns": []
+    },
+    {
+      "name": "chairc/Integrated-Design-Diffusion-Model",
+      "language": "Python",
+      "has_retry": false,
+      "retry_count": 0,
+      "anti_patterns": []
+    },
+    {
+      "name": "meta-pytorch/torcheval",
+      "language": "Python",
+      "has_retry": false,
+      "retry_count": 0,
+      "anti_patterns": []
+    },
+    {
+      "name": "zh320/realtime-semantic-segmentation-pytorch",
+      "language": "Python",
+      "has_retry": false,
+      "retry_count": 0,
+      "anti_patterns": []
+    },
+    {
+      "name": "gaetanlhf/EXPOSE",
+      "language": "Python",
+      "has_retry": false,
+      "retry_count": 0,
+      "anti_patterns": []
+    },
+    {
+      "name": "helmholtz-analytics/heat",
+      "language": "Python",
+      "has_retry": false,
+      "retry_count": 0,
+      "anti_patterns": []
+    },
+    {
+      "name": "dask/dask-image",
+      "language": "Python",
+      "has_retry": false,
+      "retry_count": 0,
+      "anti_patterns": []
+    },
+    {
+      "name": "guapier/zi5book",
+      "language": "Python",
+      "has_retry": false,
+      "retry_count": 0,
+      "anti_patterns": []
+    },
+    {
+      "name": "ICB-DCM/pyABC",
+      "language": "Python",
+      "has_retry": false,
+      "retry_count": 0,
+      "anti_patterns": []
+    },
+    {
+      "name": "chiragbiradar/DDoS-Attack-Detection-and-Mitigation",
+      "language": "Python",
+      "has_retry": false,
+      "retry_count": 0,
+      "anti_patterns": []
+    },
+    {
+      "name": "harveybc/gym-fx",
+      "language": "Python",
+      "has_retry": false,
+      "retry_count": 0,
+      "anti_patterns": []
+    },
+    {
+      "name": "ChenHongruixuan/BRIGHT",
+      "language": "Python",
+      "has_retry": false,
+      "retry_count": 0,
+      "anti_patterns": []
+    },
+    {
+      "name": "AndyGrant/OpenBench",
+      "language": "Python",
+      "has_retry": false,
+      "retry_count": 0,
+      "anti_patterns": []
+    },
+    {
+      "name": "tum-ens/urbs",
+      "language": "Python",
+      "has_retry": false,
+      "retry_count": 0,
+      "anti_patterns": []
+    },
+    {
+      "name": "MLOPTPSU/FedTorch",
+      "language": "Python",
+      "has_retry": false,
+      "retry_count": 0,
+      "anti_patterns": []
+    },
+    {
+      "name": "aio-libs/aiozipkin",
+      "language": "Python",
+      "has_retry": false,
+      "retry_count": 0,
+      "anti_patterns": []
+    },
+    {
+      "name": "papuSpartan/stable-diffusion-webui-distributed",
+      "language": "Python",
+      "has_retry": false,
+      "retry_count": 0,
+      "anti_patterns": []
+    },
+    {
+      "name": "breezy-team/breezy",
+      "language": "Python",
+      "has_retry": false,
+      "retry_count": 0,
+      "anti_patterns": []
+    },
+    {
+      "name": "Toloka/dbt-af",
+      "language": "Python",
+      "has_retry": false,
+      "retry_count": 0,
+      "anti_patterns": []
+    },
+    {
+      "name": "google/xarray-beam",
+      "language": "Python",
+      "has_retry": false,
+      "retry_count": 0,
+      "anti_patterns": []
+    },
+    {
+      "name": "meta-pytorch/torchsnapshot",
+      "language": "Python",
+      "has_retry": false,
+      "retry_count": 0,
+      "anti_patterns": []
+    },
+    {
+      "name": "allenai/genesys",
+      "language": "Python",
+      "has_retry": true,
+      "retry_count": 1,
+      "anti_patterns": []
+    },
+    {
+      "name": "NetEase-Media/grps_trtllm",
+      "language": "Python",
+      "has_retry": false,
+      "retry_count": 0,
+      "anti_patterns": []
+    },
+    {
+      "name": "MolSSI/QCFractal",
+      "language": "Python",
+      "has_retry": false,
+      "retry_count": 0,
+      "anti_patterns": []
+    },
+    {
+      "name": "long2ice/rearq",
+      "language": "Python",
+      "has_retry": false,
+      "retry_count": 0,
+      "anti_patterns": []
+    },
+    {
+      "name": "traceloop/opentelemetry-mcp-server",
+      "language": "Python",
+      "has_retry": false,
+      "retry_count": 0,
+      "anti_patterns": []
+    },
+    {
+      "name": "dptech-corp/Uni-Core",
+      "language": "Python",
+      "has_retry": false,
+      "retry_count": 0,
+      "anti_patterns": []
+    },
+    {
+      "name": "kubeedge/ianvs",
+      "language": "Python",
+      "has_retry": false,
+      "retry_count": 0,
+      "anti_patterns": []
+    },
+    {
+      "name": "lzjever/routilux",
+      "language": "Python",
+      "has_retry": true,
+      "retry_count": 17,
+      "anti_patterns": [
+        "no_backoff",
+        "missing_jitter"
+      ]
+    },
+    {
+      "name": "alibaba/graphlearn-for-pytorch",
+      "language": "Python",
+      "has_retry": false,
+      "retry_count": 0,
+      "anti_patterns": []
+    },
+    {
+      "name": "benroeder/conductor",
+      "language": "Python",
+      "has_retry": false,
+      "retry_count": 0,
+      "anti_patterns": []
+    },
+    {
+      "name": "PrimeIntellect-ai/prime",
+      "language": "Python",
+      "has_retry": true,
+      "retry_count": 4,
+      "anti_patterns": [
+        "missing_jitter"
+      ]
+    },
+    {
+      "name": "akashblackhat/DDos_Attack.py",
+      "language": "Python",
+      "has_retry": false,
+      "retry_count": 0,
+      "anti_patterns": []
+    },
+    {
+      "name": "nvidia-cosmos/cosmos-curate",
+      "language": "Python",
+      "has_retry": true,
+      "retry_count": 9,
+      "anti_patterns": [
+        "no_backoff",
+        "missing_jitter"
+      ]
+    },
+    {
+      "name": "aws-solutions/network-orchestration-for-aws-transit-gateway",
+      "language": "Python",
+      "has_retry": false,
+      "retry_count": 0,
+      "anti_patterns": []
+    },
+    {
+      "name": "thenetcircle/dino",
+      "language": "Python",
+      "has_retry": false,
+      "retry_count": 0,
+      "anti_patterns": []
+    },
+    {
+      "name": "schatty/oprl",
+      "language": "Python",
+      "has_retry": false,
+      "retry_count": 0,
+      "anti_patterns": []
+    },
+    {
+      "name": "closeio/redis-hashring",
+      "language": "Python",
+      "has_retry": false,
+      "retry_count": 0,
+      "anti_patterns": []
+    },
+    {
+      "name": "petuum/autodist",
+      "language": "Python",
+      "has_retry": false,
+      "retry_count": 0,
+      "anti_patterns": []
+    },
+    {
+      "name": "DASDAE/dascore",
+      "language": "Python",
+      "has_retry": false,
+      "retry_count": 0,
+      "anti_patterns": []
+    },
+    {
+      "name": "openstack/tooz",
+      "language": "Python",
+      "has_retry": false,
+      "retry_count": 0,
+      "anti_patterns": []
+    },
+    {
+      "name": "rqlite/pyrqlite",
+      "language": "Python",
+      "has_retry": false,
+      "retry_count": 0,
+      "anti_patterns": []
+    },
+    {
+      "name": "axsaucedo/kaos",
+      "language": "Python",
+      "has_retry": false,
+      "retry_count": 0,
+      "anti_patterns": []
+    },
+    {
+      "name": "HDFGroup/h5pyd",
+      "language": "Python",
+      "has_retry": false,
+      "retry_count": 0,
+      "anti_patterns": []
+    }
+  ]
+}

@@ -1,0 +1,37 @@
+\documentclass[11pt]{letter}
+\usepackage[margin=1in,top=0.7in,bottom=0.7in]{geometry}
+\usepackage{url}
+
+\signature{Rishabh Mehan \\ on behalf of both authors}
+\address{Rishabh Mehan \\ Software Engineering Research \\ darkrishabh@gmail.com}
+
+\begin{document}
+
+\begin{letter}{ICE2CPT 2026 Program Committee}
+
+\opening{Dear Program Committee,}
+
+We are pleased to submit the manuscript titled \textit{``Retry Amplification in Distributed Systems: A Systematic Analysis of Retry Policies and Their Role in Cascading Failures''} by Rishabh Mehan and Jasmit Kaur Saluja for consideration at ICE2CPT 2026.
+
+The paper addresses an understudied problem in distributed systems engineering: the emergent behavior of retry policies across multi-tier service architectures. Retry guidance is written for a single caller communicating with a single callee, and we found no prior systematic study of what those policies do collectively once every tier in a call path applies them simultaneously.
+
+The contributions are as follows:
+
+\begin{enumerate}
+    \item We formalize the \textbf{Retry Amplification Factor (RAF)}, a metric quantifying how retry policies multiply request volume during partial failures, and show that amplification compounds exponentially with service depth.
+
+    \item We present an \textbf{empirical study of 200 open-source Python microservice projects}. Explicit retry logic is detected in 11.5\%, and an audit of our own false negatives places true prevalence near 41\%. Among the projects detected, 60.9\% contain at least one configuration without backoff, and exactly one of 113 production configurations randomizes its delay after manual verification.
+
+    \item We provide \textbf{simulation evidence} ($n=100$ trials per configuration) that under correlated failure, standard retry policies achieve 25\% \textit{lower} success rates than no-retry baselines.
+
+    \item We propose the \textbf{Adaptive Retry Budgeting (ARB)} algorithm, which incorporates backpressure signals and dynamic budget adjustment, maintaining baseline success rates while limiting amplification to near 1.0$\times$.
+\end{enumerate}
+
+Two limitations are stated plainly in the manuscript. All 200 analyzed repositories are Python, so the figures characterize one ecosystem rather than the Go-dominated candidate pool; and the evaluation runs in simulation rather than production, which buys controlled comparison at the cost of fidelity.
+
+The manuscript is original work, has not been published elsewhere, and is not under consideration at any other venue. Both authors have approved its submission. Thank you for your consideration.
+
+\closing{Sincerely,}
+
+\end{letter}
+\end{document}

@@ -1,0 +1,2504 @@
+[
+  {
+    "file": "/var/folders/v2/8hjclk9x27980tc06stw37h80000gp/T/tmpffhwcrzb/sentry/sentry-master/src/sentry/tasks/commits.py",
+    "line": 82,
+    "type": "python_retry_decorator",
+    "max_retries": null,
+    "backoff_type": "linear",
+    "has_jitter": false,
+    "evidence": "@retry(exclude=(Release.DoesNotExist, User.DoesNotExist)"
+  },
+  {
+    "file": "/var/folders/v2/8hjclk9x27980tc06stw37h80000gp/T/tmpffhwcrzb/sentry/sentry-master/src/sentry/tasks/email.py",
+    "line": 79,
+    "type": "python_retry_decorator",
+    "max_retries": null,
+    "backoff_type": "linear",
+    "has_jitter": false,
+    "evidence": "@retry(on=(TemporaryEmailError,)"
+  },
+  {
+    "file": "/var/folders/v2/8hjclk9x27980tc06stw37h80000gp/T/tmpffhwcrzb/sentry/sentry-master/src/sentry/tasks/email.py",
+    "line": 91,
+    "type": "python_retry_decorator",
+    "max_retries": null,
+    "backoff_type": "linear",
+    "has_jitter": false,
+    "evidence": "@retry(on=(TemporaryEmailError,)"
+  },
+  {
+    "file": "/var/folders/v2/8hjclk9x27980tc06stw37h80000gp/T/tmpffhwcrzb/sentry/sentry-master/src/sentry/tasks/base.py",
+    "line": 122,
+    "type": "python_retry_decorator",
+    "max_retries": null,
+    "backoff_type": "none",
+    "has_jitter": false,
+    "evidence": "@retry(on=(Exception,)"
+  },
+  {
+    "file": "/var/folders/v2/8hjclk9x27980tc06stw37h80000gp/T/tmpffhwcrzb/sentry/sentry-master/src/sentry/tasks/codeowners/code_owners_auto_sync.py",
+    "line": 24,
+    "type": "python_retry_decorator",
+    "max_retries": null,
+    "backoff_type": "linear",
+    "has_jitter": false,
+    "evidence": "@retry(on=()"
+  },
+  {
+    "file": "/var/folders/v2/8hjclk9x27980tc06stw37h80000gp/T/tmpffhwcrzb/sentry/sentry-master/src/sentry/tasks/summaries/weekly_reports.py",
+    "line": 107,
+    "type": "python_retry_decorator",
+    "max_retries": null,
+    "backoff_type": "none",
+    "has_jitter": false,
+    "evidence": "@retry(timeouts=True)"
+  },
+  {
+    "file": "/var/folders/v2/8hjclk9x27980tc06stw37h80000gp/T/tmpffhwcrzb/sentry/sentry-master/src/sentry/feedback/endpoints/organization_feedback_summary.py",
+    "line": 38,
+    "type": "python_urllib3_retry",
+    "max_retries": 1,
+    "backoff_type": "linear",
+    "has_jitter": false,
+    "evidence": "Retry(total=1"
+  },
+  {
+    "file": "/var/folders/v2/8hjclk9x27980tc06stw37h80000gp/T/tmpffhwcrzb/sentry/sentry-master/src/sentry/feedback/endpoints/organization_feedback_categories.py",
+    "line": 35,
+    "type": "python_urllib3_retry",
+    "max_retries": 1,
+    "backoff_type": "linear",
+    "has_jitter": false,
+    "evidence": "Retry(total=1"
+  },
+  {
+    "file": "/var/folders/v2/8hjclk9x27980tc06stw37h80000gp/T/tmpffhwcrzb/sentry/sentry-master/src/sentry/integrations/tasks/update_comment.py",
+    "line": 26,
+    "type": "python_retry_decorator",
+    "max_retries": null,
+    "backoff_type": "linear",
+    "has_jitter": false,
+    "evidence": "@retry(exclude=(Integration.DoesNotExist)"
+  },
+  {
+    "file": "/var/folders/v2/8hjclk9x27980tc06stw37h80000gp/T/tmpffhwcrzb/sentry/sentry-master/src/sentry/integrations/tasks/sync_assignee_outbound.py",
+    "line": 36,
+    "type": "python_retry_decorator",
+    "max_retries": null,
+    "backoff_type": "linear",
+    "has_jitter": false,
+    "evidence": "@retry(\n    exclude=(\n        ExternalIssue.DoesNotExist,\n        Integration.DoesNotExist,\n        "
+  },
+  {
+    "file": "/var/folders/v2/8hjclk9x27980tc06stw37h80000gp/T/tmpffhwcrzb/sentry/sentry-master/src/sentry/integrations/tasks/kick_off_status_syncs.py",
+    "line": 14,
+    "type": "python_retry_decorator",
+    "max_retries": null,
+    "backoff_type": "linear",
+    "has_jitter": false,
+    "evidence": "@retry()"
+  },
+  {
+    "file": "/var/folders/v2/8hjclk9x27980tc06stw37h80000gp/T/tmpffhwcrzb/sentry/sentry-master/src/sentry/integrations/tasks/create_comment.py",
+    "line": 25,
+    "type": "python_retry_decorator",
+    "max_retries": null,
+    "backoff_type": "linear",
+    "has_jitter": false,
+    "evidence": "@retry(exclude=(Integration.DoesNotExist)"
+  },
+  {
+    "file": "/var/folders/v2/8hjclk9x27980tc06stw37h80000gp/T/tmpffhwcrzb/sentry/sentry-master/src/sentry/integrations/tasks/sync_status_outbound.py",
+    "line": 28,
+    "type": "python_retry_decorator",
+    "max_retries": null,
+    "backoff_type": "linear",
+    "has_jitter": false,
+    "evidence": "@retry(exclude=(Integration.DoesNotExist,)"
+  },
+  {
+    "file": "/var/folders/v2/8hjclk9x27980tc06stw37h80000gp/T/tmpffhwcrzb/sentry/sentry-master/src/sentry/integrations/tasks/sync_status_inbound.py",
+    "line": 199,
+    "type": "python_retry_decorator",
+    "max_retries": null,
+    "backoff_type": "linear",
+    "has_jitter": false,
+    "evidence": "@retry(exclude=(Integration.DoesNotExist,)"
+  },
+  {
+    "file": "/var/folders/v2/8hjclk9x27980tc06stw37h80000gp/T/tmpffhwcrzb/sentry/sentry-master/src/sentry/integrations/tasks/migrate_repo.py",
+    "line": 22,
+    "type": "python_retry_decorator",
+    "max_retries": null,
+    "backoff_type": "linear",
+    "has_jitter": false,
+    "evidence": "@retry(exclude=(Integration.DoesNotExist, Repository.DoesNotExist, Organization.DoesNotExist)"
+  },
+  {
+    "file": "/var/folders/v2/8hjclk9x27980tc06stw37h80000gp/T/tmpffhwcrzb/sentry/sentry-master/src/sentry/integrations/jira/tasks.py",
+    "line": 23,
+    "type": "python_retry_decorator",
+    "max_retries": null,
+    "backoff_type": "linear",
+    "has_jitter": false,
+    "evidence": "@retry(exclude=(Integration.DoesNotExist)"
+  },
+  {
+    "file": "/var/folders/v2/8hjclk9x27980tc06stw37h80000gp/T/tmpffhwcrzb/sentry/sentry-master/src/sentry/integrations/jira/tasks.py",
+    "line": 123,
+    "type": "python_retry_decorator",
+    "max_retries": null,
+    "backoff_type": "linear",
+    "has_jitter": false,
+    "evidence": "@retry(on=(IntegrationError,)"
+  },
+  {
+    "file": "/var/folders/v2/8hjclk9x27980tc06stw37h80000gp/T/tmpffhwcrzb/sentry/sentry-master/src/sentry/integrations/github/tasks/codecov_account_link.py",
+    "line": 28,
+    "type": "python_retry_decorator",
+    "max_retries": null,
+    "backoff_type": "none",
+    "has_jitter": false,
+    "evidence": "@retry(exclude=(ConfigurationError,)"
+  },
+  {
+    "file": "/var/folders/v2/8hjclk9x27980tc06stw37h80000gp/T/tmpffhwcrzb/sentry/sentry-master/src/sentry/integrations/github/tasks/codecov_account_link.py",
+    "line": 43,
+    "type": "python_retry_decorator",
+    "max_retries": null,
+    "backoff_type": "none",
+    "has_jitter": false,
+    "evidence": "@retry(exclude=(ConfigurationError,)"
+  },
+  {
+    "file": "/var/folders/v2/8hjclk9x27980tc06stw37h80000gp/T/tmpffhwcrzb/sentry/sentry-master/src/sentry/integrations/github/tasks/link_all_repos.py",
+    "line": 40,
+    "type": "python_retry_decorator",
+    "max_retries": null,
+    "backoff_type": "none",
+    "has_jitter": false,
+    "evidence": "@retry(exclude=(RepoExistsError, KeyError)"
+  },
+  {
+    "file": "/var/folders/v2/8hjclk9x27980tc06stw37h80000gp/T/tmpffhwcrzb/sentry/sentry-master/src/sentry/integrations/github/tasks/codecov_account_unlink.py",
+    "line": 23,
+    "type": "python_retry_decorator",
+    "max_retries": null,
+    "backoff_type": "none",
+    "has_jitter": false,
+    "evidence": "@retry(exclude=(ConfigurationError,)"
+  },
+  {
+    "file": "/var/folders/v2/8hjclk9x27980tc06stw37h80000gp/T/tmpffhwcrzb/sentry/sentry-master/src/sentry/integrations/opsgenie/tasks.py",
+    "line": 29,
+    "type": "python_retry_decorator",
+    "max_retries": null,
+    "backoff_type": "linear",
+    "has_jitter": false,
+    "evidence": "@retry(exclude=(Integration.DoesNotExist, OrganizationIntegration.DoesNotExist)"
+  },
+  {
+    "file": "/var/folders/v2/8hjclk9x27980tc06stw37h80000gp/T/tmpffhwcrzb/sentry/sentry-master/src/sentry/integrations/vsts/tasks/subscription_check.py",
+    "line": 22,
+    "type": "python_retry_decorator",
+    "max_retries": null,
+    "backoff_type": "linear",
+    "has_jitter": false,
+    "evidence": "@retry(exclude=(ApiError, ApiUnauthorized, Integration.DoesNotExist, IdentityNotValid)"
+  },
+  {
+    "file": "/var/folders/v2/8hjclk9x27980tc06stw37h80000gp/T/tmpffhwcrzb/sentry/sentry-master/src/sentry/integrations/vsts/tasks/kickoff_subscription_check.py",
+    "line": 19,
+    "type": "python_retry_decorator",
+    "max_retries": null,
+    "backoff_type": "linear",
+    "has_jitter": false,
+    "evidence": "@retry()"
+  },
+  {
+    "file": "/var/folders/v2/8hjclk9x27980tc06stw37h80000gp/T/tmpffhwcrzb/sentry/sentry-master/src/sentry/seer/breakpoints.py",
+    "line": 41,
+    "type": "python_urllib3_retry",
+    "max_retries": 5,
+    "backoff_type": "none",
+    "has_jitter": false,
+    "evidence": "Retry(\n        total=5"
+  },
+  {
+    "file": "/var/folders/v2/8hjclk9x27980tc06stw37h80000gp/T/tmpffhwcrzb/sentry/sentry-master/src/sentry/seer/anomaly_detection/get_historical_anomalies.py",
+    "line": 29,
+    "type": "python_urllib3_retry",
+    "max_retries": 2,
+    "backoff_type": "linear",
+    "has_jitter": false,
+    "evidence": "Retry(\n    total=2"
+  },
+  {
+    "file": "/var/folders/v2/8hjclk9x27980tc06stw37h80000gp/T/tmpffhwcrzb/sentry/sentry-master/src/sentry/seer/anomaly_detection/get_anomaly_data.py",
+    "line": 58,
+    "type": "python_urllib3_retry",
+    "max_retries": 2,
+    "backoff_type": "linear",
+    "has_jitter": false,
+    "evidence": "Retry(\n    total=2"
+  },
+  {
+    "file": "/var/folders/v2/8hjclk9x27980tc06stw37h80000gp/T/tmpffhwcrzb/sentry/sentry-master/src/sentry/seer/autofix/utils.py",
+    "line": 199,
+    "type": "python_urllib3_retry",
+    "max_retries": 2,
+    "backoff_type": "linear",
+    "has_jitter": false,
+    "evidence": "Retry(total=2"
+  },
+  {
+    "file": "/var/folders/v2/8hjclk9x27980tc06stw37h80000gp/T/tmpffhwcrzb/sentry/sentry-master/src/sentry/replays/usecases/delete.py",
+    "line": 215,
+    "type": "python_urllib3_retry",
+    "max_retries": 1,
+    "backoff_type": "linear",
+    "has_jitter": false,
+    "evidence": "Retry(total=1"
+  },
+  {
+    "file": "/var/folders/v2/8hjclk9x27980tc06stw37h80000gp/T/tmpffhwcrzb/sentry/sentry-master/src/sentry/hybridcloud/rpc/service.py",
+    "line": 657,
+    "type": "python_requests_retry",
+    "max_retries": null,
+    "backoff_type": "linear",
+    "has_jitter": false,
+    "evidence": "HTTPAdapter(\n            max_retries"
+  },
+  {
+    "file": "/var/folders/v2/8hjclk9x27980tc06stw37h80000gp/T/tmpffhwcrzb/sentry/sentry-master/src/sentry/workflow_engine/tasks/actions.py",
+    "line": 77,
+    "type": "python_retry_decorator",
+    "max_retries": null,
+    "backoff_type": "linear",
+    "has_jitter": false,
+    "evidence": "@retry(timeouts=True, raise_on_no_retries=False, ignore_and_capture=Action.DoesNotExist)"
+  },
+  {
+    "file": "/var/folders/v2/8hjclk9x27980tc06stw37h80000gp/T/tmpffhwcrzb/sentry/sentry-master/src/sentry/workflow_engine/tasks/delayed_workflows.py",
+    "line": 22,
+    "type": "python_retry_decorator",
+    "max_retries": null,
+    "backoff_type": "linear",
+    "has_jitter": false,
+    "evidence": "@retry(timeouts=True)"
+  },
+  {
+    "file": "/var/folders/v2/8hjclk9x27980tc06stw37h80000gp/T/tmpffhwcrzb/sentry/sentry-master/src/sentry/workflow_engine/tasks/workflows.py",
+    "line": 94,
+    "type": "python_retry_decorator",
+    "max_retries": null,
+    "backoff_type": "linear",
+    "has_jitter": false,
+    "evidence": "@retry(\n    timeouts=True,\n    exclude=EventNotFoundError,\n    ignore=(Group.DoesNotExist, Project.D"
+  },
+  {
+    "file": "/var/folders/v2/8hjclk9x27980tc06stw37h80000gp/T/tmpffhwcrzb/sentry/sentry-master/src/sentry/deletions/tasks/nodestore.py",
+    "line": 48,
+    "type": "python_retry_decorator",
+    "max_retries": null,
+    "backoff_type": "linear",
+    "has_jitter": false,
+    "evidence": "@retry(exclude=(DeleteAborted,)"
+  },
+  {
+    "file": "/var/folders/v2/8hjclk9x27980tc06stw37h80000gp/T/tmpffhwcrzb/sentry/sentry-master/src/sentry/deletions/tasks/groups.py",
+    "line": 23,
+    "type": "python_retry_decorator",
+    "max_retries": null,
+    "backoff_type": "linear",
+    "has_jitter": false,
+    "evidence": "@retry(exclude=(DeleteAborted,)"
+  },
+  {
+    "file": "/var/folders/v2/8hjclk9x27980tc06stw37h80000gp/T/tmpffhwcrzb/sentry/sentry-master/src/sentry/deletions/tasks/scheduled.py",
+    "line": 108,
+    "type": "python_retry_decorator",
+    "max_retries": null,
+    "backoff_type": "linear",
+    "has_jitter": false,
+    "evidence": "@retry(exclude=(DeleteAborted,)"
+  },
+  {
+    "file": "/var/folders/v2/8hjclk9x27980tc06stw37h80000gp/T/tmpffhwcrzb/sentry/sentry-master/src/sentry/deletions/tasks/scheduled.py",
+    "line": 129,
+    "type": "python_retry_decorator",
+    "max_retries": null,
+    "backoff_type": "linear",
+    "has_jitter": false,
+    "evidence": "@retry(exclude=(DeleteAborted,)"
+  },
+  {
+    "file": "/var/folders/v2/8hjclk9x27980tc06stw37h80000gp/T/tmpffhwcrzb/locust/locust-master/locust/rpc/zmqrpc.py",
+    "line": 24,
+    "type": "python_retry_decorator",
+    "max_retries": null,
+    "backoff_type": "none",
+    "has_jitter": false,
+    "evidence": "@retry()"
+  },
+  {
+    "file": "/var/folders/v2/8hjclk9x27980tc06stw37h80000gp/T/tmpffhwcrzb/locust/locust-master/locust/rpc/zmqrpc.py",
+    "line": 31,
+    "type": "python_retry_decorator",
+    "max_retries": null,
+    "backoff_type": "none",
+    "has_jitter": false,
+    "evidence": "@retry()"
+  },
+  {
+    "file": "/var/folders/v2/8hjclk9x27980tc06stw37h80000gp/T/tmpffhwcrzb/traefik/traefik-master/cmd/traefik/plugins.go",
+    "line": 40,
+    "type": "go_retry_config",
+    "max_retries": 3,
+    "backoff_type": "none",
+    "has_jitter": false,
+    "evidence": "RetryMax = 3"
+  },
+  {
+    "file": "/var/folders/v2/8hjclk9x27980tc06stw37h80000gp/T/tmpffhwcrzb/traefik/traefik-master/integration/retry_test.go",
+    "line": 55,
+    "type": "go_backoff",
+    "max_retries": null,
+    "backoff_type": "linear",
+    "has_jitter": false,
+    "evidence": "backoff."
+  },
+  {
+    "file": "/var/folders/v2/8hjclk9x27980tc06stw37h80000gp/T/tmpffhwcrzb/traefik/traefik-master/pkg/safe/routine_test.go",
+    "line": 131,
+    "type": "go_backoff",
+    "max_retries": null,
+    "backoff_type": "linear",
+    "has_jitter": false,
+    "evidence": "backoff."
+  },
+  {
+    "file": "/var/folders/v2/8hjclk9x27980tc06stw37h80000gp/T/tmpffhwcrzb/traefik/traefik-master/pkg/safe/routine_test.go",
+    "line": 131,
+    "type": "go_backoff",
+    "max_retries": null,
+    "backoff_type": "linear",
+    "has_jitter": false,
+    "evidence": "backoff."
+  },
+  {
+    "file": "/var/folders/v2/8hjclk9x27980tc06stw37h80000gp/T/tmpffhwcrzb/traefik/traefik-master/pkg/safe/routine_test.go",
+    "line": 141,
+    "type": "go_backoff",
+    "max_retries": null,
+    "backoff_type": "linear",
+    "has_jitter": false,
+    "evidence": "backoff."
+  },
+  {
+    "file": "/var/folders/v2/8hjclk9x27980tc06stw37h80000gp/T/tmpffhwcrzb/traefik/traefik-master/pkg/safe/routine_test.go",
+    "line": 141,
+    "type": "go_backoff",
+    "max_retries": null,
+    "backoff_type": "linear",
+    "has_jitter": false,
+    "evidence": "backoff."
+  },
+  {
+    "file": "/var/folders/v2/8hjclk9x27980tc06stw37h80000gp/T/tmpffhwcrzb/traefik/traefik-master/pkg/safe/routine_test.go",
+    "line": 151,
+    "type": "go_backoff",
+    "max_retries": null,
+    "backoff_type": "linear",
+    "has_jitter": false,
+    "evidence": "backoff."
+  },
+  {
+    "file": "/var/folders/v2/8hjclk9x27980tc06stw37h80000gp/T/tmpffhwcrzb/traefik/traefik-master/pkg/safe/routine_test.go",
+    "line": 151,
+    "type": "go_backoff",
+    "max_retries": null,
+    "backoff_type": "linear",
+    "has_jitter": false,
+    "evidence": "backoff."
+  },
+  {
+    "file": "/var/folders/v2/8hjclk9x27980tc06stw37h80000gp/T/tmpffhwcrzb/traefik/traefik-master/pkg/safe/routine.go",
+    "line": 69,
+    "type": "go_backoff",
+    "max_retries": null,
+    "backoff_type": "linear",
+    "has_jitter": false,
+    "evidence": "backoff."
+  },
+  {
+    "file": "/var/folders/v2/8hjclk9x27980tc06stw37h80000gp/T/tmpffhwcrzb/traefik/traefik-master/pkg/safe/routine.go",
+    "line": 69,
+    "type": "go_backoff",
+    "max_retries": null,
+    "backoff_type": "linear",
+    "has_jitter": false,
+    "evidence": "backoff."
+  },
+  {
+    "file": "/var/folders/v2/8hjclk9x27980tc06stw37h80000gp/T/tmpffhwcrzb/traefik/traefik-master/pkg/middlewares/retry/retry_test.go",
+    "line": 33,
+    "type": "go_retry_config",
+    "max_retries": 0,
+    "backoff_type": "linear",
+    "has_jitter": false,
+    "evidence": "RetryAttempts:     0"
+  },
+  {
+    "file": "/var/folders/v2/8hjclk9x27980tc06stw37h80000gp/T/tmpffhwcrzb/traefik/traefik-master/pkg/middlewares/retry/retry_test.go",
+    "line": 40,
+    "type": "go_retry_config",
+    "max_retries": 0,
+    "backoff_type": "linear",
+    "has_jitter": false,
+    "evidence": "RetryAttempts:     0"
+  },
+  {
+    "file": "/var/folders/v2/8hjclk9x27980tc06stw37h80000gp/T/tmpffhwcrzb/traefik/traefik-master/pkg/middlewares/retry/retry_test.go",
+    "line": 47,
+    "type": "go_retry_config",
+    "max_retries": 0,
+    "backoff_type": "linear",
+    "has_jitter": false,
+    "evidence": "RetryAttempts:     0"
+  },
+  {
+    "file": "/var/folders/v2/8hjclk9x27980tc06stw37h80000gp/T/tmpffhwcrzb/traefik/traefik-master/pkg/middlewares/retry/retry_test.go",
+    "line": 54,
+    "type": "go_retry_config",
+    "max_retries": 0,
+    "backoff_type": "linear",
+    "has_jitter": false,
+    "evidence": "RetryAttempts:     0"
+  },
+  {
+    "file": "/var/folders/v2/8hjclk9x27980tc06stw37h80000gp/T/tmpffhwcrzb/traefik/traefik-master/pkg/middlewares/retry/retry_test.go",
+    "line": 61,
+    "type": "go_retry_config",
+    "max_retries": 1,
+    "backoff_type": "linear",
+    "has_jitter": false,
+    "evidence": "RetryAttempts:     1"
+  },
+  {
+    "file": "/var/folders/v2/8hjclk9x27980tc06stw37h80000gp/T/tmpffhwcrzb/traefik/traefik-master/pkg/middlewares/retry/retry_test.go",
+    "line": 68,
+    "type": "go_retry_config",
+    "max_retries": 1,
+    "backoff_type": "linear",
+    "has_jitter": false,
+    "evidence": "RetryAttempts:     1"
+  },
+  {
+    "file": "/var/folders/v2/8hjclk9x27980tc06stw37h80000gp/T/tmpffhwcrzb/traefik/traefik-master/pkg/middlewares/retry/retry_test.go",
+    "line": 75,
+    "type": "go_retry_config",
+    "max_retries": 2,
+    "backoff_type": "linear",
+    "has_jitter": false,
+    "evidence": "RetryAttempts:     2"
+  },
+  {
+    "file": "/var/folders/v2/8hjclk9x27980tc06stw37h80000gp/T/tmpffhwcrzb/traefik/traefik-master/pkg/middlewares/retry/retry_test.go",
+    "line": 82,
+    "type": "go_retry_config",
+    "max_retries": 2,
+    "backoff_type": "linear",
+    "has_jitter": false,
+    "evidence": "RetryAttempts:     2"
+  },
+  {
+    "file": "/var/folders/v2/8hjclk9x27980tc06stw37h80000gp/T/tmpffhwcrzb/traefik/traefik-master/pkg/middlewares/retry/retry_test.go",
+    "line": 89,
+    "type": "go_retry_config",
+    "max_retries": 2,
+    "backoff_type": "linear",
+    "has_jitter": false,
+    "evidence": "RetryAttempts:     2"
+  },
+  {
+    "file": "/var/folders/v2/8hjclk9x27980tc06stw37h80000gp/T/tmpffhwcrzb/traefik/traefik-master/pkg/middlewares/retry/retry_test.go",
+    "line": 96,
+    "type": "go_retry_config",
+    "max_retries": 2,
+    "backoff_type": "linear",
+    "has_jitter": false,
+    "evidence": "RetryAttempts:     2"
+  },
+  {
+    "file": "/var/folders/v2/8hjclk9x27980tc06stw37h80000gp/T/tmpffhwcrzb/traefik/traefik-master/pkg/middlewares/retry/retry_test.go",
+    "line": 267,
+    "type": "go_retry_config",
+    "max_retries": 2,
+    "backoff_type": "none",
+    "has_jitter": false,
+    "evidence": "RetryAttempts:  2"
+  },
+  {
+    "file": "/var/folders/v2/8hjclk9x27980tc06stw37h80000gp/T/tmpffhwcrzb/traefik/traefik-master/pkg/middlewares/retry/retry_test.go",
+    "line": 274,
+    "type": "go_retry_config",
+    "max_retries": 1,
+    "backoff_type": "none",
+    "has_jitter": false,
+    "evidence": "RetryAttempts:  1"
+  },
+  {
+    "file": "/var/folders/v2/8hjclk9x27980tc06stw37h80000gp/T/tmpffhwcrzb/traefik/traefik-master/pkg/middlewares/retry/retry.go",
+    "line": 169,
+    "type": "go_backoff",
+    "max_retries": null,
+    "backoff_type": "linear",
+    "has_jitter": false,
+    "evidence": "backOff :"
+  },
+  {
+    "file": "/var/folders/v2/8hjclk9x27980tc06stw37h80000gp/T/tmpffhwcrzb/traefik/traefik-master/pkg/middlewares/retry/retry.go",
+    "line": 169,
+    "type": "go_backoff",
+    "max_retries": null,
+    "backoff_type": "linear",
+    "has_jitter": false,
+    "evidence": "backoff."
+  },
+  {
+    "file": "/var/folders/v2/8hjclk9x27980tc06stw37h80000gp/T/tmpffhwcrzb/traefik/traefik-master/pkg/middlewares/retry/retry.go",
+    "line": 177,
+    "type": "go_backoff",
+    "max_retries": null,
+    "backoff_type": "linear",
+    "has_jitter": false,
+    "evidence": "backoff."
+  },
+  {
+    "file": "/var/folders/v2/8hjclk9x27980tc06stw37h80000gp/T/tmpffhwcrzb/traefik/traefik-master/pkg/middlewares/retry/retry.go",
+    "line": 187,
+    "type": "go_backoff",
+    "max_retries": null,
+    "backoff_type": "exponential",
+    "has_jitter": false,
+    "evidence": "backoff."
+  },
+  {
+    "file": "/var/folders/v2/8hjclk9x27980tc06stw37h80000gp/T/tmpffhwcrzb/traefik/traefik-master/pkg/middlewares/retry/retry.go",
+    "line": 189,
+    "type": "go_backoff",
+    "max_retries": null,
+    "backoff_type": "exponential",
+    "has_jitter": false,
+    "evidence": "backoff."
+  },
+  {
+    "file": "/var/folders/v2/8hjclk9x27980tc06stw37h80000gp/T/tmpffhwcrzb/traefik/traefik-master/pkg/middlewares/retry/retry.go",
+    "line": 192,
+    "type": "go_backoff",
+    "max_retries": null,
+    "backoff_type": "exponential",
+    "has_jitter": false,
+    "evidence": "backoff."
+  },
+  {
+    "file": "/var/folders/v2/8hjclk9x27980tc06stw37h80000gp/T/tmpffhwcrzb/traefik/traefik-master/pkg/middlewares/retry/retry.go",
+    "line": 192,
+    "type": "go_exponential",
+    "max_retries": null,
+    "backoff_type": "exponential",
+    "has_jitter": false,
+    "evidence": "ExponentialBackOff"
+  },
+  {
+    "file": "/var/folders/v2/8hjclk9x27980tc06stw37h80000gp/T/tmpffhwcrzb/traefik/traefik-master/pkg/middlewares/accesslog/logger.go",
+    "line": 322,
+    "type": "go_retry_config",
+    "max_retries": 0,
+    "backoff_type": "none",
+    "has_jitter": false,
+    "evidence": "retryAttempts = 0"
+  },
+  {
+    "file": "/var/folders/v2/8hjclk9x27980tc06stw37h80000gp/T/tmpffhwcrzb/traefik/traefik-master/pkg/middlewares/accesslog/logger_test.go",
+    "line": 56,
+    "type": "go_retry_config",
+    "max_retries": 2,
+    "backoff_type": "none",
+    "has_jitter": false,
+    "evidence": "RetryAttempts       = 2"
+  },
+  {
+    "file": "/var/folders/v2/8hjclk9x27980tc06stw37h80000gp/T/tmpffhwcrzb/traefik/traefik-master/pkg/provider/docker/pswarm.go",
+    "line": 144,
+    "type": "go_backoff",
+    "max_retries": null,
+    "backoff_type": "exponential",
+    "has_jitter": false,
+    "evidence": "backoff."
+  },
+  {
+    "file": "/var/folders/v2/8hjclk9x27980tc06stw37h80000gp/T/tmpffhwcrzb/traefik/traefik-master/pkg/provider/docker/pswarm.go",
+    "line": 144,
+    "type": "go_backoff",
+    "max_retries": null,
+    "backoff_type": "exponential",
+    "has_jitter": false,
+    "evidence": "backoff."
+  },
+  {
+    "file": "/var/folders/v2/8hjclk9x27980tc06stw37h80000gp/T/tmpffhwcrzb/traefik/traefik-master/pkg/provider/docker/pswarm.go",
+    "line": 144,
+    "type": "go_backoff",
+    "max_retries": null,
+    "backoff_type": "exponential",
+    "has_jitter": false,
+    "evidence": "backoff."
+  },
+  {
+    "file": "/var/folders/v2/8hjclk9x27980tc06stw37h80000gp/T/tmpffhwcrzb/traefik/traefik-master/pkg/provider/docker/pswarm.go",
+    "line": 144,
+    "type": "go_exponential",
+    "max_retries": null,
+    "backoff_type": "exponential",
+    "has_jitter": false,
+    "evidence": "ExponentialBackOff"
+  },
+  {
+    "file": "/var/folders/v2/8hjclk9x27980tc06stw37h80000gp/T/tmpffhwcrzb/traefik/traefik-master/pkg/provider/docker/pdocker.go",
+    "line": 150,
+    "type": "go_backoff",
+    "max_retries": null,
+    "backoff_type": "exponential",
+    "has_jitter": false,
+    "evidence": "backoff."
+  },
+  {
+    "file": "/var/folders/v2/8hjclk9x27980tc06stw37h80000gp/T/tmpffhwcrzb/traefik/traefik-master/pkg/provider/docker/pdocker.go",
+    "line": 150,
+    "type": "go_backoff",
+    "max_retries": null,
+    "backoff_type": "exponential",
+    "has_jitter": false,
+    "evidence": "backoff."
+  },
+  {
+    "file": "/var/folders/v2/8hjclk9x27980tc06stw37h80000gp/T/tmpffhwcrzb/traefik/traefik-master/pkg/provider/docker/pdocker.go",
+    "line": 150,
+    "type": "go_backoff",
+    "max_retries": null,
+    "backoff_type": "exponential",
+    "has_jitter": false,
+    "evidence": "backoff."
+  },
+  {
+    "file": "/var/folders/v2/8hjclk9x27980tc06stw37h80000gp/T/tmpffhwcrzb/traefik/traefik-master/pkg/provider/docker/pdocker.go",
+    "line": 150,
+    "type": "go_exponential",
+    "max_retries": null,
+    "backoff_type": "exponential",
+    "has_jitter": false,
+    "evidence": "ExponentialBackOff"
+  },
+  {
+    "file": "/var/folders/v2/8hjclk9x27980tc06stw37h80000gp/T/tmpffhwcrzb/traefik/traefik-master/pkg/provider/kv/kv.go",
+    "line": 68,
+    "type": "go_backoff",
+    "max_retries": null,
+    "backoff_type": "exponential",
+    "has_jitter": false,
+    "evidence": "backoff."
+  },
+  {
+    "file": "/var/folders/v2/8hjclk9x27980tc06stw37h80000gp/T/tmpffhwcrzb/traefik/traefik-master/pkg/provider/kv/kv.go",
+    "line": 68,
+    "type": "go_backoff",
+    "max_retries": null,
+    "backoff_type": "exponential",
+    "has_jitter": false,
+    "evidence": "backoff."
+  },
+  {
+    "file": "/var/folders/v2/8hjclk9x27980tc06stw37h80000gp/T/tmpffhwcrzb/traefik/traefik-master/pkg/provider/kv/kv.go",
+    "line": 68,
+    "type": "go_backoff",
+    "max_retries": null,
+    "backoff_type": "exponential",
+    "has_jitter": false,
+    "evidence": "backoff."
+  },
+  {
+    "file": "/var/folders/v2/8hjclk9x27980tc06stw37h80000gp/T/tmpffhwcrzb/traefik/traefik-master/pkg/provider/kv/kv.go",
+    "line": 130,
+    "type": "go_backoff",
+    "max_retries": null,
+    "backoff_type": "exponential",
+    "has_jitter": false,
+    "evidence": "backoff."
+  },
+  {
+    "file": "/var/folders/v2/8hjclk9x27980tc06stw37h80000gp/T/tmpffhwcrzb/traefik/traefik-master/pkg/provider/kv/kv.go",
+    "line": 131,
+    "type": "go_backoff",
+    "max_retries": null,
+    "backoff_type": "exponential",
+    "has_jitter": false,
+    "evidence": "backoff."
+  },
+  {
+    "file": "/var/folders/v2/8hjclk9x27980tc06stw37h80000gp/T/tmpffhwcrzb/traefik/traefik-master/pkg/provider/kv/kv.go",
+    "line": 131,
+    "type": "go_backoff",
+    "max_retries": null,
+    "backoff_type": "exponential",
+    "has_jitter": false,
+    "evidence": "backoff."
+  },
+  {
+    "file": "/var/folders/v2/8hjclk9x27980tc06stw37h80000gp/T/tmpffhwcrzb/traefik/traefik-master/pkg/provider/kv/kv.go",
+    "line": 68,
+    "type": "go_exponential",
+    "max_retries": null,
+    "backoff_type": "exponential",
+    "has_jitter": false,
+    "evidence": "ExponentialBackOff"
+  },
+  {
+    "file": "/var/folders/v2/8hjclk9x27980tc06stw37h80000gp/T/tmpffhwcrzb/traefik/traefik-master/pkg/provider/kv/kv.go",
+    "line": 131,
+    "type": "go_exponential",
+    "max_retries": null,
+    "backoff_type": "exponential",
+    "has_jitter": false,
+    "evidence": "ExponentialBackOff"
+  },
+  {
+    "file": "/var/folders/v2/8hjclk9x27980tc06stw37h80000gp/T/tmpffhwcrzb/traefik/traefik-master/pkg/provider/consulcatalog/consul_catalog.go",
+    "line": 242,
+    "type": "go_backoff",
+    "max_retries": null,
+    "backoff_type": "exponential",
+    "has_jitter": false,
+    "evidence": "backoff."
+  },
+  {
+    "file": "/var/folders/v2/8hjclk9x27980tc06stw37h80000gp/T/tmpffhwcrzb/traefik/traefik-master/pkg/provider/consulcatalog/consul_catalog.go",
+    "line": 242,
+    "type": "go_backoff",
+    "max_retries": null,
+    "backoff_type": "exponential",
+    "has_jitter": false,
+    "evidence": "backoff."
+  },
+  {
+    "file": "/var/folders/v2/8hjclk9x27980tc06stw37h80000gp/T/tmpffhwcrzb/traefik/traefik-master/pkg/provider/consulcatalog/consul_catalog.go",
+    "line": 242,
+    "type": "go_backoff",
+    "max_retries": null,
+    "backoff_type": "exponential",
+    "has_jitter": false,
+    "evidence": "backoff."
+  },
+  {
+    "file": "/var/folders/v2/8hjclk9x27980tc06stw37h80000gp/T/tmpffhwcrzb/traefik/traefik-master/pkg/provider/consulcatalog/consul_catalog.go",
+    "line": 242,
+    "type": "go_exponential",
+    "max_retries": null,
+    "backoff_type": "exponential",
+    "has_jitter": false,
+    "evidence": "ExponentialBackOff"
+  },
+  {
+    "file": "/var/folders/v2/8hjclk9x27980tc06stw37h80000gp/T/tmpffhwcrzb/traefik/traefik-master/pkg/provider/ecs/ecs.go",
+    "line": 144,
+    "type": "go_backoff",
+    "max_retries": null,
+    "backoff_type": "exponential",
+    "has_jitter": false,
+    "evidence": "backoff."
+  },
+  {
+    "file": "/var/folders/v2/8hjclk9x27980tc06stw37h80000gp/T/tmpffhwcrzb/traefik/traefik-master/pkg/provider/ecs/ecs.go",
+    "line": 144,
+    "type": "go_backoff",
+    "max_retries": null,
+    "backoff_type": "exponential",
+    "has_jitter": false,
+    "evidence": "backoff."
+  },
+  {
+    "file": "/var/folders/v2/8hjclk9x27980tc06stw37h80000gp/T/tmpffhwcrzb/traefik/traefik-master/pkg/provider/ecs/ecs.go",
+    "line": 144,
+    "type": "go_backoff",
+    "max_retries": null,
+    "backoff_type": "exponential",
+    "has_jitter": false,
+    "evidence": "backoff."
+  },
+  {
+    "file": "/var/folders/v2/8hjclk9x27980tc06stw37h80000gp/T/tmpffhwcrzb/traefik/traefik-master/pkg/provider/ecs/ecs.go",
+    "line": 144,
+    "type": "go_exponential",
+    "max_retries": null,
+    "backoff_type": "exponential",
+    "has_jitter": false,
+    "evidence": "ExponentialBackOff"
+  },
+  {
+    "file": "/var/folders/v2/8hjclk9x27980tc06stw37h80000gp/T/tmpffhwcrzb/traefik/traefik-master/pkg/provider/nomad/nomad.go",
+    "line": 254,
+    "type": "go_backoff",
+    "max_retries": null,
+    "backoff_type": "exponential",
+    "has_jitter": false,
+    "evidence": "backoff."
+  },
+  {
+    "file": "/var/folders/v2/8hjclk9x27980tc06stw37h80000gp/T/tmpffhwcrzb/traefik/traefik-master/pkg/provider/nomad/nomad.go",
+    "line": 256,
+    "type": "go_backoff",
+    "max_retries": null,
+    "backoff_type": "exponential",
+    "has_jitter": false,
+    "evidence": "backoff."
+  },
+  {
+    "file": "/var/folders/v2/8hjclk9x27980tc06stw37h80000gp/T/tmpffhwcrzb/traefik/traefik-master/pkg/provider/nomad/nomad.go",
+    "line": 256,
+    "type": "go_backoff",
+    "max_retries": null,
+    "backoff_type": "exponential",
+    "has_jitter": false,
+    "evidence": "backoff."
+  },
+  {
+    "file": "/var/folders/v2/8hjclk9x27980tc06stw37h80000gp/T/tmpffhwcrzb/traefik/traefik-master/pkg/provider/nomad/nomad.go",
+    "line": 256,
+    "type": "go_exponential",
+    "max_retries": null,
+    "backoff_type": "exponential",
+    "has_jitter": false,
+    "evidence": "ExponentialBackOff"
+  },
+  {
+    "file": "/var/folders/v2/8hjclk9x27980tc06stw37h80000gp/T/tmpffhwcrzb/traefik/traefik-master/pkg/provider/http/http.go",
+    "line": 104,
+    "type": "go_backoff",
+    "max_retries": null,
+    "backoff_type": "exponential",
+    "has_jitter": false,
+    "evidence": "backoff."
+  },
+  {
+    "file": "/var/folders/v2/8hjclk9x27980tc06stw37h80000gp/T/tmpffhwcrzb/traefik/traefik-master/pkg/provider/http/http.go",
+    "line": 104,
+    "type": "go_backoff",
+    "max_retries": null,
+    "backoff_type": "exponential",
+    "has_jitter": false,
+    "evidence": "backoff."
+  },
+  {
+    "file": "/var/folders/v2/8hjclk9x27980tc06stw37h80000gp/T/tmpffhwcrzb/traefik/traefik-master/pkg/provider/http/http.go",
+    "line": 104,
+    "type": "go_backoff",
+    "max_retries": null,
+    "backoff_type": "exponential",
+    "has_jitter": false,
+    "evidence": "backoff."
+  },
+  {
+    "file": "/var/folders/v2/8hjclk9x27980tc06stw37h80000gp/T/tmpffhwcrzb/traefik/traefik-master/pkg/provider/http/http.go",
+    "line": 104,
+    "type": "go_exponential",
+    "max_retries": null,
+    "backoff_type": "exponential",
+    "has_jitter": false,
+    "evidence": "ExponentialBackOff"
+  },
+  {
+    "file": "/var/folders/v2/8hjclk9x27980tc06stw37h80000gp/T/tmpffhwcrzb/traefik/traefik-master/pkg/provider/kubernetes/ingress/kubernetes.go",
+    "line": 151,
+    "type": "go_backoff",
+    "max_retries": null,
+    "backoff_type": "exponential",
+    "has_jitter": false,
+    "evidence": "backoff."
+  },
+  {
+    "file": "/var/folders/v2/8hjclk9x27980tc06stw37h80000gp/T/tmpffhwcrzb/traefik/traefik-master/pkg/provider/kubernetes/ingress/kubernetes.go",
+    "line": 151,
+    "type": "go_backoff",
+    "max_retries": null,
+    "backoff_type": "exponential",
+    "has_jitter": false,
+    "evidence": "backoff."
+  },
+  {
+    "file": "/var/folders/v2/8hjclk9x27980tc06stw37h80000gp/T/tmpffhwcrzb/traefik/traefik-master/pkg/provider/kubernetes/ingress/kubernetes.go",
+    "line": 151,
+    "type": "go_backoff",
+    "max_retries": null,
+    "backoff_type": "exponential",
+    "has_jitter": false,
+    "evidence": "backoff."
+  },
+  {
+    "file": "/var/folders/v2/8hjclk9x27980tc06stw37h80000gp/T/tmpffhwcrzb/traefik/traefik-master/pkg/provider/kubernetes/ingress/kubernetes.go",
+    "line": 151,
+    "type": "go_exponential",
+    "max_retries": null,
+    "backoff_type": "exponential",
+    "has_jitter": false,
+    "evidence": "ExponentialBackOff"
+  },
+  {
+    "file": "/var/folders/v2/8hjclk9x27980tc06stw37h80000gp/T/tmpffhwcrzb/traefik/traefik-master/pkg/provider/kubernetes/knative/kubernetes.go",
+    "line": 144,
+    "type": "go_backoff",
+    "max_retries": null,
+    "backoff_type": "exponential",
+    "has_jitter": false,
+    "evidence": "backoff."
+  },
+  {
+    "file": "/var/folders/v2/8hjclk9x27980tc06stw37h80000gp/T/tmpffhwcrzb/traefik/traefik-master/pkg/provider/kubernetes/knative/kubernetes.go",
+    "line": 144,
+    "type": "go_backoff",
+    "max_retries": null,
+    "backoff_type": "exponential",
+    "has_jitter": false,
+    "evidence": "backoff."
+  },
+  {
+    "file": "/var/folders/v2/8hjclk9x27980tc06stw37h80000gp/T/tmpffhwcrzb/traefik/traefik-master/pkg/provider/kubernetes/knative/kubernetes.go",
+    "line": 144,
+    "type": "go_backoff",
+    "max_retries": null,
+    "backoff_type": "exponential",
+    "has_jitter": false,
+    "evidence": "backoff."
+  },
+  {
+    "file": "/var/folders/v2/8hjclk9x27980tc06stw37h80000gp/T/tmpffhwcrzb/traefik/traefik-master/pkg/provider/kubernetes/knative/kubernetes.go",
+    "line": 144,
+    "type": "go_exponential",
+    "max_retries": null,
+    "backoff_type": "exponential",
+    "has_jitter": false,
+    "evidence": "ExponentialBackOff"
+  },
+  {
+    "file": "/var/folders/v2/8hjclk9x27980tc06stw37h80000gp/T/tmpffhwcrzb/traefik/traefik-master/pkg/provider/kubernetes/crd/kubernetes.go",
+    "line": 150,
+    "type": "go_backoff",
+    "max_retries": null,
+    "backoff_type": "exponential",
+    "has_jitter": false,
+    "evidence": "backoff."
+  },
+  {
+    "file": "/var/folders/v2/8hjclk9x27980tc06stw37h80000gp/T/tmpffhwcrzb/traefik/traefik-master/pkg/provider/kubernetes/crd/kubernetes.go",
+    "line": 150,
+    "type": "go_backoff",
+    "max_retries": null,
+    "backoff_type": "exponential",
+    "has_jitter": false,
+    "evidence": "backoff."
+  },
+  {
+    "file": "/var/folders/v2/8hjclk9x27980tc06stw37h80000gp/T/tmpffhwcrzb/traefik/traefik-master/pkg/provider/kubernetes/crd/kubernetes.go",
+    "line": 150,
+    "type": "go_backoff",
+    "max_retries": null,
+    "backoff_type": "exponential",
+    "has_jitter": false,
+    "evidence": "backoff."
+  },
+  {
+    "file": "/var/folders/v2/8hjclk9x27980tc06stw37h80000gp/T/tmpffhwcrzb/traefik/traefik-master/pkg/provider/kubernetes/crd/kubernetes.go",
+    "line": 150,
+    "type": "go_exponential",
+    "max_retries": null,
+    "backoff_type": "exponential",
+    "has_jitter": false,
+    "evidence": "ExponentialBackOff"
+  },
+  {
+    "file": "/var/folders/v2/8hjclk9x27980tc06stw37h80000gp/T/tmpffhwcrzb/traefik/traefik-master/pkg/provider/kubernetes/ingress-nginx/kubernetes.go",
+    "line": 188,
+    "type": "go_backoff",
+    "max_retries": null,
+    "backoff_type": "exponential",
+    "has_jitter": false,
+    "evidence": "backoff."
+  },
+  {
+    "file": "/var/folders/v2/8hjclk9x27980tc06stw37h80000gp/T/tmpffhwcrzb/traefik/traefik-master/pkg/provider/kubernetes/ingress-nginx/kubernetes.go",
+    "line": 188,
+    "type": "go_backoff",
+    "max_retries": null,
+    "backoff_type": "exponential",
+    "has_jitter": false,
+    "evidence": "backoff."
+  },
+  {
+    "file": "/var/folders/v2/8hjclk9x27980tc06stw37h80000gp/T/tmpffhwcrzb/traefik/traefik-master/pkg/provider/kubernetes/ingress-nginx/kubernetes.go",
+    "line": 188,
+    "type": "go_backoff",
+    "max_retries": null,
+    "backoff_type": "exponential",
+    "has_jitter": false,
+    "evidence": "backoff."
+  },
+  {
+    "file": "/var/folders/v2/8hjclk9x27980tc06stw37h80000gp/T/tmpffhwcrzb/traefik/traefik-master/pkg/provider/kubernetes/ingress-nginx/kubernetes.go",
+    "line": 188,
+    "type": "go_exponential",
+    "max_retries": null,
+    "backoff_type": "exponential",
+    "has_jitter": false,
+    "evidence": "ExponentialBackOff"
+  },
+  {
+    "file": "/var/folders/v2/8hjclk9x27980tc06stw37h80000gp/T/tmpffhwcrzb/traefik/traefik-master/pkg/provider/kubernetes/gateway/kubernetes.go",
+    "line": 241,
+    "type": "go_backoff",
+    "max_retries": null,
+    "backoff_type": "exponential",
+    "has_jitter": false,
+    "evidence": "backoff."
+  },
+  {
+    "file": "/var/folders/v2/8hjclk9x27980tc06stw37h80000gp/T/tmpffhwcrzb/traefik/traefik-master/pkg/provider/kubernetes/gateway/kubernetes.go",
+    "line": 241,
+    "type": "go_backoff",
+    "max_retries": null,
+    "backoff_type": "exponential",
+    "has_jitter": false,
+    "evidence": "backoff."
+  },
+  {
+    "file": "/var/folders/v2/8hjclk9x27980tc06stw37h80000gp/T/tmpffhwcrzb/traefik/traefik-master/pkg/provider/kubernetes/gateway/kubernetes.go",
+    "line": 241,
+    "type": "go_backoff",
+    "max_retries": null,
+    "backoff_type": "exponential",
+    "has_jitter": false,
+    "evidence": "backoff."
+  },
+  {
+    "file": "/var/folders/v2/8hjclk9x27980tc06stw37h80000gp/T/tmpffhwcrzb/traefik/traefik-master/pkg/provider/kubernetes/gateway/kubernetes.go",
+    "line": 241,
+    "type": "go_exponential",
+    "max_retries": null,
+    "backoff_type": "exponential",
+    "has_jitter": false,
+    "evidence": "ExponentialBackOff"
+  },
+  {
+    "file": "/var/folders/v2/8hjclk9x27980tc06stw37h80000gp/T/tmpffhwcrzb/traefik/traefik-master/pkg/job/job.go",
+    "line": 9,
+    "type": "go_backoff",
+    "max_retries": null,
+    "backoff_type": "exponential",
+    "has_jitter": false,
+    "evidence": "backoff."
+  },
+  {
+    "file": "/var/folders/v2/8hjclk9x27980tc06stw37h80000gp/T/tmpffhwcrzb/traefik/traefik-master/pkg/job/job.go",
+    "line": 9,
+    "type": "go_backoff",
+    "max_retries": null,
+    "backoff_type": "exponential",
+    "has_jitter": false,
+    "evidence": "BackOff ="
+  },
+  {
+    "file": "/var/folders/v2/8hjclk9x27980tc06stw37h80000gp/T/tmpffhwcrzb/traefik/traefik-master/pkg/job/job.go",
+    "line": 19,
+    "type": "go_backoff",
+    "max_retries": null,
+    "backoff_type": "exponential",
+    "has_jitter": false,
+    "evidence": "backoff."
+  },
+  {
+    "file": "/var/folders/v2/8hjclk9x27980tc06stw37h80000gp/T/tmpffhwcrzb/traefik/traefik-master/pkg/job/job.go",
+    "line": 25,
+    "type": "go_backoff",
+    "max_retries": null,
+    "backoff_type": "exponential",
+    "has_jitter": false,
+    "evidence": "backoff."
+  },
+  {
+    "file": "/var/folders/v2/8hjclk9x27980tc06stw37h80000gp/T/tmpffhwcrzb/traefik/traefik-master/pkg/job/job.go",
+    "line": 26,
+    "type": "go_backoff",
+    "max_retries": null,
+    "backoff_type": "exponential",
+    "has_jitter": false,
+    "evidence": "backOff."
+  },
+  {
+    "file": "/var/folders/v2/8hjclk9x27980tc06stw37h80000gp/T/tmpffhwcrzb/traefik/traefik-master/pkg/job/job.go",
+    "line": 28,
+    "type": "go_backoff",
+    "max_retries": null,
+    "backoff_type": "exponential",
+    "has_jitter": false,
+    "evidence": "BackOff:"
+  },
+  {
+    "file": "/var/folders/v2/8hjclk9x27980tc06stw37h80000gp/T/tmpffhwcrzb/traefik/traefik-master/pkg/job/job.go",
+    "line": 38,
+    "type": "go_backoff",
+    "max_retries": null,
+    "backoff_type": "exponential",
+    "has_jitter": false,
+    "evidence": "BackOff."
+  },
+  {
+    "file": "/var/folders/v2/8hjclk9x27980tc06stw37h80000gp/T/tmpffhwcrzb/traefik/traefik-master/pkg/job/job.go",
+    "line": 19,
+    "type": "go_exponential",
+    "max_retries": null,
+    "backoff_type": "exponential",
+    "has_jitter": false,
+    "evidence": "ExponentialBackOff"
+  },
+  {
+    "file": "/var/folders/v2/8hjclk9x27980tc06stw37h80000gp/T/tmpffhwcrzb/traefik/traefik-master/pkg/job/job.go",
+    "line": 25,
+    "type": "go_exponential",
+    "max_retries": null,
+    "backoff_type": "exponential",
+    "has_jitter": false,
+    "evidence": "ExponentialBackOff"
+  },
+  {
+    "file": "/var/folders/v2/8hjclk9x27980tc06stw37h80000gp/T/tmpffhwcrzb/traefik/traefik-master/pkg/job/job.go",
+    "line": 28,
+    "type": "go_exponential",
+    "max_retries": null,
+    "backoff_type": "exponential",
+    "has_jitter": false,
+    "evidence": "ExponentialBackOff"
+  },
+  {
+    "file": "/var/folders/v2/8hjclk9x27980tc06stw37h80000gp/T/tmpffhwcrzb/traefik/traefik-master/pkg/job/job.go",
+    "line": 38,
+    "type": "go_exponential",
+    "max_retries": null,
+    "backoff_type": "exponential",
+    "has_jitter": false,
+    "evidence": "ExponentialBackOff"
+  },
+  {
+    "file": "/var/folders/v2/8hjclk9x27980tc06stw37h80000gp/T/tmpffhwcrzb/traefik/traefik-master/pkg/job/job_test.go",
+    "line": 19,
+    "type": "go_backoff",
+    "max_retries": null,
+    "backoff_type": "exponential",
+    "has_jitter": true,
+    "evidence": "backoff."
+  },
+  {
+    "file": "/var/folders/v2/8hjclk9x27980tc06stw37h80000gp/T/tmpffhwcrzb/traefik/traefik-master/pkg/job/job_test.go",
+    "line": 19,
+    "type": "go_exponential",
+    "max_retries": null,
+    "backoff_type": "exponential",
+    "has_jitter": true,
+    "evidence": "ExponentialBackOff"
+  },
+  {
+    "file": "/var/folders/v2/8hjclk9x27980tc06stw37h80000gp/T/tmpffhwcrzb/consul/consul-main/ui/packages/consul-ui/app/components/data-loader/chart.xstate.js",
+    "line": 41,
+    "type": "js_got_retry",
+    "max_retries": null,
+    "backoff_type": "none",
+    "has_jitter": false,
+    "evidence": "RETRY: {"
+  },
+  {
+    "file": "/var/folders/v2/8hjclk9x27980tc06stw37h80000gp/T/tmpffhwcrzb/consul/consul-main/ui/packages/consul-ui/app/components/data-loader/chart.xstate.js",
+    "line": 48,
+    "type": "js_got_retry",
+    "max_retries": null,
+    "backoff_type": "none",
+    "has_jitter": false,
+    "evidence": "RETRY: {"
+  },
+  {
+    "file": "/var/folders/v2/8hjclk9x27980tc06stw37h80000gp/T/tmpffhwcrzb/consul/consul-main/proto/private/pbconfigentry/config_entry.pb.go",
+    "line": 8002,
+    "type": "go_backoff",
+    "max_retries": null,
+    "backoff_type": "linear",
+    "has_jitter": false,
+    "evidence": "BackOff."
+  },
+  {
+    "file": "/var/folders/v2/8hjclk9x27980tc06stw37h80000gp/T/tmpffhwcrzb/consul/consul-main/proto/private/pbconfigentry/config_entry.pb.go",
+    "line": 9644,
+    "type": "go_backoff",
+    "max_retries": null,
+    "backoff_type": "linear",
+    "has_jitter": false,
+    "evidence": "BackOff:"
+  },
+  {
+    "file": "/var/folders/v2/8hjclk9x27980tc06stw37h80000gp/T/tmpffhwcrzb/consul/consul-main/proto/private/pbconfigentry/config_entry.pb.go",
+    "line": 9645,
+    "type": "go_backoff",
+    "max_retries": null,
+    "backoff_type": "linear",
+    "has_jitter": false,
+    "evidence": "BackOff."
+  },
+  {
+    "file": "/var/folders/v2/8hjclk9x27980tc06stw37h80000gp/T/tmpffhwcrzb/consul/consul-main/proto/private/pbconfigentry/config_entry.pb.go",
+    "line": 9646,
+    "type": "go_backoff",
+    "max_retries": null,
+    "backoff_type": "linear",
+    "has_jitter": false,
+    "evidence": "BackOff."
+  },
+  {
+    "file": "/var/folders/v2/8hjclk9x27980tc06stw37h80000gp/T/tmpffhwcrzb/consul/consul-main/proto/private/pbconfigentry/config_entry.gen.go",
+    "line": 1383,
+    "type": "go_backoff",
+    "max_retries": null,
+    "backoff_type": "linear",
+    "has_jitter": false,
+    "evidence": "BackOff ="
+  },
+  {
+    "file": "/var/folders/v2/8hjclk9x27980tc06stw37h80000gp/T/tmpffhwcrzb/consul/consul-main/proto/private/pbconfigentry/config_entry.gen.go",
+    "line": 1394,
+    "type": "go_backoff",
+    "max_retries": null,
+    "backoff_type": "linear",
+    "has_jitter": false,
+    "evidence": "BackOff ="
+  },
+  {
+    "file": "/var/folders/v2/8hjclk9x27980tc06stw37h80000gp/T/tmpffhwcrzb/consul/consul-main/internal/controller/controller.go",
+    "line": 167,
+    "type": "go_backoff",
+    "max_retries": null,
+    "backoff_type": "linear",
+    "has_jitter": false,
+    "evidence": "Backoff ="
+  },
+  {
+    "file": "/var/folders/v2/8hjclk9x27980tc06stw37h80000gp/T/tmpffhwcrzb/consul/consul-main/internal/controller/controller.go",
+    "line": 168,
+    "type": "go_backoff",
+    "max_retries": null,
+    "backoff_type": "linear",
+    "has_jitter": false,
+    "evidence": "Backoff ="
+  },
+  {
+    "file": "/var/folders/v2/8hjclk9x27980tc06stw37h80000gp/T/tmpffhwcrzb/consul/consul-main/internal/controller/controller.go",
+    "line": 238,
+    "type": "go_backoff",
+    "max_retries": null,
+    "backoff_type": "linear",
+    "has_jitter": false,
+    "evidence": "backoff="
+  },
+  {
+    "file": "/var/folders/v2/8hjclk9x27980tc06stw37h80000gp/T/tmpffhwcrzb/consul/consul-main/internal/controller/controller_test.go",
+    "line": 512,
+    "type": "go_backoff",
+    "max_retries": null,
+    "backoff_type": "linear",
+    "has_jitter": false,
+    "evidence": "backoff="
+  },
+  {
+    "file": "/var/folders/v2/8hjclk9x27980tc06stw37h80000gp/T/tmpffhwcrzb/consul/consul-main/internal/controller/supervisor.go",
+    "line": 40,
+    "type": "go_backoff",
+    "max_retries": null,
+    "backoff_type": "linear",
+    "has_jitter": true,
+    "evidence": "backoff:"
+  },
+  {
+    "file": "/var/folders/v2/8hjclk9x27980tc06stw37h80000gp/T/tmpffhwcrzb/consul/consul-main/internal/controller/supervisor.go",
+    "line": 123,
+    "type": "go_backoff",
+    "max_retries": null,
+    "backoff_type": "linear",
+    "has_jitter": false,
+    "evidence": "backoff."
+  },
+  {
+    "file": "/var/folders/v2/8hjclk9x27980tc06stw37h80000gp/T/tmpffhwcrzb/consul/consul-main/internal/controller/supervisor.go",
+    "line": 131,
+    "type": "go_backoff",
+    "max_retries": null,
+    "backoff_type": "linear",
+    "has_jitter": false,
+    "evidence": "backoff."
+  },
+  {
+    "file": "/var/folders/v2/8hjclk9x27980tc06stw37h80000gp/T/tmpffhwcrzb/consul/consul-main/internal/controller/supervisor.go",
+    "line": 134,
+    "type": "go_backoff",
+    "max_retries": null,
+    "backoff_type": "linear",
+    "has_jitter": false,
+    "evidence": "backoff."
+  },
+  {
+    "file": "/var/folders/v2/8hjclk9x27980tc06stw37h80000gp/T/tmpffhwcrzb/consul/consul-main/agent/envoyextensions/builtin/wasm/structs.go",
+    "line": 299,
+    "type": "go_backoff",
+    "max_retries": null,
+    "backoff_type": "linear",
+    "has_jitter": false,
+    "evidence": "BackOff."
+  },
+  {
+    "file": "/var/folders/v2/8hjclk9x27980tc06stw37h80000gp/T/tmpffhwcrzb/consul/consul-main/agent/envoyextensions/builtin/wasm/structs.go",
+    "line": 300,
+    "type": "go_backoff",
+    "max_retries": null,
+    "backoff_type": "linear",
+    "has_jitter": false,
+    "evidence": "BackOff."
+  },
+  {
+    "file": "/var/folders/v2/8hjclk9x27980tc06stw37h80000gp/T/tmpffhwcrzb/consul/consul-main/agent/envoyextensions/builtin/wasm/structs.go",
+    "line": 311,
+    "type": "go_backoff",
+    "max_retries": null,
+    "backoff_type": "linear",
+    "has_jitter": false,
+    "evidence": "BackOff."
+  },
+  {
+    "file": "/var/folders/v2/8hjclk9x27980tc06stw37h80000gp/T/tmpffhwcrzb/consul/consul-main/agent/envoyextensions/builtin/wasm/structs.go",
+    "line": 312,
+    "type": "go_backoff",
+    "max_retries": null,
+    "backoff_type": "linear",
+    "has_jitter": false,
+    "evidence": "BackOff."
+  },
+  {
+    "file": "/var/folders/v2/8hjclk9x27980tc06stw37h80000gp/T/tmpffhwcrzb/consul/consul-main/agent/envoyextensions/builtin/wasm/structs.go",
+    "line": 314,
+    "type": "go_backoff",
+    "max_retries": null,
+    "backoff_type": "linear",
+    "has_jitter": false,
+    "evidence": "BackOff."
+  },
+  {
+    "file": "/var/folders/v2/8hjclk9x27980tc06stw37h80000gp/T/tmpffhwcrzb/consul/consul-main/agent/envoyextensions/builtin/wasm/structs.go",
+    "line": 315,
+    "type": "go_backoff",
+    "max_retries": null,
+    "backoff_type": "linear",
+    "has_jitter": false,
+    "evidence": "BackOff."
+  },
+  {
+    "file": "/var/folders/v2/8hjclk9x27980tc06stw37h80000gp/T/tmpffhwcrzb/consul/consul-main/agent/envoyextensions/builtin/wasm/structs.go",
+    "line": 319,
+    "type": "go_backoff",
+    "max_retries": null,
+    "backoff_type": "linear",
+    "has_jitter": false,
+    "evidence": "BackOff ="
+  },
+  {
+    "file": "/var/folders/v2/8hjclk9x27980tc06stw37h80000gp/T/tmpffhwcrzb/consul/consul-main/agent/envoyextensions/builtin/wasm/structs.go",
+    "line": 399,
+    "type": "go_backoff",
+    "max_retries": null,
+    "backoff_type": "linear",
+    "has_jitter": false,
+    "evidence": "BackOff."
+  },
+  {
+    "file": "/var/folders/v2/8hjclk9x27980tc06stw37h80000gp/T/tmpffhwcrzb/consul/consul-main/agent/envoyextensions/builtin/wasm/structs.go",
+    "line": 400,
+    "type": "go_backoff",
+    "max_retries": null,
+    "backoff_type": "linear",
+    "has_jitter": false,
+    "evidence": "BackOff."
+  },
+  {
+    "file": "/var/folders/v2/8hjclk9x27980tc06stw37h80000gp/T/tmpffhwcrzb/consul/consul-main/agent/envoyextensions/builtin/wasm/structs.go",
+    "line": 400,
+    "type": "go_backoff",
+    "max_retries": null,
+    "backoff_type": "linear",
+    "has_jitter": false,
+    "evidence": "BackOff."
+  },
+  {
+    "file": "/var/folders/v2/8hjclk9x27980tc06stw37h80000gp/T/tmpffhwcrzb/consul/consul-main/agent/envoyextensions/builtin/wasm/structs.go",
+    "line": 402,
+    "type": "go_backoff",
+    "max_retries": null,
+    "backoff_type": "linear",
+    "has_jitter": false,
+    "evidence": "BackOff."
+  },
+  {
+    "file": "/var/folders/v2/8hjclk9x27980tc06stw37h80000gp/T/tmpffhwcrzb/consul/consul-main/agent/envoyextensions/builtin/wasm/structs.go",
+    "line": 402,
+    "type": "go_backoff",
+    "max_retries": null,
+    "backoff_type": "linear",
+    "has_jitter": false,
+    "evidence": "BackOff."
+  },
+  {
+    "file": "/var/folders/v2/8hjclk9x27980tc06stw37h80000gp/T/tmpffhwcrzb/consul/consul-main/agent/envoyextensions/builtin/wasm/structs.go",
+    "line": 405,
+    "type": "go_backoff",
+    "max_retries": null,
+    "backoff_type": "linear",
+    "has_jitter": false,
+    "evidence": "BackOff."
+  },
+  {
+    "file": "/var/folders/v2/8hjclk9x27980tc06stw37h80000gp/T/tmpffhwcrzb/consul/consul-main/agent/envoyextensions/builtin/wasm/structs.go",
+    "line": 406,
+    "type": "go_backoff",
+    "max_retries": null,
+    "backoff_type": "linear",
+    "has_jitter": false,
+    "evidence": "BackOff."
+  },
+  {
+    "file": "/var/folders/v2/8hjclk9x27980tc06stw37h80000gp/T/tmpffhwcrzb/consul/consul-main/agent/envoyextensions/builtin/wasm/structs.go",
+    "line": 406,
+    "type": "go_backoff",
+    "max_retries": null,
+    "backoff_type": "linear",
+    "has_jitter": false,
+    "evidence": "BackOff."
+  },
+  {
+    "file": "/var/folders/v2/8hjclk9x27980tc06stw37h80000gp/T/tmpffhwcrzb/consul/consul-main/agent/envoyextensions/builtin/wasm/structs.go",
+    "line": 408,
+    "type": "go_backoff",
+    "max_retries": null,
+    "backoff_type": "linear",
+    "has_jitter": false,
+    "evidence": "BackOff."
+  },
+  {
+    "file": "/var/folders/v2/8hjclk9x27980tc06stw37h80000gp/T/tmpffhwcrzb/consul/consul-main/agent/envoyextensions/builtin/wasm/structs.go",
+    "line": 408,
+    "type": "go_backoff",
+    "max_retries": null,
+    "backoff_type": "linear",
+    "has_jitter": false,
+    "evidence": "BackOff."
+  },
+  {
+    "file": "/var/folders/v2/8hjclk9x27980tc06stw37h80000gp/T/tmpffhwcrzb/consul/consul-main/agent/envoyextensions/builtin/wasm/structs.go",
+    "line": 412,
+    "type": "go_backoff",
+    "max_retries": null,
+    "backoff_type": "linear",
+    "has_jitter": false,
+    "evidence": "BackOff."
+  },
+  {
+    "file": "/var/folders/v2/8hjclk9x27980tc06stw37h80000gp/T/tmpffhwcrzb/consul/consul-main/agent/envoyextensions/builtin/wasm/structs.go",
+    "line": 412,
+    "type": "go_backoff",
+    "max_retries": null,
+    "backoff_type": "linear",
+    "has_jitter": false,
+    "evidence": "BackOff."
+  },
+  {
+    "file": "/var/folders/v2/8hjclk9x27980tc06stw37h80000gp/T/tmpffhwcrzb/consul/consul-main/agent/envoyextensions/builtin/wasm/structs.go",
+    "line": 413,
+    "type": "go_backoff",
+    "max_retries": null,
+    "backoff_type": "linear",
+    "has_jitter": false,
+    "evidence": "BackOff."
+  },
+  {
+    "file": "/var/folders/v2/8hjclk9x27980tc06stw37h80000gp/T/tmpffhwcrzb/consul/consul-main/agent/envoyextensions/builtin/wasm/structs.go",
+    "line": 413,
+    "type": "go_backoff",
+    "max_retries": null,
+    "backoff_type": "linear",
+    "has_jitter": false,
+    "evidence": "BackOff."
+  },
+  {
+    "file": "/var/folders/v2/8hjclk9x27980tc06stw37h80000gp/T/tmpffhwcrzb/consul/consul-main/agent/envoyextensions/builtin/wasm/structs.go",
+    "line": 414,
+    "type": "go_backoff",
+    "max_retries": null,
+    "backoff_type": "linear",
+    "has_jitter": false,
+    "evidence": "BackOff."
+  },
+  {
+    "file": "/var/folders/v2/8hjclk9x27980tc06stw37h80000gp/T/tmpffhwcrzb/consul/consul-main/agent/envoyextensions/builtin/wasm/structs.go",
+    "line": 415,
+    "type": "go_backoff",
+    "max_retries": null,
+    "backoff_type": "linear",
+    "has_jitter": false,
+    "evidence": "BackOff."
+  },
+  {
+    "file": "/var/folders/v2/8hjclk9x27980tc06stw37h80000gp/T/tmpffhwcrzb/consul/consul-main/agent/envoyextensions/builtin/wasm/structs.go",
+    "line": 418,
+    "type": "go_backoff",
+    "max_retries": null,
+    "backoff_type": "linear",
+    "has_jitter": false,
+    "evidence": "BackOff."
+  },
+  {
+    "file": "/var/folders/v2/8hjclk9x27980tc06stw37h80000gp/T/tmpffhwcrzb/consul/consul-main/agent/envoyextensions/builtin/wasm/structs.go",
+    "line": 419,
+    "type": "go_backoff",
+    "max_retries": null,
+    "backoff_type": "linear",
+    "has_jitter": false,
+    "evidence": "BackOff."
+  },
+  {
+    "file": "/var/folders/v2/8hjclk9x27980tc06stw37h80000gp/T/tmpffhwcrzb/consul/consul-main/agent/envoyextensions/builtin/wasm/structs.go",
+    "line": 419,
+    "type": "go_backoff",
+    "max_retries": null,
+    "backoff_type": "linear",
+    "has_jitter": false,
+    "evidence": "BackOff."
+  },
+  {
+    "file": "/var/folders/v2/8hjclk9x27980tc06stw37h80000gp/T/tmpffhwcrzb/consul/consul-main/agent/envoyextensions/builtin/wasm/structs.go",
+    "line": 420,
+    "type": "go_backoff",
+    "max_retries": null,
+    "backoff_type": "linear",
+    "has_jitter": false,
+    "evidence": "BackOff."
+  },
+  {
+    "file": "/var/folders/v2/8hjclk9x27980tc06stw37h80000gp/T/tmpffhwcrzb/consul/consul-main/agent/envoyextensions/builtin/wasm/structs.go",
+    "line": 420,
+    "type": "go_backoff",
+    "max_retries": null,
+    "backoff_type": "linear",
+    "has_jitter": false,
+    "evidence": "BackOff."
+  },
+  {
+    "file": "/var/folders/v2/8hjclk9x27980tc06stw37h80000gp/T/tmpffhwcrzb/consul/consul-main/agent/envoyextensions/builtin/wasm/structs.go",
+    "line": 421,
+    "type": "go_backoff",
+    "max_retries": null,
+    "backoff_type": "linear",
+    "has_jitter": false,
+    "evidence": "BackOff."
+  },
+  {
+    "file": "/var/folders/v2/8hjclk9x27980tc06stw37h80000gp/T/tmpffhwcrzb/consul/consul-main/agent/envoyextensions/builtin/wasm/structs.go",
+    "line": 422,
+    "type": "go_backoff",
+    "max_retries": null,
+    "backoff_type": "linear",
+    "has_jitter": false,
+    "evidence": "BackOff."
+  },
+  {
+    "file": "/var/folders/v2/8hjclk9x27980tc06stw37h80000gp/T/tmpffhwcrzb/consul/consul-main/agent/envoyextensions/builtin/wasm/wasm_test.go",
+    "line": 248,
+    "type": "go_backoff",
+    "max_retries": null,
+    "backoff_type": "linear",
+    "has_jitter": false,
+    "evidence": "BackOff."
+  },
+  {
+    "file": "/var/folders/v2/8hjclk9x27980tc06stw37h80000gp/T/tmpffhwcrzb/consul/consul-main/agent/envoyextensions/builtin/wasm/wasm_test.go",
+    "line": 275,
+    "type": "go_backoff",
+    "max_retries": null,
+    "backoff_type": "linear",
+    "has_jitter": false,
+    "evidence": "BackOff."
+  },
+  {
+    "file": "/var/folders/v2/8hjclk9x27980tc06stw37h80000gp/T/tmpffhwcrzb/consul/consul-main/agent/envoyextensions/builtin/wasm/wasm_test.go",
+    "line": 278,
+    "type": "go_backoff",
+    "max_retries": null,
+    "backoff_type": "linear",
+    "has_jitter": false,
+    "evidence": "BackOff."
+  },
+  {
+    "file": "/var/folders/v2/8hjclk9x27980tc06stw37h80000gp/T/tmpffhwcrzb/consul/consul-main/agent/envoyextensions/builtin/wasm/wasm_test.go",
+    "line": 278,
+    "type": "go_backoff",
+    "max_retries": null,
+    "backoff_type": "linear",
+    "has_jitter": false,
+    "evidence": "BackOff."
+  },
+  {
+    "file": "/var/folders/v2/8hjclk9x27980tc06stw37h80000gp/T/tmpffhwcrzb/consul/consul-main/agent/envoyextensions/builtin/wasm/wasm_test.go",
+    "line": 284,
+    "type": "go_backoff",
+    "max_retries": null,
+    "backoff_type": "linear",
+    "has_jitter": false,
+    "evidence": "BackOff."
+  },
+  {
+    "file": "/var/folders/v2/8hjclk9x27980tc06stw37h80000gp/T/tmpffhwcrzb/consul/consul-main/agent/envoyextensions/builtin/wasm/wasm_test.go",
+    "line": 285,
+    "type": "go_backoff",
+    "max_retries": null,
+    "backoff_type": "linear",
+    "has_jitter": false,
+    "evidence": "BackOff."
+  },
+  {
+    "file": "/var/folders/v2/8hjclk9x27980tc06stw37h80000gp/T/tmpffhwcrzb/consul/consul-main/agent/envoyextensions/builtin/wasm/wasm_test.go",
+    "line": 288,
+    "type": "go_backoff",
+    "max_retries": null,
+    "backoff_type": "linear",
+    "has_jitter": false,
+    "evidence": "BackOff."
+  },
+  {
+    "file": "/var/folders/v2/8hjclk9x27980tc06stw37h80000gp/T/tmpffhwcrzb/consul/consul-main/agent/envoyextensions/builtin/wasm/wasm_test.go",
+    "line": 288,
+    "type": "go_backoff",
+    "max_retries": null,
+    "backoff_type": "linear",
+    "has_jitter": false,
+    "evidence": "BackOff."
+  },
+  {
+    "file": "/var/folders/v2/8hjclk9x27980tc06stw37h80000gp/T/tmpffhwcrzb/consul/consul-main/agent/envoyextensions/builtin/wasm/wasm_test.go",
+    "line": 294,
+    "type": "go_backoff",
+    "max_retries": null,
+    "backoff_type": "linear",
+    "has_jitter": false,
+    "evidence": "BackOff."
+  },
+  {
+    "file": "/var/folders/v2/8hjclk9x27980tc06stw37h80000gp/T/tmpffhwcrzb/consul/consul-main/agent/envoyextensions/builtin/wasm/wasm_test.go",
+    "line": 297,
+    "type": "go_backoff",
+    "max_retries": null,
+    "backoff_type": "linear",
+    "has_jitter": false,
+    "evidence": "BackOff."
+  },
+  {
+    "file": "/var/folders/v2/8hjclk9x27980tc06stw37h80000gp/T/tmpffhwcrzb/consul/consul-main/agent/envoyextensions/builtin/wasm/wasm_test.go",
+    "line": 303,
+    "type": "go_backoff",
+    "max_retries": null,
+    "backoff_type": "linear",
+    "has_jitter": false,
+    "evidence": "BackOff."
+  },
+  {
+    "file": "/var/folders/v2/8hjclk9x27980tc06stw37h80000gp/T/tmpffhwcrzb/consul/consul-main/agent/envoyextensions/builtin/wasm/wasm_test.go",
+    "line": 306,
+    "type": "go_backoff",
+    "max_retries": null,
+    "backoff_type": "linear",
+    "has_jitter": false,
+    "evidence": "BackOff."
+  },
+  {
+    "file": "/var/folders/v2/8hjclk9x27980tc06stw37h80000gp/T/tmpffhwcrzb/consul/consul-main/agent/envoyextensions/builtin/wasm/wasm_test.go",
+    "line": 423,
+    "type": "go_backoff",
+    "max_retries": null,
+    "backoff_type": "linear",
+    "has_jitter": false,
+    "evidence": "BackOff."
+  },
+  {
+    "file": "/var/folders/v2/8hjclk9x27980tc06stw37h80000gp/T/tmpffhwcrzb/consul/consul-main/agent/envoyextensions/builtin/wasm/wasm_test.go",
+    "line": 425,
+    "type": "go_backoff",
+    "max_retries": null,
+    "backoff_type": "linear",
+    "has_jitter": false,
+    "evidence": "BackOff."
+  },
+  {
+    "file": "/var/folders/v2/8hjclk9x27980tc06stw37h80000gp/T/tmpffhwcrzb/consul/consul-main/agent/envoyextensions/builtin/wasm/wasm_test.go",
+    "line": 440,
+    "type": "go_backoff",
+    "max_retries": null,
+    "backoff_type": "linear",
+    "has_jitter": false,
+    "evidence": "BackOff:"
+  },
+  {
+    "file": "/var/folders/v2/8hjclk9x27980tc06stw37h80000gp/T/tmpffhwcrzb/consul/consul-main/agent/envoyextensions/builtin/wasm/wasm_test.go",
+    "line": 633,
+    "type": "go_backoff",
+    "max_retries": null,
+    "backoff_type": "linear",
+    "has_jitter": false,
+    "evidence": "BackOff."
+  },
+  {
+    "file": "/var/folders/v2/8hjclk9x27980tc06stw37h80000gp/T/tmpffhwcrzb/consul/consul-main/agent/envoyextensions/builtin/wasm/wasm_test.go",
+    "line": 634,
+    "type": "go_backoff",
+    "max_retries": null,
+    "backoff_type": "linear",
+    "has_jitter": false,
+    "evidence": "BackOff."
+  },
+  {
+    "file": "/var/folders/v2/8hjclk9x27980tc06stw37h80000gp/T/tmpffhwcrzb/consul/consul-main/agent/envoyextensions/builtin/otel-access-logging/structs.go",
+    "line": 361,
+    "type": "go_backoff",
+    "max_retries": null,
+    "backoff_type": "linear",
+    "has_jitter": false,
+    "evidence": "BackOff."
+  },
+  {
+    "file": "/var/folders/v2/8hjclk9x27980tc06stw37h80000gp/T/tmpffhwcrzb/consul/consul-main/agent/envoyextensions/builtin/otel-access-logging/structs.go",
+    "line": 370,
+    "type": "go_backoff",
+    "max_retries": null,
+    "backoff_type": "linear",
+    "has_jitter": false,
+    "evidence": "BackOff:"
+  },
+  {
+    "file": "/var/folders/v2/8hjclk9x27980tc06stw37h80000gp/T/tmpffhwcrzb/consul/consul-main/agent/envoyextensions/builtin/otel-access-logging/structs.go",
+    "line": 370,
+    "type": "go_backoff",
+    "max_retries": null,
+    "backoff_type": "linear",
+    "has_jitter": false,
+    "evidence": "BackOff."
+  },
+  {
+    "file": "/var/folders/v2/8hjclk9x27980tc06stw37h80000gp/T/tmpffhwcrzb/consul/consul-main/agent/grpc-external/services/resource/server.go",
+    "line": 288,
+    "type": "go_backoff",
+    "max_retries": null,
+    "backoff_type": "linear",
+    "has_jitter": true,
+    "evidence": "backoff :"
+  },
+  {
+    "file": "/var/folders/v2/8hjclk9x27980tc06stw37h80000gp/T/tmpffhwcrzb/consul/consul-main/agent/grpc-external/services/resource/server.go",
+    "line": 300,
+    "type": "go_backoff",
+    "max_retries": null,
+    "backoff_type": "linear",
+    "has_jitter": true,
+    "evidence": "backoff."
+  },
+  {
+    "file": "/var/folders/v2/8hjclk9x27980tc06stw37h80000gp/T/tmpffhwcrzb/consul/consul-main/agent/leafcert/watch.go",
+    "line": 121,
+    "type": "go_backoff",
+    "max_retries": null,
+    "backoff_type": "linear",
+    "has_jitter": false,
+    "evidence": "backoff."
+  },
+  {
+    "file": "/var/folders/v2/8hjclk9x27980tc06stw37h80000gp/T/tmpffhwcrzb/consul/consul-main/agent/cache/cache_test.go",
+    "line": 570,
+    "type": "go_backoff",
+    "max_retries": null,
+    "backoff_type": "linear",
+    "has_jitter": false,
+    "evidence": "backoff."
+  },
+  {
+    "file": "/var/folders/v2/8hjclk9x27980tc06stw37h80000gp/T/tmpffhwcrzb/consul/consul-main/agent/cache/cache_test.go",
+    "line": 616,
+    "type": "go_backoff",
+    "max_retries": null,
+    "backoff_type": "linear",
+    "has_jitter": false,
+    "evidence": "backoff."
+  },
+  {
+    "file": "/var/folders/v2/8hjclk9x27980tc06stw37h80000gp/T/tmpffhwcrzb/consul/consul-main/agent/cache/cache_test.go",
+    "line": 2295,
+    "type": "go_backoff",
+    "max_retries": null,
+    "backoff_type": "linear",
+    "has_jitter": false,
+    "evidence": "backoff."
+  },
+  {
+    "file": "/var/folders/v2/8hjclk9x27980tc06stw37h80000gp/T/tmpffhwcrzb/consul/consul-main/agent/cache/cache.go",
+    "line": 88,
+    "type": "go_backoff",
+    "max_retries": null,
+    "backoff_type": "linear",
+    "has_jitter": false,
+    "evidence": "backoff."
+  },
+  {
+    "file": "/var/folders/v2/8hjclk9x27980tc06stw37h80000gp/T/tmpffhwcrzb/consul/consul-main/agent/cache/cache.go",
+    "line": 836,
+    "type": "go_backoff",
+    "max_retries": null,
+    "backoff_type": "exponential",
+    "has_jitter": false,
+    "evidence": "backoff."
+  },
+  {
+    "file": "/var/folders/v2/8hjclk9x27980tc06stw37h80000gp/T/tmpffhwcrzb/consul/consul-main/agent/cache/watch_test.go",
+    "line": 282,
+    "type": "go_backoff",
+    "max_retries": null,
+    "backoff_type": "linear",
+    "has_jitter": false,
+    "evidence": "backoff."
+  },
+  {
+    "file": "/var/folders/v2/8hjclk9x27980tc06stw37h80000gp/T/tmpffhwcrzb/consul/consul-main/agent/cache/watch_test.go",
+    "line": 346,
+    "type": "go_backoff",
+    "max_retries": null,
+    "backoff_type": "linear",
+    "has_jitter": false,
+    "evidence": "backoff."
+  },
+  {
+    "file": "/var/folders/v2/8hjclk9x27980tc06stw37h80000gp/T/tmpffhwcrzb/consul/consul-main/agent/cache/watch.go",
+    "line": 127,
+    "type": "go_backoff",
+    "max_retries": null,
+    "backoff_type": "linear",
+    "has_jitter": false,
+    "evidence": "backoff."
+  },
+  {
+    "file": "/var/folders/v2/8hjclk9x27980tc06stw37h80000gp/T/tmpffhwcrzb/consul/consul-main/agent/checks/alias.go",
+    "line": 18,
+    "type": "go_backoff",
+    "max_retries": null,
+    "backoff_type": "linear",
+    "has_jitter": false,
+    "evidence": "backoff."
+  },
+  {
+    "file": "/var/folders/v2/8hjclk9x27980tc06stw37h80000gp/T/tmpffhwcrzb/consul/consul-main/agent/proxycfg/proxycfg.deepcopy.go",
+    "line": 58,
+    "type": "go_backoff",
+    "max_retries": null,
+    "backoff_type": "linear",
+    "has_jitter": false,
+    "evidence": "BackOff ="
+  },
+  {
+    "file": "/var/folders/v2/8hjclk9x27980tc06stw37h80000gp/T/tmpffhwcrzb/consul/consul-main/agent/proxycfg/proxycfg.deepcopy.go",
+    "line": 59,
+    "type": "go_backoff",
+    "max_retries": null,
+    "backoff_type": "linear",
+    "has_jitter": false,
+    "evidence": "BackOff ="
+  },
+  {
+    "file": "/var/folders/v2/8hjclk9x27980tc06stw37h80000gp/T/tmpffhwcrzb/consul/consul-main/agent/consul/leader_peering.go",
+    "line": 68,
+    "type": "go_backoff",
+    "max_retries": null,
+    "backoff_type": "exponential",
+    "has_jitter": false,
+    "evidence": "backoff."
+  },
+  {
+    "file": "/var/folders/v2/8hjclk9x27980tc06stw37h80000gp/T/tmpffhwcrzb/consul/consul-main/agent/consul/leader_peering.go",
+    "line": 71,
+    "type": "go_backoff",
+    "max_retries": null,
+    "backoff_type": "exponential",
+    "has_jitter": false,
+    "evidence": "Backoff ="
+  },
+  {
+    "file": "/var/folders/v2/8hjclk9x27980tc06stw37h80000gp/T/tmpffhwcrzb/consul/consul-main/agent/consul/leader_peering.go",
+    "line": 705,
+    "type": "go_backoff",
+    "max_retries": null,
+    "backoff_type": "exponential",
+    "has_jitter": false,
+    "evidence": "Backoff."
+  },
+  {
+    "file": "/var/folders/v2/8hjclk9x27980tc06stw37h80000gp/T/tmpffhwcrzb/consul/consul-main/agent/consul/leader_peering.go",
+    "line": 722,
+    "type": "go_backoff",
+    "max_retries": null,
+    "backoff_type": "linear",
+    "has_jitter": false,
+    "evidence": "Backoff."
+  },
+  {
+    "file": "/var/folders/v2/8hjclk9x27980tc06stw37h80000gp/T/tmpffhwcrzb/consul/consul-main/agent/consul/leader_connect.go",
+    "line": 33,
+    "type": "go_backoff",
+    "max_retries": null,
+    "backoff_type": "linear",
+    "has_jitter": false,
+    "evidence": "Backoff ="
+  },
+  {
+    "file": "/var/folders/v2/8hjclk9x27980tc06stw37h80000gp/T/tmpffhwcrzb/consul/consul-main/agent/consul/rpc_test.go",
+    "line": 1449,
+    "type": "go_retry_config",
+    "max_retries": 1,
+    "backoff_type": "linear",
+    "has_jitter": false,
+    "evidence": "retryCount:     1"
+  },
+  {
+    "file": "/var/folders/v2/8hjclk9x27980tc06stw37h80000gp/T/tmpffhwcrzb/consul/consul-main/agent/consul/rpc_test.go",
+    "line": 1455,
+    "type": "go_retry_config",
+    "max_retries": 1,
+    "backoff_type": "linear",
+    "has_jitter": false,
+    "evidence": "retryCount:     1"
+  },
+  {
+    "file": "/var/folders/v2/8hjclk9x27980tc06stw37h80000gp/T/tmpffhwcrzb/consul/consul-main/agent/consul/rpc_test.go",
+    "line": 1461,
+    "type": "go_retry_config",
+    "max_retries": 2,
+    "backoff_type": "none",
+    "has_jitter": false,
+    "evidence": "retryCount:     2"
+  },
+  {
+    "file": "/var/folders/v2/8hjclk9x27980tc06stw37h80000gp/T/tmpffhwcrzb/consul/consul-main/agent/consul/rpc_test.go",
+    "line": 1467,
+    "type": "go_retry_config",
+    "max_retries": 3,
+    "backoff_type": "none",
+    "has_jitter": false,
+    "evidence": "retryCount:     3"
+  },
+  {
+    "file": "/var/folders/v2/8hjclk9x27980tc06stw37h80000gp/T/tmpffhwcrzb/consul/consul-main/agent/consul/rpc_test.go",
+    "line": 1473,
+    "type": "go_retry_config",
+    "max_retries": 4,
+    "backoff_type": "none",
+    "has_jitter": false,
+    "evidence": "retryCount:     4"
+  },
+  {
+    "file": "/var/folders/v2/8hjclk9x27980tc06stw37h80000gp/T/tmpffhwcrzb/consul/consul-main/agent/consul/acl_replication.go",
+    "line": 21,
+    "type": "go_backoff",
+    "max_retries": null,
+    "backoff_type": "linear",
+    "has_jitter": false,
+    "evidence": "Backoff ="
+  },
+  {
+    "file": "/var/folders/v2/8hjclk9x27980tc06stw37h80000gp/T/tmpffhwcrzb/consul/consul-main/agent/consul/leader_peering_test.go",
+    "line": 1604,
+    "type": "go_backoff",
+    "max_retries": null,
+    "backoff_type": "linear",
+    "has_jitter": false,
+    "evidence": "backoff."
+  },
+  {
+    "file": "/var/folders/v2/8hjclk9x27980tc06stw37h80000gp/T/tmpffhwcrzb/consul/consul-main/agent/consul/leader_peering_test.go",
+    "line": 1610,
+    "type": "go_backoff",
+    "max_retries": null,
+    "backoff_type": "exponential",
+    "has_jitter": false,
+    "evidence": "backoff."
+  },
+  {
+    "file": "/var/folders/v2/8hjclk9x27980tc06stw37h80000gp/T/tmpffhwcrzb/consul/consul-main/agent/consul/leader_peering_test.go",
+    "line": 1790,
+    "type": "go_backoff",
+    "max_retries": null,
+    "backoff_type": "linear",
+    "has_jitter": false,
+    "evidence": "Backoff ="
+  },
+  {
+    "file": "/var/folders/v2/8hjclk9x27980tc06stw37h80000gp/T/tmpffhwcrzb/consul/consul-main/agent/consul/leader_peering_test.go",
+    "line": 1791,
+    "type": "go_backoff",
+    "max_retries": null,
+    "backoff_type": "linear",
+    "has_jitter": false,
+    "evidence": "Backoff ="
+  },
+  {
+    "file": "/var/folders/v2/8hjclk9x27980tc06stw37h80000gp/T/tmpffhwcrzb/consul/consul-main/agent/consul/controller/controller.go",
+    "line": 130,
+    "type": "go_backoff",
+    "max_retries": null,
+    "backoff_type": "linear",
+    "has_jitter": false,
+    "evidence": "Backoff:"
+  },
+  {
+    "file": "/var/folders/v2/8hjclk9x27980tc06stw37h80000gp/T/tmpffhwcrzb/consul/consul-main/agent/consul/controller/controller.go",
+    "line": 131,
+    "type": "go_backoff",
+    "max_retries": null,
+    "backoff_type": "linear",
+    "has_jitter": false,
+    "evidence": "Backoff:"
+  },
+  {
+    "file": "/var/folders/v2/8hjclk9x27980tc06stw37h80000gp/T/tmpffhwcrzb/consul/consul-main/agent/consul/controller/controller.go",
+    "line": 158,
+    "type": "go_backoff",
+    "max_retries": null,
+    "backoff_type": "linear",
+    "has_jitter": false,
+    "evidence": "Backoff ="
+  },
+  {
+    "file": "/var/folders/v2/8hjclk9x27980tc06stw37h80000gp/T/tmpffhwcrzb/consul/consul-main/agent/consul/controller/controller.go",
+    "line": 159,
+    "type": "go_backoff",
+    "max_retries": null,
+    "backoff_type": "linear",
+    "has_jitter": false,
+    "evidence": "Backoff ="
+  },
+  {
+    "file": "/var/folders/v2/8hjclk9x27980tc06stw37h80000gp/T/tmpffhwcrzb/consul/consul-main/agent/consul/controller/queue/rate.go",
+    "line": 33,
+    "type": "go_backoff",
+    "max_retries": null,
+    "backoff_type": "exponential",
+    "has_jitter": false,
+    "evidence": "backoff."
+  },
+  {
+    "file": "/var/folders/v2/8hjclk9x27980tc06stw37h80000gp/T/tmpffhwcrzb/consul/consul-main/agent/consul/controller/queue/rate.go",
+    "line": 51,
+    "type": "go_backoff",
+    "max_retries": null,
+    "backoff_type": "linear",
+    "has_jitter": false,
+    "evidence": "backoff :"
+  },
+  {
+    "file": "/var/folders/v2/8hjclk9x27980tc06stw37h80000gp/T/tmpffhwcrzb/consul/consul-main/agent/consul/watch/server_local.go",
+    "line": 337,
+    "type": "go_backoff",
+    "max_retries": null,
+    "backoff_type": "linear",
+    "has_jitter": false,
+    "evidence": "backoff."
+  },
+  {
+    "file": "/var/folders/v2/8hjclk9x27980tc06stw37h80000gp/T/tmpffhwcrzb/consul/consul-main/agent/structs/config_entry_jwt_provider_test.go",
+    "line": 217,
+    "type": "go_backoff",
+    "max_retries": null,
+    "backoff_type": "linear",
+    "has_jitter": false,
+    "evidence": "BackOff:"
+  },
+  {
+    "file": "/var/folders/v2/8hjclk9x27980tc06stw37h80000gp/T/tmpffhwcrzb/consul/consul-main/agent/structs/config_entry_jwt_provider_test.go",
+    "line": 320,
+    "type": "go_backoff",
+    "max_retries": null,
+    "backoff_type": "linear",
+    "has_jitter": false,
+    "evidence": "BackOff:"
+  },
+  {
+    "file": "/var/folders/v2/8hjclk9x27980tc06stw37h80000gp/T/tmpffhwcrzb/consul/consul-main/agent/structs/config_entry_jwt_provider_test.go",
+    "line": 361,
+    "type": "go_backoff",
+    "max_retries": null,
+    "backoff_type": "linear",
+    "has_jitter": false,
+    "evidence": "BackOff:"
+  },
+  {
+    "file": "/var/folders/v2/8hjclk9x27980tc06stw37h80000gp/T/tmpffhwcrzb/consul/consul-main/agent/structs/config_entry_jwt_provider.go",
+    "line": 284,
+    "type": "go_backoff",
+    "max_retries": null,
+    "backoff_type": "linear",
+    "has_jitter": false,
+    "evidence": "BackOff."
+  },
+  {
+    "file": "/var/folders/v2/8hjclk9x27980tc06stw37h80000gp/T/tmpffhwcrzb/consul/consul-main/agent/connect/ca/provider.go",
+    "line": 107,
+    "type": "go_backoff",
+    "max_retries": null,
+    "backoff_type": "linear",
+    "has_jitter": false,
+    "evidence": "backoff."
+  },
+  {
+    "file": "/var/folders/v2/8hjclk9x27980tc06stw37h80000gp/T/tmpffhwcrzb/consul/consul-main/agent/connect/ca/provider.go",
+    "line": 151,
+    "type": "go_backoff",
+    "max_retries": null,
+    "backoff_type": "linear",
+    "has_jitter": false,
+    "evidence": "backoff."
+  },
+  {
+    "file": "/var/folders/v2/8hjclk9x27980tc06stw37h80000gp/T/tmpffhwcrzb/consul/consul-main/agent/connect/ca/provider.go",
+    "line": 167,
+    "type": "go_backoff",
+    "max_retries": null,
+    "backoff_type": "linear",
+    "has_jitter": false,
+    "evidence": "backoff."
+  },
+  {
+    "file": "/var/folders/v2/8hjclk9x27980tc06stw37h80000gp/T/tmpffhwcrzb/consul/consul-main/agent/xds/jwt_authn_test.go",
+    "line": 85,
+    "type": "go_backoff",
+    "max_retries": null,
+    "backoff_type": "linear",
+    "has_jitter": false,
+    "evidence": "BackOff:"
+  },
+  {
+    "file": "/var/folders/v2/8hjclk9x27980tc06stw37h80000gp/T/tmpffhwcrzb/consul/consul-main/agent/xds/jwt_authn_test.go",
+    "line": 493,
+    "type": "go_backoff",
+    "max_retries": null,
+    "backoff_type": "linear",
+    "has_jitter": false,
+    "evidence": "BackOff:"
+  },
+  {
+    "file": "/var/folders/v2/8hjclk9x27980tc06stw37h80000gp/T/tmpffhwcrzb/consul/consul-main/agent/xds/jwt_authn_test.go",
+    "line": 512,
+    "type": "go_backoff",
+    "max_retries": null,
+    "backoff_type": "linear",
+    "has_jitter": false,
+    "evidence": "BackOff:"
+  },
+  {
+    "file": "/var/folders/v2/8hjclk9x27980tc06stw37h80000gp/T/tmpffhwcrzb/consul/consul-main/agent/xds/jwt_authn_test.go",
+    "line": 521,
+    "type": "go_backoff",
+    "max_retries": null,
+    "backoff_type": "linear",
+    "has_jitter": false,
+    "evidence": "BackOff:"
+  },
+  {
+    "file": "/var/folders/v2/8hjclk9x27980tc06stw37h80000gp/T/tmpffhwcrzb/consul/consul-main/agent/xds/jwt_authn.go",
+    "line": 273,
+    "type": "go_backoff",
+    "max_retries": null,
+    "backoff_type": "linear",
+    "has_jitter": false,
+    "evidence": "BackOff ="
+  },
+  {
+    "file": "/var/folders/v2/8hjclk9x27980tc06stw37h80000gp/T/tmpffhwcrzb/consul/consul-main/agent/xds/jwt_authn.go",
+    "line": 274,
+    "type": "go_backoff",
+    "max_retries": null,
+    "backoff_type": "linear",
+    "has_jitter": false,
+    "evidence": "BackOff."
+  },
+  {
+    "file": "/var/folders/v2/8hjclk9x27980tc06stw37h80000gp/T/tmpffhwcrzb/consul/consul-main/agent/xds/jwt_authn.go",
+    "line": 275,
+    "type": "go_backoff",
+    "max_retries": null,
+    "backoff_type": "linear",
+    "has_jitter": false,
+    "evidence": "BackOff."
+  },
+  {
+    "file": "/var/folders/v2/8hjclk9x27980tc06stw37h80000gp/T/tmpffhwcrzb/consul/consul-main/lib/telemetry.go",
+    "line": 392,
+    "type": "go_backoff",
+    "max_retries": null,
+    "backoff_type": "linear",
+    "has_jitter": false,
+    "evidence": "Backoff :"
+  },
+  {
+    "file": "/var/folders/v2/8hjclk9x27980tc06stw37h80000gp/T/tmpffhwcrzb/prometheus/prometheus-main/tsdb/db.go",
+    "line": 1150,
+    "type": "go_backoff",
+    "max_retries": null,
+    "backoff_type": "linear",
+    "has_jitter": false,
+    "evidence": "backoff :"
+  },
+  {
+    "file": "/var/folders/v2/8hjclk9x27980tc06stw37h80000gp/T/tmpffhwcrzb/prometheus/prometheus-main/tsdb/db.go",
+    "line": 1203,
+    "type": "go_backoff",
+    "max_retries": null,
+    "backoff_type": "exponential",
+    "has_jitter": false,
+    "evidence": "backoff ="
+  },
+  {
+    "file": "/var/folders/v2/8hjclk9x27980tc06stw37h80000gp/T/tmpffhwcrzb/prometheus/prometheus-main/tsdb/db.go",
+    "line": 1205,
+    "type": "go_backoff",
+    "max_retries": null,
+    "backoff_type": "exponential",
+    "has_jitter": false,
+    "evidence": "backoff ="
+  },
+  {
+    "file": "/var/folders/v2/8hjclk9x27980tc06stw37h80000gp/T/tmpffhwcrzb/prometheus/prometheus-main/config/config.go",
+    "line": 243,
+    "type": "go_backoff",
+    "max_retries": null,
+    "backoff_type": "linear",
+    "has_jitter": false,
+    "evidence": "Backoff:"
+  },
+  {
+    "file": "/var/folders/v2/8hjclk9x27980tc06stw37h80000gp/T/tmpffhwcrzb/prometheus/prometheus-main/config/config.go",
+    "line": 244,
+    "type": "go_backoff",
+    "max_retries": null,
+    "backoff_type": "linear",
+    "has_jitter": false,
+    "evidence": "Backoff:"
+  },
+  {
+    "file": "/var/folders/v2/8hjclk9x27980tc06stw37h80000gp/T/tmpffhwcrzb/prometheus/prometheus-main/storage/remote/client.go",
+    "line": 256,
+    "type": "go_backoff",
+    "max_retries": null,
+    "backoff_type": "linear",
+    "has_jitter": false,
+    "evidence": "Backoff ="
+  },
+  {
+    "file": "/var/folders/v2/8hjclk9x27980tc06stw37h80000gp/T/tmpffhwcrzb/prometheus/prometheus-main/storage/remote/queue_manager.go",
+    "line": 751,
+    "type": "go_backoff",
+    "max_retries": null,
+    "backoff_type": "linear",
+    "has_jitter": false,
+    "evidence": "backoff."
+  },
+  {
+    "file": "/var/folders/v2/8hjclk9x27980tc06stw37h80000gp/T/tmpffhwcrzb/prometheus/prometheus-main/storage/remote/queue_manager.go",
+    "line": 754,
+    "type": "go_backoff",
+    "max_retries": null,
+    "backoff_type": "linear",
+    "has_jitter": false,
+    "evidence": "backoff."
+  },
+  {
+    "file": "/var/folders/v2/8hjclk9x27980tc06stw37h80000gp/T/tmpffhwcrzb/prometheus/prometheus-main/storage/remote/queue_manager.go",
+    "line": 755,
+    "type": "go_backoff",
+    "max_retries": null,
+    "backoff_type": "linear",
+    "has_jitter": false,
+    "evidence": "backoff :"
+  },
+  {
+    "file": "/var/folders/v2/8hjclk9x27980tc06stw37h80000gp/T/tmpffhwcrzb/prometheus/prometheus-main/storage/remote/queue_manager.go",
+    "line": 778,
+    "type": "go_backoff",
+    "max_retries": null,
+    "backoff_type": "linear",
+    "has_jitter": false,
+    "evidence": "backoff ="
+  },
+  {
+    "file": "/var/folders/v2/8hjclk9x27980tc06stw37h80000gp/T/tmpffhwcrzb/prometheus/prometheus-main/storage/remote/queue_manager.go",
+    "line": 813,
+    "type": "go_backoff",
+    "max_retries": null,
+    "backoff_type": "linear",
+    "has_jitter": false,
+    "evidence": "backoff :"
+  },
+  {
+    "file": "/var/folders/v2/8hjclk9x27980tc06stw37h80000gp/T/tmpffhwcrzb/prometheus/prometheus-main/storage/remote/queue_manager.go",
+    "line": 835,
+    "type": "go_backoff",
+    "max_retries": null,
+    "backoff_type": "linear",
+    "has_jitter": false,
+    "evidence": "backoff ="
+  },
+  {
+    "file": "/var/folders/v2/8hjclk9x27980tc06stw37h80000gp/T/tmpffhwcrzb/prometheus/prometheus-main/storage/remote/queue_manager.go",
+    "line": 875,
+    "type": "go_backoff",
+    "max_retries": null,
+    "backoff_type": "linear",
+    "has_jitter": false,
+    "evidence": "backoff :"
+  },
+  {
+    "file": "/var/folders/v2/8hjclk9x27980tc06stw37h80000gp/T/tmpffhwcrzb/prometheus/prometheus-main/storage/remote/queue_manager.go",
+    "line": 896,
+    "type": "go_backoff",
+    "max_retries": null,
+    "backoff_type": "linear",
+    "has_jitter": false,
+    "evidence": "backoff ="
+  },
+  {
+    "file": "/var/folders/v2/8hjclk9x27980tc06stw37h80000gp/T/tmpffhwcrzb/prometheus/prometheus-main/storage/remote/queue_manager.go",
+    "line": 936,
+    "type": "go_backoff",
+    "max_retries": null,
+    "backoff_type": "linear",
+    "has_jitter": false,
+    "evidence": "backoff :"
+  },
+  {
+    "file": "/var/folders/v2/8hjclk9x27980tc06stw37h80000gp/T/tmpffhwcrzb/prometheus/prometheus-main/storage/remote/queue_manager.go",
+    "line": 957,
+    "type": "go_backoff",
+    "max_retries": null,
+    "backoff_type": "linear",
+    "has_jitter": false,
+    "evidence": "backoff ="
+  },
+  {
+    "file": "/var/folders/v2/8hjclk9x27980tc06stw37h80000gp/T/tmpffhwcrzb/prometheus/prometheus-main/storage/remote/queue_manager.go",
+    "line": 2023,
+    "type": "go_backoff",
+    "max_retries": null,
+    "backoff_type": "linear",
+    "has_jitter": false,
+    "evidence": "backoff :"
+  },
+  {
+    "file": "/var/folders/v2/8hjclk9x27980tc06stw37h80000gp/T/tmpffhwcrzb/prometheus/prometheus-main/storage/remote/queue_manager.go",
+    "line": 2081,
+    "type": "go_backoff",
+    "max_retries": null,
+    "backoff_type": "linear",
+    "has_jitter": false,
+    "evidence": "backoff ="
+  },
+  {
+    "file": "/var/folders/v2/8hjclk9x27980tc06stw37h80000gp/T/tmpffhwcrzb/prometheus/prometheus-main/storage/remote/queue_manager_test.go",
+    "line": 2053,
+    "type": "go_backoff",
+    "max_retries": null,
+    "backoff_type": "linear",
+    "has_jitter": false,
+    "evidence": "Backoff ="
+  },
+  {
+    "file": "/var/folders/v2/8hjclk9x27980tc06stw37h80000gp/T/tmpffhwcrzb/prometheus/prometheus-main/storage/remote/queue_manager_test.go",
+    "line": 2054,
+    "type": "go_backoff",
+    "max_retries": null,
+    "backoff_type": "linear",
+    "has_jitter": false,
+    "evidence": "Backoff ="
+  },
+  {
+    "file": "/var/folders/v2/8hjclk9x27980tc06stw37h80000gp/T/tmpffhwcrzb/strapi/strapi-main/packages/core/data-transfer/src/strapi/providers/utils.ts",
+    "line": 28,
+    "type": "js_retry_config",
+    "max_retries": 5,
+    "backoff_type": "none",
+    "has_jitter": false,
+    "evidence": "Retries: 5"
+  },
+  {
+    "file": "/var/folders/v2/8hjclk9x27980tc06stw37h80000gp/T/tmpffhwcrzb/strapi/strapi-main/packages/cli/create-strapi-app/src/utils/template.ts",
+    "line": 33,
+    "type": "js_retry_config",
+    "max_retries": 3,
+    "backoff_type": "linear",
+    "has_jitter": false,
+    "evidence": "retries: 3"
+  },
+  {
+    "file": "/var/folders/v2/8hjclk9x27980tc06stw37h80000gp/T/tmpffhwcrzb/strapi/strapi-main/packages/cli/create-strapi-app/src/utils/template.ts",
+    "line": 56,
+    "type": "js_retry_config",
+    "max_retries": 3,
+    "backoff_type": "linear",
+    "has_jitter": false,
+    "evidence": "retries: 3"
+  },
+  {
+    "file": "/var/folders/v2/8hjclk9x27980tc06stw37h80000gp/T/tmpffhwcrzb/strapi/strapi-main/packages/cli/create-strapi-app/src/utils/template.ts",
+    "line": 87,
+    "type": "js_retry_config",
+    "max_retries": 3,
+    "backoff_type": "linear",
+    "has_jitter": false,
+    "evidence": "retries: 3"
+  },
+  {
+    "file": "/var/folders/v2/8hjclk9x27980tc06stw37h80000gp/T/tmpffhwcrzb/strapi/strapi-main/packages/cli/create-strapi-app/src/utils/template.ts",
+    "line": 108,
+    "type": "js_retry_config",
+    "max_retries": 3,
+    "backoff_type": "none",
+    "has_jitter": false,
+    "evidence": "retries: 3"
+  },
+  {
+    "file": "/var/folders/v2/8hjclk9x27980tc06stw37h80000gp/T/tmpffhwcrzb/strapi/strapi-main/packages/cli/cloud/src/services/build-logs.ts",
+    "line": 11,
+    "type": "js_retry_config",
+    "max_retries": 0,
+    "backoff_type": "none",
+    "has_jitter": false,
+    "evidence": "retries = 0"
+  }
+]

@@ -1,0 +1,15 @@
+{
+  "seed": 20260814,
+  "sample_size": 30,
+  "precision": {
+    "checked": 30,
+    "genuine": 29,
+    "false_positives": 1,
+    "precision": 0.9667
+  },
+  "false_negative": {
+    "checked": 30,
+    "missed_retry_logic": 10,
+    "false_negative_rate": 0.3333
+  }
+}

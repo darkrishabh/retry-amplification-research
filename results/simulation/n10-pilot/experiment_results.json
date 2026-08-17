@@ -1,0 +1,154 @@
+{
+  "NR": {
+    "S1": {
+      "scenario": "S1: Single Service Failure",
+      "policy": "NoRetry",
+      "num_trials": 10,
+      "cascade_probability": 0.0,
+      "cascade_ci": 0.0,
+      "raf_mean": 1.0,
+      "raf_ci": 0.0,
+      "success_rate_mean": 0.7186073861318256,
+      "success_rate_ci": 0.002004985702514041,
+      "recovery_time_mean": 1.0
+    },
+    "S2": {
+      "scenario": "S2: Cascading Slowdown",
+      "policy": "NoRetry",
+      "num_trials": 10,
+      "cascade_probability": 1.0,
+      "cascade_ci": 0.0,
+      "raf_mean": 1.0,
+      "raf_ci": 0.0,
+      "success_rate_mean": 0.6549216103431786,
+      "success_rate_ci": 0.0022583122169018833,
+      "recovery_time_mean": 1.0
+    },
+    "S3": {
+      "scenario": "S3: Correlated Failures",
+      "policy": "NoRetry",
+      "num_trials": 10,
+      "cascade_probability": 1.0,
+      "cascade_ci": 0.0,
+      "raf_mean": 1.0,
+      "raf_ci": 0.0,
+      "success_rate_mean": 0.5534261732891986,
+      "success_rate_ci": 0.002693899741423297,
+      "recovery_time_mean": 1.0
+    }
+  },
+  "SR": {
+    "S1": {
+      "scenario": "S1: Single Service Failure",
+      "policy": "StandardRetry",
+      "num_trials": 10,
+      "cascade_probability": 0.0,
+      "cascade_ci": 0.0,
+      "raf_mean": 1.1764981442851241,
+      "raf_ci": 0.0011876786002804221,
+      "success_rate_mean": 0.6106529639753556,
+      "success_rate_ci": 0.002388263616707914,
+      "recovery_time_mean": 1.0
+    },
+    "S2": {
+      "scenario": "S2: Cascading Slowdown",
+      "policy": "StandardRetry",
+      "num_trials": 10,
+      "cascade_probability": 1.0,
+      "cascade_ci": 0.0,
+      "raf_mean": 1.1872528265669726,
+      "raf_ci": 0.0012333617721566055,
+      "success_rate_mean": 0.55093076728513,
+      "success_rate_ci": 0.0021438572601068704,
+      "recovery_time_mean": 1.0
+    },
+    "S3": {
+      "scenario": "S3: Correlated Failures",
+      "policy": "StandardRetry",
+      "num_trials": 10,
+      "cascade_probability": 1.0,
+      "cascade_ci": 0.0,
+      "raf_mean": 1.339964464319533,
+      "raf_ci": 0.0012536998574893842,
+      "success_rate_mean": 0.4154018344432747,
+      "success_rate_ci": 0.001401628431756903,
+      "recovery_time_mean": 1.0
+    }
+  },
+  "CB": {
+    "S1": {
+      "scenario": "S1: Single Service Failure",
+      "policy": "CircuitBreaker",
+      "num_trials": 10,
+      "cascade_probability": 0.0,
+      "cascade_ci": 0.0,
+      "raf_mean": 1.0044915534506382,
+      "raf_ci": 0.0007659856301994012,
+      "success_rate_mean": 0.714464669648756,
+      "success_rate_ci": 0.0029612737994272396,
+      "recovery_time_mean": 1.0
+    },
+    "S2": {
+      "scenario": "S2: Cascading Slowdown",
+      "policy": "CircuitBreaker",
+      "num_trials": 10,
+      "cascade_probability": 1.0,
+      "cascade_ci": 0.0,
+      "raf_mean": 1.0245530917693138,
+      "raf_ci": 0.0018703649136828705,
+      "success_rate_mean": 0.6393931208882337,
+      "success_rate_ci": 0.0022692839893440086,
+      "recovery_time_mean": 1.0
+    },
+    "S3": {
+      "scenario": "S3: Correlated Failures",
+      "policy": "CircuitBreaker",
+      "num_trials": 10,
+      "cascade_probability": 1.0,
+      "cascade_ci": 0.0,
+      "raf_mean": 1.0018966828208855,
+      "raf_ci": 2.3061173619182245e-05,
+      "success_rate_mean": 0.5529275549297573,
+      "success_rate_ci": 0.0019295253350897657,
+      "recovery_time_mean": 1.0
+    }
+  },
+  "ARB": {
+    "S1": {
+      "scenario": "S1: Single Service Failure",
+      "policy": "AdaptiveRetryBudgeting",
+      "num_trials": 10,
+      "cascade_probability": 0.0,
+      "cascade_ci": 0.0,
+      "raf_mean": 1.014266043947471,
+      "raf_ci": 0.0005043153377789893,
+      "success_rate_mean": 0.708566567810399,
+      "success_rate_ci": 0.002138838089837865,
+      "recovery_time_mean": 1.0
+    },
+    "S2": {
+      "scenario": "S2: Cascading Slowdown",
+      "policy": "AdaptiveRetryBudgeting",
+      "num_trials": 10,
+      "cascade_probability": 1.0,
+      "cascade_ci": 0.0,
+      "raf_mean": 1.0143775391359002,
+      "raf_ci": 0.0019811952869871466,
+      "success_rate_mean": 0.6445118526815227,
+      "success_rate_ci": 0.0014817986098328996,
+      "recovery_time_mean": 1.0
+    },
+    "S3": {
+      "scenario": "S3: Correlated Failures",
+      "policy": "AdaptiveRetryBudgeting",
+      "num_trials": 10,
+      "cascade_probability": 1.0,
+      "cascade_ci": 0.0,
+      "raf_mean": 1.0087565342096692,
+      "raf_ci": 0.00045411118481442195,
+      "success_rate_mean": 0.5510088957275563,
+      "success_rate_ci": 0.0017414910790953938,
+      "recovery_time_mean": 1.0
+    }
+  }
+}

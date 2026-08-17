@@ -1,0 +1,74 @@
+[
+  {
+    "name": "httpbin",
+    "language": "Python",
+    "files_analyzed": 8,
+    "files_with_retry": 0,
+    "retry_configs_found": 0,
+    "has_explicit_retry": false
+  },
+  {
+    "name": "sentry",
+    "language": "Python",
+    "files_analyzed": 5026,
+    "files_with_retry": 33,
+    "retry_configs_found": 37,
+    "has_explicit_retry": true
+  },
+  {
+    "name": "locust",
+    "language": "Python",
+    "files_analyzed": 158,
+    "files_with_retry": 1,
+    "retry_configs_found": 2,
+    "has_explicit_retry": true
+  },
+  {
+    "name": "traefik",
+    "language": "Go",
+    "files_analyzed": 759,
+    "files_with_retry": 22,
+    "retry_configs_found": 96,
+    "has_explicit_retry": true
+  },
+  {
+    "name": "consul",
+    "language": "Go",
+    "files_analyzed": 2890,
+    "files_with_retry": 31,
+    "retry_configs_found": 117,
+    "has_explicit_retry": true
+  },
+  {
+    "name": "prometheus",
+    "language": "Go",
+    "files_analyzed": 768,
+    "files_with_retry": 5,
+    "retry_configs_found": 20,
+    "has_explicit_retry": true
+  },
+  {
+    "name": "strapi",
+    "language": "JavaScript",
+    "files_analyzed": 2831,
+    "files_with_retry": 3,
+    "retry_configs_found": 6,
+    "has_explicit_retry": true
+  },
+  {
+    "name": "nest",
+    "language": "TypeScript",
+    "files_analyzed": 1441,
+    "files_with_retry": 0,
+    "retry_configs_found": 0,
+    "has_explicit_retry": false
+  },
+  {
+    "name": "spring-cloud-netflix",
+    "language": "Java",
+    "files_analyzed": 69,
+    "files_with_retry": 0,
+    "retry_configs_found": 0,
+    "has_explicit_retry": false
+  }
+]
